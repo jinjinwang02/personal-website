@@ -17,7 +17,9 @@
     }
 
     const sections = document.querySelectorAll("section");
-    const underline = document.getElementById("underline")
+    const underline = document.getElementById("underline");
+    const navInfo = document.querySelector(".nav__item-2");
+    const navProjects = document.querySelector(".nav__item-3");
     const options = {
         threshold: 0.7,
     };
@@ -32,15 +34,31 @@
                 left: coords.left,
             };
             if (entry.isIntersecting) {
-                underline.style.setProperty("left", `${directions.left - 60}px`);
+                underline.style.setProperty("left", `${directions.left - 64}px`);
                 if (className === "home") {
-                    underline.style.setProperty("width", "91.8vw");
+                    underline.style.setProperty("width", "92.2vw");
+                    underline.style.setProperty("background-color", "transparent");
+                    underline.style.setProperty("height", "4rem");
+                    underline.style.setProperty("top", "3rem");
+                    navInfo.style.setProperty("color", "#000");
+                    navProjects.style.setProperty("color", "#000");
                 }
                 if (className === "info") {
                     underline.style.setProperty("width", "15.2rem");
+                    underline.style.setProperty("background-color", "#BE020D");
+                    underline.style.setProperty("height", "3rem");
+                    underline.style.setProperty("top", "3.4rem");
+                    navInfo.style.setProperty("color", "#F8F6F0");
+                    navProjects.style.setProperty("color", "#000");
+
                 }
                 if (className === "projects") {
                     underline.style.setProperty("width", "64.9vw");
+                    underline.style.setProperty("background-color", "#BE020D");
+                    underline.style.setProperty("height", "3rem");
+                    underline.style.setProperty("top", "3.4rem");
+                    navProjects.style.setProperty("color", "#F8F6F0");
+                    navInfo.style.setProperty("color", "#000");
                 }
             }
         });

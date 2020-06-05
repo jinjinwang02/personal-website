@@ -50,7 +50,8 @@ header {
   background-color: #F8F6F0; }
 
 .nav__links, .nav__popup {
-  flex: 1; }
+  flex: 1;
+  z-index: 11; }
 
 .nav__links {
   padding-right: 60rem;
@@ -63,14 +64,11 @@ header {
   justify-content: flex-end; }
 
 .nav__underline {
-  height: 1px;
-  width: 91.7vw;
-  transform: scaleY(0.5);
-  background-color: #BE020D;
-  top: 6rem;
-  right: 3rem;
+  border-top: 1px solid #BE020D;
+  border-bottom: 1px solid #BE020D;
   position: absolute;
-  transition: left .5s ease, width .5s ease; }
+  transition: all .2s ease-out;
+  z-index: 10; }
 
 .nav__popup-container {
   position: absolute;
