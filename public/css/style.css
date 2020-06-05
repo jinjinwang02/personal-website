@@ -40,13 +40,14 @@ section {
 
 header {
   position: sticky;
-  top: 3rem; }
+  top: 0; }
 
 .nav__container {
-  margin: 3rem 0;
+  height: 6rem;
   display: flex;
-  align-items: center;
-  justify-content: space-between; }
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: #F8F6F0; }
 
 .nav__links, .nav__popup {
   flex: 1; }
@@ -66,7 +67,7 @@ header {
   width: 91.7vw;
   transform: scaleY(0.5);
   background-color: #BE020D;
-  top: 2.3rem;
+  top: 6rem;
   right: 3rem;
   position: absolute;
   transition: left .5s ease, width .5s ease; }
@@ -117,7 +118,7 @@ body {
 
 .heading-2 {
   font-family: "Prata", serif;
-  font-size: 4rem; }
+  font-size: 3rem; }
 
 .heading-3 {
   font-family: "Prata", serif;
@@ -144,3 +145,6 @@ body {
 .text-body-3 {
   font-family: "Roboto Mono", monospace;
   font-size: 1.2rem; }
+
+.home__heading {
+  left: 6rem; }
