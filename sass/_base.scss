@@ -1,0 +1,57 @@
+//COLOURS
+$color-background: #F8F6F0;
+$color-red-dark: #BE020D;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
+//FONT
+$font-primary: 'Prata', serif;
+$font-display-1: 'Gilda Display', serif;
+$font-display-2: 'Roboto Mono', monospace;
+
+//BORDER
+$border-thin-red: 1px solid $color-red-dark;
+$border-thin-black: 1px solid $color-black;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: $color-background;
+}
+
+a,
+a:active,
+a:visited,
+a:focus,
+a:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+.container {
+    margin: 0 6rem;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

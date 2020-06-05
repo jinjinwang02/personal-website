@@ -1,0 +1,146 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  background-color: #F8F6F0; }
+
+a,
+a:active,
+a:visited,
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: inherit; }
+
+.container {
+  margin: 0 6rem; }
+
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.footer {
+  position: relative;
+  color: #BE020D;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  background-color: none; }
+
+header {
+  position: sticky;
+  top: 3rem; }
+
+.nav__container {
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.nav__links, .nav__popup {
+  flex: 1; }
+
+.nav__links {
+  padding-right: 60rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between; }
+
+.nav__popup {
+  display: flex;
+  justify-content: flex-end; }
+
+.nav__underline {
+  height: 1px;
+  width: 91.7vw;
+  transform: scaleY(0.5);
+  background-color: #BE020D;
+  top: 2.3rem;
+  right: 3rem;
+  position: absolute;
+  transition: left .5s ease, width .5s ease; }
+
+.nav__popup-container {
+  position: absolute;
+  margin-top: 3.5rem;
+  background-color: #F8F6F0;
+  border-radius: .5rem;
+  border: 1px solid #BE020D;
+  padding: 1rem 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .2s ease; }
+
+.nav__popup-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; }
+  .nav__popup-links--title {
+    margin-bottom: 1rem; }
+  .nav__popup-links--item {
+    margin-bottom: .5rem; }
+    .nav__popup-links--item:last-child {
+      margin-top: 3rem;
+      text-decoration: underline; }
+
+.nav__item-4 {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer; }
+
+.nav__popup-active {
+  opacity: 1;
+  pointer-events: all; }
+
+body {
+  font-family: "Gilda Display", serif;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.6; }
+
+.heading-1 {
+  font-family: "Prata", serif;
+  font-size: 14.8rem; }
+
+.heading-2 {
+  font-family: "Prata", serif;
+  font-size: 4rem; }
+
+.heading-3 {
+  font-family: "Prata", serif;
+  font-size: 3.2rem; }
+
+.heading-sub-1 {
+  font-family: "Prata", serif;
+  font-size: 2.4rem;
+  text-transform: uppercase; }
+
+.text-body-1 {
+  font-family: "Gilda Display", serif;
+  font-size: 2rem; }
+
+.text-nav-1 {
+  font-family: "Gilda Display", serif;
+  font-size: 1.3rem; }
+
+.text-body-2 {
+  font-family: "Gilda Display", serif;
+  font-size: 1.3rem;
+  color: #BE020D !important; }
+
+.text-body-3 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.2rem; }
