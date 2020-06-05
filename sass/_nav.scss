@@ -1,84 +1,68 @@
-
-header {
-  position: sticky;
-  top: 0;
-}
+// header {
+//   position: sticky;
+//   top: 0;
+// }
 
 .nav {
-    &__container {
-    height: 6rem;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    background-color: $color-background;
-    }
-
-    
-    &__links, &__popup {
-      flex: 1;
-      z-index: 11;
-    }
-
+  &__container {
+    position: sticky;
+    top: 0;
+  }
     &__links {
-      padding-right: 60rem;
-      list-style: none;
+      top: 3.6rem;
       display: flex;
       justify-content: space-between;
+      position: absolute;
+      width: 100%;
+      color: $color-red-dark;
+    }
+    
+    &__item {
+      transition: all .3s ease;
+    }
+
+    &__item-3 {
+      margin-right: 58rem;
+    }
+
+    &__item:hover ~ &__cursor {
+      transform: translate(-50%, -50%) scale(6);
+    }
+    
+    &__cursor {
+      pointer-events: none;
+      position: fixed;
+      padding: 0.8rem;
+      background-color: $color-red-dark;
+      border-radius: 50%;
+      mix-blend-mode: difference;
+      transition: transform .3s ease;
     }
 
     &__popup {
-      display: flex;
+        display: flex;
         justify-content: flex-end;
     }
 
     &__underline {
-      // height: 3rem;
-      // width: 92.2vw;
-      border-top: $border-thin-red;
       border-bottom: $border-thin-red;
-      // background-color: transparent;
-      // top: 3.6rem;
       position: absolute;
-      transition: all .2s ease-out;
-      z-index: 10;
+      transition: all .3s ease-out;
+      z-index: -1;
+      width: 100%;
+      height: 4rem;
+      top: 3.1rem;
+      background-color: transparent;
     }
-
-    // &__v-line-1 {
-    //   display: inline-block;
-    //   position: absolute;
-    //   top: 4rem;
-    //   border-right: $border-thin-red;
-    //   height: 4rem;
-    //   width: 15.8rem;
-    // }
-
-    // &__v-line-2 {
-    //   display: inline-block;
-    //   position: absolute;
-    //   top: 4rem;
-    //   border-right: $border-thin-red;
-    //   height: 4rem;
-    //   width: 31.2rem;
-    // }
-
-    // &__v-line-3 {
-    //   display: inline-block;
-    //   position: absolute;
-    //   top: 4rem;
-    //   border-right: $border-thin-red;
-    //   height: 4rem;
-    //   width: 124.6rem;
-    // }
     
     &__popup-container {
       position: absolute;
-      margin-top: 3.5rem;
+      margin: 9.5rem -1rem 0;
       background-color: $color-background;
       border-radius: .5rem;
       border: $border-thin-red;
       padding: 1rem 1.5rem;
       opacity: 0;
-      pointer-events: none;
       transition: all .2s ease;
     }
 
@@ -102,15 +86,16 @@ header {
       }
     }
 
-    &__item-4 {
-      outline: none;
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-    }
-
     &__popup-active {
       opacity: 1;
-      pointer-events: all;
+      cursor: pointer;
     }
+}
+
+
+span {
+  display: inline-block;
+  pointer-events: none;
+  transition: transform .1s linear;
+  font-size: 3.6rem;
 }

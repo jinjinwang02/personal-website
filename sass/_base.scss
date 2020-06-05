@@ -29,11 +29,13 @@ $border-thin-black: 1px solid $color-black;
 html {
     // This defines what 1rem is
     font-size: 62.5%;
+    cursor: none;
 }
 
 body {
     box-sizing: border-box;
     background-color: $color-background;
+    cursor: none;
 }
 
 a,
@@ -46,7 +48,7 @@ a:hover {
     }
     
 .container {
-    margin: 0 6rem;
+    margin: 9rem 0;
 }
 
 section {

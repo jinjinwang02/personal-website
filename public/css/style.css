@@ -6,11 +6,13 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  cursor: none; }
 
 body {
   box-sizing: border-box;
-  background-color: #F8F6F0; }
+  background-color: #F8F6F0;
+  cursor: none; }
 
 a,
 a:active,
@@ -21,7 +23,7 @@ a:hover {
   color: inherit; }
 
 .container {
-  margin: 0 6rem; }
+  margin: 9rem 0; }
 
 section {
   min-height: 100vh;
@@ -38,47 +40,58 @@ section {
   bottom: 0;
   background-color: none; }
 
-header {
+.nav__container {
   position: sticky;
   top: 0; }
 
-.nav__container {
-  height: 6rem;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  background-color: #F8F6F0; }
-
-.nav__links, .nav__popup {
-  flex: 1;
-  z-index: 11; }
-
 .nav__links {
-  padding-right: 60rem;
-  list-style: none;
+  top: 3.6rem;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  color: #BE020D; }
+
+.nav__item {
+  transition: all .3s ease; }
+
+.nav__item-3 {
+  margin-right: 58rem; }
+
+.nav__item:hover ~ .nav__cursor {
+  transform: translate(-50%, -50%) scale(6); }
+
+.nav__cursor {
+  pointer-events: none;
+  position: fixed;
+  padding: 0.8rem;
+  background-color: #BE020D;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: transform .3s ease; }
 
 .nav__popup {
   display: flex;
   justify-content: flex-end; }
 
 .nav__underline {
-  border-top: 1px solid #BE020D;
   border-bottom: 1px solid #BE020D;
   position: absolute;
-  transition: all .2s ease-out;
-  z-index: 10; }
+  transition: all .3s ease-out;
+  z-index: -1;
+  width: 100%;
+  height: 4rem;
+  top: 3.1rem;
+  background-color: transparent; }
 
 .nav__popup-container {
   position: absolute;
-  margin-top: 3.5rem;
+  margin: 9.5rem -1rem 0;
   background-color: #F8F6F0;
   border-radius: .5rem;
   border: 1px solid #BE020D;
   padding: 1rem 1.5rem;
   opacity: 0;
-  pointer-events: none;
   transition: all .2s ease; }
 
 .nav__popup-links {
@@ -94,15 +107,15 @@ header {
       margin-top: 3rem;
       text-decoration: underline; }
 
-.nav__item-4 {
-  outline: none;
-  border: none;
-  background-color: transparent;
-  cursor: pointer; }
-
 .nav__popup-active {
   opacity: 1;
-  pointer-events: all; }
+  cursor: pointer; }
+
+span {
+  display: inline-block;
+  pointer-events: none;
+  transition: transform .1s linear;
+  font-size: 3.6rem; }
 
 body {
   font-family: "Gilda Display", serif;
@@ -144,5 +157,5 @@ body {
   font-family: "Roboto Mono", monospace;
   font-size: 1.2rem; }
 
-.home__heading {
-  left: 6rem; }
+.home {
+  display: flex; }
