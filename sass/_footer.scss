@@ -1,9 +1,13 @@
 .footer {
     position: relative;
     color: $color-red-dark;
-    height: 40px;
     width: 100%;
-    text-align: center;
-    bottom: 0;
-    background-color: none;
+    text-align: end;
+    bottom: 4rem;
+    right: 3rem;
+    background-color: transparent;
+}
+
+footer {
+    height: 0;
 }

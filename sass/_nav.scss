@@ -1,12 +1,8 @@
-// header {
-//   position: sticky;
-//   top: 0;
-// }
-
 .nav {
   &__container {
     position: sticky;
     top: 0;
+    z-index: 100;
   }
     &__links {
       top: 3.6rem;
@@ -15,6 +11,7 @@
       position: absolute;
       width: 100%;
       color: $color-red-dark;
+      z-index: 101;
     }
     
     &__item {
@@ -23,6 +20,10 @@
 
     &__item-3 {
       margin-right: 58rem;
+    }
+
+    &__item-4 {
+      cursor: pointer;
     }
 
     &__item:hover ~ &__cursor {
@@ -57,16 +58,16 @@
     
     &__popup-container {
       position: absolute;
-      margin: 9.5rem -1rem 0;
-      background-color: $color-background;
+      margin: 9.5rem -2rem 0;
+      background-color: transparent;
       border-radius: .5rem;
       border: $border-thin-red;
-      padding: 1rem 1.5rem;
+      padding: 1rem 2rem;
       opacity: 0;
-      transition: all .2s ease;
     }
 
     &__popup-links {
+      cursor: none;
       list-style: none;
       display: flex;
       flex-direction: column;
@@ -80,22 +81,27 @@
         margin-bottom: .5rem;
 
         &:last-child {
-          margin-top: 3rem;
+          margin-top: 4rem;
           text-decoration: underline;
         }
       }
     }
 
+    &__popup-link {
+      cursor: none;
+    }
+
     &__popup-active {
       opacity: 1;
-      cursor: pointer;
+      animation-name: moveInRight;
+      animation-duration: .4s;
+      animation-timing-function: ease-out;
     }
 }
 
 
 span {
   display: inline-block;
-  pointer-events: none;
   transition: transform .1s linear;
   font-size: 3.6rem;
 }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="public/images/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Prata&family=Roboto+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="public/css/style.css">
+    <title>Jinjin Wang | Web Developer</title>
+</head>
+
+<body>
+    <nav class="nav__container">
+        <div class="nav__links">
+            <a href="#home" class="nav__item nav__item-1 " data-page="home"><span>home</span></a>
+            <a href="#info" class="nav__item nav__item-2 " data-page="info"><span>info</span></a>
+            <a href="#projects" class="nav__item nav__item-3" data-page="projects"><span>projects</span></a>
+            <a class="nav__item nav__item-4" onclick="contactPopUp()"><span>get in touch</span></a>
+            <div class="nav__cursor"></div>
+
+        </div>
+        <div class="nav__underline" id="underline"></div>
+
+        <div class="nav__popup">
+            <div class="nav__popup-container" id="popup">
+                <ul class="nav__popup-links">
+                    <li class="nav__popup-links--title"><span class="text-body-3">contact & socials</span>
+                    </li>
+                    <li class="nav__popup-links--item"><a class="nav__popup-link text-body-2"
+                            href="mailto: jinjinwang@gmail.com" target="_blank">email</a>
+                    </li>
+                    <li class="nav__popup-links--item"><a class="nav__popup-link text-body-2"
+                            href="https://www.linkedin.com/in/jinjin-wang-616a99183/" target="_blank">linkedin</a>
+                    </li>
+                    <li class="nav__popup-links--item"><a class="nav__popup-link text-body-2"
+                            href="https://github.com/lyrisswing" target="_blank">github</a>
+                    </li>
+                    <li class="nav__popup-links--item"><a class="nav__popup-link text-body-2"
+                            href="https://www.dropbox.com/s/52w2qjxuhlxui0w/CV_Jinjin%20Wang.pdf?dl=0"
+                            target="_blank">resume</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="home" data-index="0" class="home">
+            <div class="home__heading">
+                <h1 class="heading-2">I'm a junior developer</h1>
+                <h1 class="heading-2">and multidispinary designer</h1>
+                <h1 class="heading-2">from China, living in London.</h1>
+            </div>
+        </section>
+
+        <section id="info" data-index="1" class="info">
+        </section>
+
+        <section id="projects" data-index="2" class="projects">
+            <div class="projects__container">
+                <div class="projects__1">
+                    <span class="text-body-4 projects__index">01 /</span>
+                    <a href="https://calm-tor-86699.herokuapp.com/" target="_blank"
+                        class="heading-2 projects__link"><span>Keeper</span></a>
+                    <span class="text-body-3 projects__info">
+                        A note-keeping app. <br>
+                        Built with React, Node.js, MongoDB. <br>
+                        Role: UI design and full-stack.
+                    </span>
+                </div>
+                <div class="projects__2">
+                    <span class="text-body-4 projects__index">02 /</span>
+                    <a href="https://protected-hamlet-37960.herokuapp.com/" target="_blank"
+                        class="heading-2 projects__link"><span>Daily-journal</span></a>
+                    <span class="text-body-3 projects__info">
+                        A blog site project with user authentication. <br>
+                        Built with EJS, Node.js, MongoDB, Passport.js. <br>
+                        Role: UI design and full-stack.
+                    </span>
+                </div>
+                <div class="projects__3">
+                    <span class="text-body-4 projects__index">03 /</span>
+                    <a href="https://crwn-clothing-20200106.herokuapp.com/" target="_blank"
+                        class="heading-2 projects__link">
+                        <span>CRWN-clothing</span></a>
+                    <span class="text-body-3 projects__info">
+                        A e-commerce website with user authentication. <br>
+                        Built with React, Redux-saga and Firebase. <br>
+                        Role: Followed tutorial online.
+                    </span>
+                </div>
+                <div class="projects__4">
+                    <span class="text-body-4 projects__index">04 /</span>
+                    <a href="https://github.com/lyrisswing" target="_blank" class="heading-2 projects__link">
+                        <span>Sentiment</span></a>
+                    <span class="text-body-3 projects__info">
+                        A collabration project in development. <br>
+                        Front-end built using React. <br>
+                        Role: UI design and front-end.
+                    </span>
+                </div>
+            </div>
+            <div class="projects__decoline"></div>
+        </section>
+
+        <footer>
+            <div class="footer">
+                <span class="text-body-2">© 2020, site designed and coded by Jinjin Wang</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

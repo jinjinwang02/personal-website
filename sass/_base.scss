@@ -6,17 +6,36 @@ $color-grey-dark: #777;
 $color-grey-dark-2: #999;
 $color-grey-dark-3: #333;
 
+$color-grey-light: #E8E8E8;
+
 $color-white: #fff;
 $color-black: #000;
 
 //FONT
 $font-primary: 'Prata', serif;
 $font-display-1: 'Gilda Display', serif;
-$font-display-2: 'Roboto Mono', monospace;
+$font-display-2: 'Raleway', sans-serif;
+$font-display-3: 'Roboto mono', monospace;
 
 //BORDER
 $border-thin-red: 1px solid $color-red-dark;
 $border-thin-black: 1px solid $color-black;
+$border-thin-white: 2px solid $color-white;
+
+//ANIMATIONS
+@keyframes moveInRight {
+    0% {
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
 
 *,
 *::after,
@@ -24,6 +43,7 @@ $border-thin-black: 1px solid $color-black;
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    user-select: none;
 }
 
 html {
@@ -36,6 +56,7 @@ body {
     box-sizing: border-box;
     background-color: $color-background;
     cursor: none;
+
 }
 
 a,
@@ -48,12 +69,5 @@ a:hover {
     }
     
 .container {
-    margin: 9rem 0;
-}
-
-section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 9rem;
 }

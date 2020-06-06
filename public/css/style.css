@@ -1,9 +1,18 @@
+@keyframes moveInRight {
+  0% {
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    transform: translate(0); } }
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  user-select: none; }
 
 html {
   font-size: 62.5%;
@@ -23,26 +32,24 @@ a:hover {
   color: inherit; }
 
 .container {
-  margin: 9rem 0; }
-
-section {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  margin-top: 9rem; }
 
 .footer {
   position: relative;
   color: #BE020D;
-  height: 40px;
   width: 100%;
-  text-align: center;
-  bottom: 0;
-  background-color: none; }
+  text-align: end;
+  bottom: 4rem;
+  right: 3rem;
+  background-color: transparent; }
+
+footer {
+  height: 0; }
 
 .nav__container {
   position: sticky;
-  top: 0; }
+  top: 0;
+  z-index: 100; }
 
 .nav__links {
   top: 3.6rem;
@@ -50,13 +57,17 @@ section {
   justify-content: space-between;
   position: absolute;
   width: 100%;
-  color: #BE020D; }
+  color: #BE020D;
+  z-index: 101; }
 
 .nav__item {
   transition: all .3s ease; }
 
 .nav__item-3 {
   margin-right: 58rem; }
+
+.nav__item-4 {
+  cursor: pointer; }
 
 .nav__item:hover ~ .nav__cursor {
   transform: translate(-50%, -50%) scale(6); }
@@ -86,15 +97,15 @@ section {
 
 .nav__popup-container {
   position: absolute;
-  margin: 9.5rem -1rem 0;
-  background-color: #F8F6F0;
+  margin: 9.5rem -2rem 0;
+  background-color: transparent;
   border-radius: .5rem;
   border: 1px solid #BE020D;
-  padding: 1rem 1.5rem;
-  opacity: 0;
-  transition: all .2s ease; }
+  padding: 1rem 2rem;
+  opacity: 0; }
 
 .nav__popup-links {
+  cursor: none;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -104,16 +115,20 @@ section {
   .nav__popup-links--item {
     margin-bottom: .5rem; }
     .nav__popup-links--item:last-child {
-      margin-top: 3rem;
+      margin-top: 4rem;
       text-decoration: underline; }
+
+.nav__popup-link {
+  cursor: none; }
 
 .nav__popup-active {
   opacity: 1;
-  cursor: pointer; }
+  animation-name: moveInRight;
+  animation-duration: .4s;
+  animation-timing-function: ease-out; }
 
 span {
   display: inline-block;
-  pointer-events: none;
   transition: transform .1s linear;
   font-size: 3.6rem; }
 
@@ -129,7 +144,9 @@ body {
 
 .heading-2 {
   font-family: "Prata", serif;
-  font-size: 3rem; }
+  font-size: 5rem;
+  line-height: 1.4;
+  letter-spacing: 2px; }
 
 .heading-3 {
   font-family: "Prata", serif;
@@ -150,12 +167,72 @@ body {
 
 .text-body-2 {
   font-family: "Gilda Display", serif;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #BE020D !important; }
 
 .text-body-3 {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem; }
+
+.text-body-4 {
+  font-family: "Roboto mono", monospace;
   font-size: 1.2rem; }
 
 .home {
-  display: flex; }
+  min-height: 120vh; }
+  .home__heading {
+    position: absolute;
+    top: 50%;
+    left: 6%; }
+
+.info {
+  min-height: 100vh;
+  background-color: #D97925; }
+
+.projects {
+  min-height: 100vh;
+  background-color: #E8E8E8; }
+  .projects__container {
+    display: grid;
+    width: 90%;
+    height: 100vh;
+    align-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 0 0 8.5rem; }
+  .projects__link, .projects__index, .projects__info {
+    position: relative;
+    opacity: .2;
+    z-index: 999;
+    transition: opacity .3s ease; }
+  .projects__link:hover {
+    opacity: 1;
+    cursor: none; }
+  .projects__link:hover ~ .projects__info {
+    opacity: 1; }
+  .projects__2 {
+    margin-right: 4rem; }
+  .projects__3 {
+    margin-right: 5rem; }
+  .projects__1, .projects__2, .projects__3, .projects__4 {
+    width: 100%;
+    transition: opacity .3s ease;
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-template-rows: repeat(2, min-content); }
+    .projects__1 .projects__index, .projects__2 .projects__index, .projects__3 .projects__index, .projects__4 .projects__index {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+      margin-right: 1rem;
+      align-self: flex-end; }
+    .projects__1 .projects__link, .projects__2 .projects__link, .projects__3 .projects__link, .projects__4 .projects__link {
+      grid-row: 1 / 2;
+      grid-column: 2 / 3; }
+    .projects__1 .projects__info, .projects__2 .projects__info, .projects__3 .projects__info, .projects__4 .projects__info {
+      grid-row: 2 / 3;
+      grid-column: 2 / 3; }
+  .projects__decoline {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 260vh;
+    border-bottom: 2px solid #fff; }

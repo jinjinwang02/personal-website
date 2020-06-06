@@ -12,7 +12,9 @@ body {
 
 .heading-2 {
     font-family: $font-primary;
-    font-size: 3rem;
+    font-size: 5rem;
+    line-height: 1.4;
+    letter-spacing: 2px;
 }
 
 .heading-3 {
@@ -38,11 +40,16 @@ body {
 
 .text-body-2 {
     font-family: $font-display-1;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: $color-red-dark !important;
 }
 
 .text-body-3 {
     font-family: $font-display-2;
+    font-size: 1.4rem;
+}
+
+.text-body-4 {
+    font-family: $font-display-3;
     font-size: 1.2rem;
 }
