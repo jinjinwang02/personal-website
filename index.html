@@ -29,11 +29,18 @@
                 <ul class="nav__popup-links">
                     <li class="nav__popup-links--title"><span class="text-body-3">contact & socials</span>
                     </li>
-                    <li class="nav__popup-links--item"><a class="nav__popup-link text-body-2"
-                            href="mailto: jinjinwang@gmail.com" target="_blank">email</a>
+                    <li class="nav__popup-links--item">
+                        <a class="nav__popup-link" href="mailto: jinjinwang@gmail.com" target="_blank">
+                            <span class="hoverIn text-body-2">
+                                email
+                            </span>
+                        </a>
                     </li>
-                    <li class="nav__popup-links--item"><a class="nav__popup-link text-body-2"
-                            href="https://www.linkedin.com/in/jinjin-wang-616a99183/" target="_blank">linkedin</a>
+                    <li class="nav__popup-links--item">
+                        <a class="nav__popup-link text-body-2" href="https://www.linkedin.com/in/jinjin-wang-616a99183/"
+                            target="_blank">
+                            linkedin
+                        </a>
                     </li>
                     <li class="nav__popup-links--item"><a class="nav__popup-link text-body-2"
                             href="https://github.com/lyrisswing" target="_blank">github</a>
@@ -57,45 +64,52 @@
         </section>
 
         <section id="info" data-index="1" class="info">
+            <div class="info__heading">
+                <h1 class="heading-1">Info</h1>
+            </div>
         </section>
 
         <section id="projects" data-index="2" class="projects">
+            <div class="projects__cursor"></div>
             <div class="projects__container">
                 <div class="projects__1">
                     <span class="text-body-4 projects__index">01 /</span>
                     <a href="https://calm-tor-86699.herokuapp.com/" target="_blank"
-                        class="heading-2 projects__link"><span>Keeper</span></a>
+                        class="heading-3 projects__link projects__link-1">Keeper</a>
                     <span class="text-body-3 projects__info">
                         A note-keeping app. <br>
                         Built with React, Node.js, MongoDB. <br>
                         Role: UI design and full-stack.
                     </span>
+                    <div class="projects__overlay"></div>
                 </div>
                 <div class="projects__2">
                     <span class="text-body-4 projects__index">02 /</span>
                     <a href="https://protected-hamlet-37960.herokuapp.com/" target="_blank"
-                        class="heading-2 projects__link"><span>Daily-journal</span></a>
+                        class="heading-3 projects__link projects__link-2">Daily-Journal</a>
                     <span class="text-body-3 projects__info">
                         A blog site project with user authentication. <br>
                         Built with EJS, Node.js, MongoDB, Passport.js. <br>
                         Role: UI design and full-stack.
                     </span>
+                    <div class="projects__overlay"></div>
                 </div>
                 <div class="projects__3">
                     <span class="text-body-4 projects__index">03 /</span>
                     <a href="https://crwn-clothing-20200106.herokuapp.com/" target="_blank"
-                        class="heading-2 projects__link">
-                        <span>CRWN-clothing</span></a>
+                        class="heading-3 projects__link projects__link-3">
+                        CRWN-Clothing</a>
                     <span class="text-body-3 projects__info">
                         A e-commerce website with user authentication. <br>
                         Built with React, Redux-saga and Firebase. <br>
                         Role: Followed tutorial online.
                     </span>
+                    <div class="projects__overlay"></div>
                 </div>
                 <div class="projects__4">
                     <span class="text-body-4 projects__index">04 /</span>
-                    <a href="https://github.com/lyrisswing" target="_blank" class="heading-2 projects__link">
-                        <span>Sentiment</span></a>
+                    <a target="_blank" class="heading-3 projects__link projects__link-4">
+                        Sentiment</a>
                     <span class="text-body-3 projects__info">
                         A collabration project in development. <br>
                         Front-end built using React. <br>
@@ -113,6 +127,7 @@
         </footer>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="app.js"></script>
 </body>
 

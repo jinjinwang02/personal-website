@@ -1,4 +1,12 @@
 .info {
     min-height: 100vh;
-    background-color: #D97925;
+    background-color: $color-pink-light;
+    overflow: hidden;
+
+    &__heading {
+        transform: rotate(-90deg);
+        float: right;
+        margin-top: 10rem;
+        margin-right: -5rem;
+    }
 }

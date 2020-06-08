@@ -1,6 +1,8 @@
 //COLOURS
 $color-background: #F8F6F0;
 $color-red-dark: #BE020D;
+$color-orange-light: #f93700;
+$color-pink-light: #f9dddd;
 
 $color-grey-dark: #777;
 $color-grey-dark-2: #999;
@@ -25,6 +27,7 @@ $border-thin-white: 2px solid $color-white;
 //ANIMATIONS
 @keyframes moveInRight {
     0% {
+        opacity: 0;
         transform: translateX(10rem);
     }
 
@@ -33,6 +36,23 @@ $border-thin-white: 2px solid $color-white;
     }
 
     100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom{
+    0% {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+
+    40% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
         transform: translate(0);
     }
 }
@@ -43,7 +63,6 @@ $border-thin-white: 2px solid $color-white;
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    user-select: none;
 }
 
 html {
@@ -55,8 +74,11 @@ html {
 body {
     box-sizing: border-box;
     background-color: $color-background;
-    cursor: none;
+}
 
+::selection {
+    background: $color-pink-light;
+    color: $color-orange-light;
 }
 
 a,
@@ -68,6 +90,6 @@ a:hover {
       color: inherit;
     }
     
-.container {
-    margin-top: 9rem;
-}
+// .container {
+//     margin-top: 9rem;
+// }

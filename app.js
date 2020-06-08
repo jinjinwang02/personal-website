@@ -2,7 +2,6 @@
 (function () {
     const navLink = document.querySelectorAll(".nav__item");
     const cursor = document.querySelector(".nav__cursor");
-    const projectLink = document.querySelectorAll(".projects__link");
 
     const animate = function (e) {
         const span = this.querySelector("span");
@@ -26,8 +25,6 @@
 
     navLink.forEach(b => b.addEventListener("mousemove", animate));
     navLink.forEach(b => b.addEventListener("mouseleave", animate));
-    projectLink.forEach(b => b.addEventListener("mousemove", animate));
-    projectLink.forEach(b => b.addEventListener("mouseleave", animate));
     window.addEventListener("mousemove", editCursor);
 })();
 
@@ -41,11 +38,15 @@ function contactPopUp() {
     }
 };
 
-const body = document.querySelector(".container");
+const bodyWindow = document.querySelector(".container");
 function cancelPopup() {
     if (popup.classList.length === 2) popup.classList.remove("nav__popup-active");
 };
-body.addEventListener("mouseover", cancelPopup);
+bodyWindow.addEventListener("click", cancelPopup);
+
+//POP UP LINKs
+
+
 
 //NAV UNDERLINE ANIMATION
 const sections = document.querySelectorAll("section");
@@ -60,7 +61,6 @@ function navCheck(entries) {
     entries.forEach((entry) => {
         const className = entry.target.className;
         const activeAnchor = document.querySelector(`[data-page=${className}]`);
-        const sectionIndex = entry.target.getAttribute("data-index");
         const coords = activeAnchor.getBoundingClientRect();
         const directions = {
             left: coords.left,
@@ -85,12 +85,59 @@ sections.forEach((section) => {
 });
 
 //PARALLAX
-function parallax(element, distance, speed) {
-    const item = document.querySelector(element);
+function parallaxX(element, distance, speed) {
+    const item = querySelector(element);
 
-    item.style.transform = `translateY(${distance * speed}px)`;
+    item.style.setProperty("transform", `translateY(${distance * speed}px)`);
 }
 
-window.addEventListener("scroll", function () {
-    parallax(".home__heading", window.scrollY, 0.4);
+function parallaxY(element, distance, speed) {
+    const item = querySelector(element);
+
+    item.style.setProperty("transform", `translateY(${distance * speed}px rotate(-90deg))`);
+}
+
+window.addEventListener("scroll", () => {
+    parallaxX(".home__heading", window.scrollY, 0.3);
+    parallaxY(".info__heading", window.scrollY, 0.3);
 });
+
+// TWEENMAX
+TweenMax.from(".home__heading", 1, {
+    y: 20,
+    opacity: 0,
+    ease: Expo.easeInOut
+});
+
+//PROJECTS IMAGES
+const projectsCursor = document.querySelector(".projects__cursor");
+const projectsOverlay = document.querySelectorAll(".projects__overlay");
+
+function moveCircle(e) {
+    TweenLite.to(projectsCursor, 0.5, {
+        css: {
+            left: e.pageX,
+            top: e.pageY
+        },
+        delay: 0.03
+    });
+}
+
+document.querySelector(".projects__1").addEventListener("mouseenter", () => {
+    projectsCursor.style.setProperty("background-image", "url(public/images/keeper-homepage.png)");
+});
+document.querySelector(".projects__2").addEventListener("mouseenter", () => {
+    projectsCursor.style.setProperty("background-image", "url(public/images/image-2.jpg)");
+});
+document.querySelector(".projects__3").addEventListener("mouseenter", () => {
+    projectsCursor.style.setProperty("background-image", "url(public/images/image-3.jpg)");
+});
+
+projectsOverlay.forEach(b => b.addEventListener("mousemove", () => {
+    TweenLite.to(projectsCursor, 0.3, { scale: 1, autoAlpha: 1 });
+    projectsOverlay.forEach(b => b.addEventListener("mousemove", moveCircle))
+}));
+
+projectsOverlay.forEach(b => b.addEventListener("mouseout", () => {
+    TweenLite.to(projectsCursor, 0.3, { scale: 0.1, autoAlpha: 0 });
+}));
