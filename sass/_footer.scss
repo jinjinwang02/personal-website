@@ -10,22 +10,23 @@
         display: inline-block;
         overflow: hidden;
 
-        &-heading {
-            background-image: linear-gradient($color-red, $color-red);
-            background-position: 0 100%;
-            background-size: 100% 0.6rem;
-            background-repeat: no-repeat;
-            text-shadow: none;
-            transition: background-size .2s ease-in-out;
+        &-heading:hover ~  &-heading-bg {
+            transform-origin: right center;
+            transform: scaleX(0)
 
-            &:hover {
-
-                background-position: 100% 100%;
-                background-size: 0 0.6rem;
-            }
         }
-
-
+        &-heading-bg{
+            position: absolute;
+            background-color: $color-pink;
+            opacity: .5;
+            height: 5rem;
+            width: 96%;
+            left: 0;
+            bottom: 1rem;
+            z-index: -1;
+            transform-origin: left center;
+            transition: transform .2s ease-in-out;
+        }
         }
 
     &__contactLinks {
@@ -53,26 +54,5 @@
     &__copyright {
         position: relative;
         display: block;
-    }
-}
-
-
-
-@keyframes leaveFromLeftThenBack{
-    0% {
-        background-position: 100% 100%;
-        background-size: 100% 0.6rem;
-    }
-    49% {
-        background-position: 100% 100%;
-        background-size: 0 0.6rem;
-    }
-    50%{
-        background-position: 0 100%;
-        background-size: 0 0.6rem;
-    }
-    100% {
-        background-position: 0 100%;
-        background-size: 100% 0.6rem;
     }
 }

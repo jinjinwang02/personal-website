@@ -38,16 +38,20 @@ a:hover {
     position: relative;
     display: inline-block;
     overflow: hidden; }
-    .footer__contact-heading {
-      background-image: linear-gradient(#BE020D, #BE020D);
-      background-position: 0 100%;
-      background-size: 100% 0.6rem;
-      background-repeat: no-repeat;
-      text-shadow: none;
-      transition: background-size .2s ease-in-out; }
-      .footer__contact-heading:hover {
-        background-position: 100% 100%;
-        background-size: 0 0.6rem; }
+    .footer__contact-heading:hover ~ .footer__contact-heading-bg {
+      transform-origin: right center;
+      transform: scaleX(0); }
+    .footer__contact-heading-bg {
+      position: absolute;
+      background-color: #EACCC7;
+      opacity: .5;
+      height: 5rem;
+      width: 96%;
+      left: 0;
+      bottom: 1rem;
+      z-index: -1;
+      transform-origin: left center;
+      transition: transform .2s ease-in-out; }
   .footer__contactLinks {
     display: block;
     list-style: none;
@@ -65,20 +69,6 @@ a:hover {
   .footer__copyright {
     position: relative;
     display: block; }
-
-@keyframes leaveFromLeftThenBack {
-  0% {
-    background-position: 100% 100%;
-    background-size: 100% 0.6rem; }
-  49% {
-    background-position: 100% 100%;
-    background-size: 0 0.6rem; }
-  50% {
-    background-position: 0 100%;
-    background-size: 0 0.6rem; }
-  100% {
-    background-position: 0 100%;
-    background-size: 100% 0.6rem; } }
 
 .nav__container {
   position: sticky;
@@ -174,8 +164,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 1.4rem;
   font-weight: 300;
-  line-height: 1.6;
-  color: #5E5351; }
+  line-height: 1.6; }
 
 .text-circle {
   font-family: "Raleway", sans-serif;
@@ -185,13 +174,11 @@ body {
 
 .heading-projects {
   font-family: "Prata", serif;
-  font-size: 4rem;
-  color: #5E5351; }
+  font-size: 4rem; }
 
 .text-index {
   font-family: "Roboto Mono", monospace;
-  font-size: 1rem;
-  color: #5E5351; }
+  font-size: 1rem; }
 
 .home {
   min-height: 100vh;
@@ -414,8 +401,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-right: 5rem;
-    z-index: 2; }
+    padding-right: 5rem; }
   .projects__container-right {
     position: absolute;
     top: 28%;
@@ -424,8 +410,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 5rem;
-    z-index: 2; }
+    padding-left: 5rem; }
   .projects__left {
     display: grid;
     grid-template-rows: repeat(4, min-content);
@@ -447,7 +432,8 @@ body {
       grid-column: 1 / 2;
       justify-self: flex-end;
       margin-bottom: .5rem;
-      text-align: end; }
+      text-align: end;
+      z-index: 999; }
     .projects__left .projects__info {
       grid-row: 3 / 4;
       grid-column: 1 / 2;
@@ -479,7 +465,8 @@ body {
       grid-row: 2 / 3;
       grid-column: 2 / 3;
       justify-self: flex-start;
-      margin-bottom: .5rem; }
+      margin-bottom: .5rem;
+      z-index: 999; }
     .projects__right .projects__info {
       grid-row: 3 / 4;
       grid-column: 2 / 3;
@@ -489,7 +476,8 @@ body {
       grid-column: 2 / 3;
       justify-self: flex-start; }
   .projects__view {
-    display: inline; }
+    display: inline;
+    z-index: 1000; }
     .projects__view svg {
       margin-left: 0.2rem;
       height: 0.8rem;
@@ -501,3 +489,15 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1; }
+  .projects__1, .projects__2, .projects__3, .projects__4, .projects__5, .projects__6, .projects__7, .projects__8 {
+    position: relative;
+    color: #5E5351;
+    z-index: 2;
+    transition: color .2s ease; }
+    .projects__1 svg, .projects__2 svg, .projects__3 svg, .projects__4 svg, .projects__5 svg, .projects__6 svg, .projects__7 svg, .projects__8 svg {
+      stroke: #5E5351;
+      transition: stroke .2s ease; }
+  .projects__1:hover, .projects__2:hover, .projects__3:hover, .projects__4:hover, .projects__5:hover, .projects__6:hover, .projects__7:hover, .projects__8:hover {
+    color: #f93700; }
+    .projects__1:hover svg, .projects__2:hover svg, .projects__3:hover svg, .projects__4:hover svg, .projects__5:hover svg, .projects__6:hover svg, .projects__7:hover svg, .projects__8:hover svg {
+      stroke: #f93700; }
