@@ -26,18 +26,59 @@ a:visited,
 a:focus,
 a:hover {
   text-decoration: none;
-  color: inherit; }
+  color: inherit;
+  cursor: none; }
 
 .footer {
-  position: relative;
+  position: absolute;
   width: 100%;
-  text-align: end;
-  bottom: 4rem;
-  right: 3rem;
-  background-color: transparent; }
+  top: 86%;
+  text-align: center; }
+  .footer__contact {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; }
+    .footer__contact-heading {
+      background-image: linear-gradient(#BE020D, #BE020D);
+      background-position: 0 100%;
+      background-size: 100% 0.6rem;
+      background-repeat: no-repeat;
+      text-shadow: none;
+      transition: background-size .2s ease-in-out; }
+      .footer__contact-heading:hover {
+        background-position: 100% 100%;
+        background-size: 0 0.6rem; }
+  .footer__contactLinks {
+    display: block;
+    list-style: none;
+    margin-bottom: 22rem; }
+    .footer__contactLinks-item {
+      display: inline-block;
+      margin-top: 3rem; }
+      .footer__contactLinks-item:not(:last-child) {
+        margin-right: 3rem; }
+    .footer__contactLinks span {
+      display: inline-block;
+      color: #5E5351;
+      text-transform: uppercase;
+      letter-spacing: -1.5px; }
+  .footer__copyright {
+    position: relative;
+    display: block; }
 
-footer {
-  height: 0; }
+@keyframes leaveFromLeftThenBack {
+  0% {
+    background-position: 100% 100%;
+    background-size: 100% 0.6rem; }
+  49% {
+    background-position: 100% 100%;
+    background-size: 0 0.6rem; }
+  50% {
+    background-position: 0 100%;
+    background-size: 0 0.6rem; }
+  100% {
+    background-position: 0 100%;
+    background-size: 100% 0.6rem; } }
 
 .nav__container {
   position: sticky;
@@ -55,7 +96,6 @@ footer {
   padding: 0 8rem; }
 
 .nav__item {
-  cursor: none;
   transition: all .3s ease; }
   .nav__item span {
     display: inline-block;
@@ -66,14 +106,13 @@ footer {
 
 .nav__item:hover ~ .nav__cursor {
   background-color: #BE020D;
-  transform: translate(-50%, -50%) scale(12); }
+  transform: translate(-50%, -50%) scale(14); }
 
 .nav__cursor {
   pointer-events: none;
   position: fixed;
-  padding: 0.4rem;
-  border: 2px solid #BE020D;
-  background-color: none;
+  padding: 0.5rem;
+  background-color: #BE020D;
   border-radius: 50%;
   mix-blend-mode: difference;
   transition: transform .3s ease; }
@@ -102,8 +141,7 @@ body {
 .heading-home-2 {
   font-family: "Prata", serif;
   font-size: 6rem;
-  color: #BE020D;
-  text-transform: lowercase; }
+  color: #BE020D; }
 
 .text-nav {
   font-family: "Raleway", sans-serif;
@@ -197,8 +235,6 @@ body {
       margin-bottom: .5rem;
       position: relative;
       z-index: 101; }
-      .home__contactLinks-item a {
-        cursor: none; }
       .home__contactLinks-item .hoverIn-1,
       .home__contactLinks-item .hoverIn-2,
       .home__contactLinks-item .hoverIn-3,
@@ -312,7 +348,7 @@ body {
         justify-self: flex-end; }
 
 .projects {
-  min-height: 500vh;
+  min-height: 420vh;
   position: relative;
   overflow: hidden; }
   .projects__arrow-1 {
@@ -352,12 +388,12 @@ body {
     transition: .2s ease-out; }
   .projects__line-ct {
     position: absolute;
-    top: 48%;
+    top: 53%;
     left: 50%;
     transform: scaleX(0.5) translate(-50%, -50%);
     width: 1px;
     background-color: #f93700;
-    height: 250vh; }
+    height: 245vh; }
   .projects__cursor {
     position: absolute;
     width: 50rem;
@@ -372,7 +408,7 @@ body {
     z-index: 1; }
   .projects__container-left {
     position: absolute;
-    top: 25%;
+    top: 27%;
     left: 0;
     width: 50%;
     display: flex;
@@ -382,7 +418,7 @@ body {
     z-index: 2; }
   .projects__container-right {
     position: absolute;
-    top: 25%;
+    top: 28%;
     right: 0;
     width: 50%;
     display: flex;
@@ -426,7 +462,7 @@ body {
     grid-template-rows: repeat(4, min-content);
     grid-template-columns: min-content max-content;
     grid-gap: 1.5rem;
-    margin-bottom: 24rem; }
+    margin-bottom: 22rem; }
     .projects__right:first-child {
       margin-top: 20rem; }
     .projects__right .projects__index {
@@ -458,9 +494,6 @@ body {
       margin-left: 0.2rem;
       height: 0.8rem;
       width: 0.8rem; }
-  .projects__1:hover, .projects__2:hover, .projects__3:hover, .projects__4:hover, .projects__5:hover, .projects__6:hover, .projects__7:hover, .projects__8:hover {
-    cursor: none;
-    color: #f93700; }
   .projects__overlay {
     position: absolute;
     top: 0;

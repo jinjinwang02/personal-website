@@ -1,26 +1,78 @@
+
 .footer {
-    position: relative;
+    position: absolute;
     width: 100%;
-    text-align: end;
-    bottom: 4rem;
-    right: 3rem;
-    background-color: transparent;
+    top: 86%;
+    text-align: center;
+
+    &__contact {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+
+        &-heading {
+            background-image: linear-gradient($color-red, $color-red);
+            background-position: 0 100%;
+            background-size: 100% 0.6rem;
+            background-repeat: no-repeat;
+            text-shadow: none;
+            transition: background-size .2s ease-in-out;
+
+            &:hover {
+
+                background-position: 100% 100%;
+                background-size: 0 0.6rem;
+            }
+        }
+
+
+        }
+
+    &__contactLinks {
+        display: block;
+        list-style: none;
+        margin-bottom: 22rem;
+        
+        &-item {
+            display: inline-block;
+            margin-top: 3rem;
+            
+            &:not(:last-child) {
+                margin-right: 3rem;
+            }
+        }
+        
+        span {
+            display: inline-block;
+            color: $color-brown;
+            text-transform: uppercase;
+            letter-spacing: -1.5px;
+        }
+    }
+
+    &__copyright {
+        position: relative;
+        display: block;
+    }
 }
 
-footer {
-    height: 0;
+
+
+@keyframes leaveFromLeftThenBack{
+    0% {
+        background-position: 100% 100%;
+        background-size: 100% 0.6rem;
+    }
+    49% {
+        background-position: 100% 100%;
+        background-size: 0 0.6rem;
+    }
+    50%{
+        background-position: 0 100%;
+        background-size: 0 0.6rem;
+    }
+    100% {
+        background-position: 0 100%;
+        background-size: 100% 0.6rem;
+    }
 }
-
-// &:last-child {
-//     margin-top: 4rem;
-//     background-image: linear-gradient($color-black, $color-black);
-//     background-position: 100% 90%;
-//     background-size: 0% 0.1rem;
-//     background-repeat: no-repeat;
-//     transition: background-size .4s ease-in-out;
-//     }
-
-//     &:last-child:hover {
-//     background-position: 0 90%;
-//     background-size: 100% 0.1rem;
-//     }

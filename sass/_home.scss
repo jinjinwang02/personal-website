@@ -51,23 +51,19 @@
           position: relative;
           z-index: 101;
 
-          a {
-            cursor: none;
-          }
-  
-          .hoverIn-1,
-          .hoverIn-2,
-          .hoverIn-3,
-          .hoverIn-4 {
+            .hoverIn-1,
+            .hoverIn-2,
+            .hoverIn-3,
+            .hoverIn-4 {
             display: inline-block;
             margin-right: 2px;
             margin-bottom: 1.5rem;
-          }
-  
-          .char {
+            }
+
+            .char {
             display: inline-block;
             letter-spacing: -2px;
-          }
+            }
         }
         }
 

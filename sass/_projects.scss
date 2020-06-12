@@ -1,5 +1,5 @@
 .projects {
-    min-height: 500vh;
+    min-height: 420vh;
     position: relative;
     overflow: hidden;
 
@@ -51,12 +51,12 @@
 
     &__line-ct {
         position: absolute;
-        top: 48%;
+        top: 53%;
         left: 50%;
         transform: scaleX(0.5) translate(-50%, -50%);
         width: 1px;
         background-color: $color-orange;
-        height: 250vh;
+        height: 245vh;
     }
 
     &__cursor {
@@ -75,7 +75,7 @@
 
     &__container-left {
         position: absolute;
-        top: 25%;
+        top: 27%;
         left: 0;
         width: 50%;
         display: flex;
@@ -87,7 +87,7 @@
 
     &__container-right {
         position: absolute;
-        top: 25%;
+        top: 28%;
         right:0;
         width: 50%;
         display: flex;
@@ -146,7 +146,7 @@
         grid-template-rows: repeat(4, min-content);
         grid-template-columns: min-content max-content;
         grid-gap: 1.5rem;
-        margin-bottom: 24rem;
+        margin-bottom: 22rem;
 
         &:first-child {
             margin-top: 20rem;
@@ -196,17 +196,16 @@
     }
 
 
-    &__1:hover, 
-    &__2:hover, 
-    &__3:hover, 
-    &__4:hover, 
-    &__5:hover, 
-    &__6:hover, 
-    &__7:hover, 
-    &__8:hover {
-        cursor: none;
-        color: $color-orange;
-    }
+    // &__1:hover, 
+    // &__2:hover, 
+    // &__3:hover, 
+    // &__4:hover, 
+    // &__5:hover, 
+    // &__6:hover, 
+    // &__7:hover, 
+    // &__8:hover {
+    //     color: $color-orange;
+    // }
 
     &__overlay {
         position: absolute;

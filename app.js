@@ -1,4 +1,4 @@
-// NAV AND CURSOR ANIMATION ///////////////////////////////////
+// NAV AND CURSOR ANIMATION
 (function () {
     const navLink = document.querySelectorAll(".nav__item");
     const cursor = document.querySelector(".nav__cursor");
@@ -28,66 +28,65 @@
     window.addEventListener("mousemove", editCursor);
 })();
 
-//CONTACT LINKS ///////////////////////////////////
+//CONTACT LINKS
 const anim1 = () => {
     anime({
         targets: ".hoverIn-1 > .char",
-        translateY: [10, 0],
+        translateY: [15, 0],
         translateZ: 0,
         opacity: [0, 1],
         easing: "easeInOutCubic",
-        duration: 200,
-        delay: (el, i) => 100 + 10 * i
+        duration: 100,
+        delay: (el, i) => 100 + 15 * i
     });
 }
 const anim2 = () => {
     anime({
         targets: ".hoverIn-2 > .char",
-        translateY: [10, 0],
+        translateY: [15, 0],
         translateZ: 0,
         opacity: [0, 1],
         easing: "easeInOutCubic",
-        duration: 250,
-        delay: (el, i) => 100 + 10 * i
+        duration: 100,
+        delay: (el, i) => 100 + 15 * i
     });
 }
 const anim3 = () => {
     anime({
         targets: ".hoverIn-3 > .char",
-        translateY: [10, 0],
+        translateY: [15, 0],
         translateZ: 0,
         opacity: [0, 1],
         easing: "easeInOutCubic",
-        duration: 200,
-        delay: (el, i) => 100 + 10 * i
+        duration: 100,
+        delay: (el, i) => 100 + 15 * i
     });
 }
 const anim4 = () => {
     anime({
         targets: ".hoverIn-4 > .char",
-        translateY: [10, 0],
+        translateY: [15, 0],
         translateZ: 0,
         opacity: [0, 1],
         easing: "easeInOutCubic",
-        duration: 200,
-        delay: (el, i) => 100 + 10 * i
+        duration: 100,
+        delay: (el, i) => 100 + 15 * i
     });
 }
 
-const homeContactLink1 = document.querySelectorAll(".home__contactLinks-item")[0];
-const homeContactLink2 = document.querySelectorAll(".home__contactLinks-item")[1];
-const homeContactLink3 = document.querySelectorAll(".home__contactLinks-item")[2];
-const homeContactLink4 = document.querySelectorAll(".home__contactLinks-item")[3];
+document.querySelectorAll(".home__contactLinks-item")[0].addEventListener("mouseenter", anim1);
+document.querySelectorAll(".home__contactLinks-item")[1].addEventListener("mouseenter", anim2);
+document.querySelectorAll(".home__contactLinks-item")[2].addEventListener("mouseenter", anim3);
+document.querySelectorAll(".home__contactLinks-item")[3].addEventListener("mouseenter", anim4);
+document.querySelectorAll(".footer__contactLinks-item")[0].addEventListener("mouseenter", anim1);
+document.querySelectorAll(".footer__contactLinks-item")[1].addEventListener("mouseenter", anim2);
+document.querySelectorAll(".footer__contactLinks-item")[2].addEventListener("mouseenter", anim3);
+document.querySelectorAll(".footer__contactLinks-item")[3].addEventListener("mouseenter", anim4);
 
-homeContactLink1.addEventListener("mouseenter", anim1);
-homeContactLink2.addEventListener("mouseenter", anim2);
-homeContactLink3.addEventListener("mouseenter", anim3);
-homeContactLink4.addEventListener("mouseenter", anim4);
-
-// HOME PARALLAX ///////////////////////////////////
+// HOME PARALLAX
 function parallaxHome(element, distance, speed) {
     const item = document.querySelector(element);
-    item.style.setProperty("transform", `translateY(${distance * speed}px)`);
+    item.style.transform = `translateY(${distance * speed}px)`;
 }
 
 window.addEventListener("scroll", () => {
@@ -140,7 +139,7 @@ homeTag.addEventListener('click', () => {
     smoothScroll(".home", 300);
 });
 
-/////////////////////////////////// TWEENMAX ///////////////////////////////////
+// HOME TWEENMAX
 TweenMax.from(".home__heading-1", 2, {
     x: 30,
     opacity: 0,
@@ -162,6 +161,7 @@ TweenMax.from(".home__circle", 2, {
     opacity: 0,
     ease: Expo.easeInOut
 });
+
 //INFO SPLIT SCREEN
 function splitScroll() {
     const controller = new ScrollMagic.Controller();
@@ -177,8 +177,7 @@ function splitScroll() {
 
 splitScroll();
 
-// PROJECTS CIRCLE AND HEADING/////////////
-
+// PROJECTS ROTAING CIRCLE AND HEADING
 const circle = document.querySelector(".projects__circle");
 const circleTrail = document.querySelector(".projects__circle-trail");
 const projectsHeading = document.querySelector(".projects__heading")
@@ -201,10 +200,10 @@ window.addEventListener("scroll", () => {
 
 
     let newPosition = 1450 - (window.scrollY || window.pageYOffset) / 1.1;
-    projectsHeading.style.setProperty("transform", `translateX(${newPosition}px)`);
+    projectsHeading.style.transform = `translateX(${newPosition}px)`;
 });
 
-// PROJECT IMAGES ///////////////////////////////////
+// PROJECT IMAGES
 // const projectsCursor = document.querySelector(".projects__cursor");
 // const projectsOverlay = document.querySelectorAll(".projects__overlay");
 

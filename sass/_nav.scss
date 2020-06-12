@@ -16,7 +16,6 @@
     }
     
     &__item {
-      cursor: none;
       transition: all .3s ease;
 
       span {
@@ -32,15 +31,14 @@
 
     &__item:hover ~ &__cursor {
       background-color: $color-red;
-      transform: translate(-50%, -50%) scale(12);
+      transform: translate(-50%, -50%) scale(14);
     }
     
     &__cursor {
       pointer-events: none;
       position: fixed;
-      padding: 0.4rem;
-      border: $border-thick-red;
-      background-color: none;
+      padding: 0.5rem;
+      background-color: $color-red;
       border-radius: 50%;
       mix-blend-mode: difference;
       transition: transform .3s ease;
