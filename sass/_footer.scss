@@ -1,6 +1,5 @@
 .footer {
     position: relative;
-    color: $color-red-dark;
     width: 100%;
     text-align: end;
     bottom: 4rem;
@@ -11,3 +10,17 @@
 footer {
     height: 0;
 }
+
+// &:last-child {
+//     margin-top: 4rem;
+//     background-image: linear-gradient($color-black, $color-black);
+//     background-position: 100% 90%;
+//     background-size: 0% 0.1rem;
+//     background-repeat: no-repeat;
+//     transition: background-size .4s ease-in-out;
+//     }
+
+//     &:last-child:hover {
+//     background-position: 0 90%;
+//     background-size: 100% 0.1rem;
+//     }

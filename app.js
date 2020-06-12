@@ -1,4 +1,4 @@
-//NAV ITEMS ANIMATION
+// NAV AND CURSOR ANIMATION ///////////////////////////////////
 (function () {
     const navLink = document.querySelectorAll(".nav__item");
     const cursor = document.querySelector(".nav__cursor");
@@ -28,116 +28,217 @@
     window.addEventListener("mousemove", editCursor);
 })();
 
-//POP UP
-const popup = document.getElementById("popup");
-function contactPopUp() {
-    if (popup.classList.length === 1) {
-        popup.classList.add("nav__popup-active");
-    } else {
-        popup.classList.remove("nav__popup-active");
-    }
-};
-
-const bodyWindow = document.querySelector(".container");
-function cancelPopup() {
-    if (popup.classList.length === 2) popup.classList.remove("nav__popup-active");
-};
-bodyWindow.addEventListener("click", cancelPopup);
-
-//POP UP LINKs
-
-
-
-//NAV UNDERLINE ANIMATION
-const sections = document.querySelectorAll("section");
-const underline = document.getElementById("underline");
-const navInfo = document.querySelector(".nav__item-2");
-const navProjects = document.querySelector(".nav__item-3");
-const options = {
-    threshold: 0.7,
-};
-let observer = new IntersectionObserver(navCheck, options);
-function navCheck(entries) {
-    entries.forEach((entry) => {
-        const className = entry.target.className;
-        const activeAnchor = document.querySelector(`[data-page=${className}]`);
-        const coords = activeAnchor.getBoundingClientRect();
-        const directions = {
-            left: coords.left,
-        };
-        if (entry.isIntersecting) {
-            underline.style.setProperty("left", `${directions.left}px`);
-            if (className === "home") {
-                underline.style.setProperty("width", "100vw");
-            }
-            if (className === "info") {
-                underline.style.setProperty("width", "19.2rem");
-
-            }
-            if (className === "projects") {
-                underline.style.setProperty("width", "83rem");
-            }
-        }
+//CONTACT LINKS ///////////////////////////////////
+const anim1 = () => {
+    anime({
+        targets: ".hoverIn-1 > .char",
+        translateY: [10, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeInOutCubic",
+        duration: 200,
+        delay: (el, i) => 100 + 10 * i
     });
 }
-sections.forEach((section) => {
-    observer.observe(section);
-});
+const anim2 = () => {
+    anime({
+        targets: ".hoverIn-2 > .char",
+        translateY: [10, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeInOutCubic",
+        duration: 250,
+        delay: (el, i) => 100 + 10 * i
+    });
+}
+const anim3 = () => {
+    anime({
+        targets: ".hoverIn-3 > .char",
+        translateY: [10, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeInOutCubic",
+        duration: 200,
+        delay: (el, i) => 100 + 10 * i
+    });
+}
+const anim4 = () => {
+    anime({
+        targets: ".hoverIn-4 > .char",
+        translateY: [10, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeInOutCubic",
+        duration: 200,
+        delay: (el, i) => 100 + 10 * i
+    });
+}
 
-//PARALLAX
-function parallaxX(element, distance, speed) {
-    const item = querySelector(element);
+const homeContactLink1 = document.querySelectorAll(".home__contactLinks-item")[0];
+const homeContactLink2 = document.querySelectorAll(".home__contactLinks-item")[1];
+const homeContactLink3 = document.querySelectorAll(".home__contactLinks-item")[2];
+const homeContactLink4 = document.querySelectorAll(".home__contactLinks-item")[3];
 
+homeContactLink1.addEventListener("mouseenter", anim1);
+homeContactLink2.addEventListener("mouseenter", anim2);
+homeContactLink3.addEventListener("mouseenter", anim3);
+homeContactLink4.addEventListener("mouseenter", anim4);
+
+// HOME PARALLAX ///////////////////////////////////
+function parallaxHome(element, distance, speed) {
+    const item = document.querySelector(element);
     item.style.setProperty("transform", `translateY(${distance * speed}px)`);
 }
 
-function parallaxY(element, distance, speed) {
-    const item = querySelector(element);
-
-    item.style.setProperty("transform", `translateY(${distance * speed}px rotate(-90deg))`);
-}
-
 window.addEventListener("scroll", () => {
-    parallaxX(".home__heading", window.scrollY, 0.3);
-    parallaxY(".info__heading", window.scrollY, 0.3);
+    parallaxHome(".home", window.scrollY, 0.3);
+
+    const name = document.querySelector(".home__heading-1");
+    let newPosition = (window.scrollY || window.pageYOffset) / 4;
+    name.style.transform = `translateX(-${newPosition}px)`;
+
+    const role1 = document.querySelector(".home__heading-2");
+    role1.style.transform = `translateX(${newPosition}px)`;
+
+    const role2 = document.querySelector(".home__heading-3");
+    role2.style.transform = `translateX(${newPosition}px)`;
+
+    const cube = document.querySelector(".home__cube");
+    let newOpacity = 1 - ((window.scrollY || window.pageYOffset) * 2 / 1000);
+    cube.style.opacity = `${newOpacity}`;
+
+    const line = document.querySelector(".home__line-rt");
+    let newHeight = 506 - (window.scrollY || window.pageYOffset) * 1.2;
+    line.style.height = `${newHeight}px`;
 });
 
-// TWEENMAX
-TweenMax.from(".home__heading", 1, {
-    y: 20,
+
+function smoothScroll(target, duration) {
+    var target = document.querySelector(target);
+    let targetPosition = target.getBoundingClientRect().top;
+    let startPosition = window.pageYOffset;
+    let distance = targetPosition - startPosition;
+    let startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) { startTime = currentTime; }
+        let timeElapsed = currentTime - startTime;
+        const run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) { requestAnimationFrame(animation); }
+    }
+
+    function ease(t, b, c, d) {
+        return c * t / d + b;
+    };
+    requestAnimationFrame(animation);
+}
+
+const homeTag = document.getElementById('homeTag');
+
+homeTag.addEventListener('click', () => {
+    smoothScroll(".home", 300);
+});
+
+/////////////////////////////////// TWEENMAX ///////////////////////////////////
+TweenMax.from(".home__heading-1", 2, {
+    x: 30,
     opacity: 0,
     ease: Expo.easeInOut
 });
+TweenMax.from(".home__heading-2", 2, {
+    x: -30,
+    opacity: 0,
+    ease: Expo.easeInOut
+});
+TweenMax.from(".home__heading-3", 2, {
+    x: -30,
+    opacity: 0,
+    ease: Expo.easeInOut
+});
+TweenMax.from(".home__circle", 2, {
+    delay: 1.2,
+    x: -20,
+    opacity: 0,
+    ease: Expo.easeInOut
+});
+//INFO SPLIT SCREEN
+function splitScroll() {
+    const controller = new ScrollMagic.Controller();
 
-//PROJECTS IMAGES
-const projectsCursor = document.querySelector(".projects__cursor");
-const projectsOverlay = document.querySelectorAll(".projects__overlay");
-
-function moveCircle(e) {
-    TweenLite.to(projectsCursor, 0.5, {
-        css: {
-            left: e.pageX,
-            top: e.pageY
-        },
-        delay: 0.03
-    });
+    new ScrollMagic.Scene({
+        duration: 300,
+        triggerElement: ".info__heading",
+        triggerHook: 0,
+    }).setPin(".info__heading")
+        // .addIndicators()
+        .addTo(controller);
 }
 
-document.querySelector(".projects__1").addEventListener("mouseenter", () => {
-    projectsCursor.style.setProperty("background-image", "url(public/images/keeper-homepage.png)");
-});
-document.querySelector(".projects__2").addEventListener("mouseenter", () => {
-    projectsCursor.style.setProperty("background-image", "url(public/images/image-2.jpg)");
-});
-document.querySelector(".projects__3").addEventListener("mouseenter", () => {
-    projectsCursor.style.setProperty("background-image", "url(public/images/image-3.jpg)");
+splitScroll();
+
+// PROJECTS CIRCLE AND HEADING/////////////
+
+const circle = document.querySelector(".projects__circle");
+const circleTrail = document.querySelector(".projects__circle-trail");
+const projectsHeading = document.querySelector(".projects__heading")
+
+window.addEventListener("scroll", () => {
+    let offset = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
+    offset = offset * 0.4;
+
+    circle.style.setProperty("-moz-transform", "translate(-50%, -50%) rotate(" + offset + "deg)");
+    circle.style.setProperty("-webkit-transform", "translate(-50%, -50%) rotate(" + offset + "deg)");
+    circle.style.setProperty("-o-transform", "translate(-50%, -50%) rotate(" + offset + "deg)");
+    circle.style.setProperty("-ms-transform", "translate(-50%, -50%) rotate(" + offset + "deg)");
+    circle.style.setProperty("transform", "translate(-50%, -50%) rotate(" + offset + "deg)");
+
+    circleTrail.style.setProperty("-moz-transform", "translate(-50%, -50%) rotate(" + offset + "deg)");
+    circleTrail.style.setProperty("-webkit-transform", "translate(-50%, -50%) rotate(" + offset + "deg)");
+    circleTrail.style.setProperty("-o-transform", "translate(-50%, -50%) rotate(" + offset + "deg)");
+    circleTrail.style.setProperty("-ms-transform", "translate(-50%, -50%) rotate(" + offset + "deg)");
+    circleTrail.style.setProperty("transform", "translate(-50%, -50%) rotate(" + offset + "deg)");
+
+
+    let newPosition = 1450 - (window.scrollY || window.pageYOffset) / 1.1;
+    projectsHeading.style.setProperty("transform", `translateX(${newPosition}px)`);
 });
 
-projectsOverlay.forEach(b => b.addEventListener("mousemove", () => {
-    TweenLite.to(projectsCursor, 0.3, { scale: 1, autoAlpha: 1 });
-    projectsOverlay.forEach(b => b.addEventListener("mousemove", moveCircle))
-}));
+// PROJECT IMAGES ///////////////////////////////////
+// const projectsCursor = document.querySelector(".projects__cursor");
+// const projectsOverlay = document.querySelectorAll(".projects__overlay");
 
-projectsOverlay.forEach(b => b.addEventListener("mouseout", () => {
-    TweenLite.to(projectsCursor, 0.3, { scale: 0.1, autoAlpha: 0 });
-}));
+// function moveCircle(e) {
+//     TweenLite.to(projectsCursor, 0.5, {
+//         css: {
+//             left: e.pageX,
+//             top: e.pageY
+//         },
+//         delay: 0.03
+//     });
+// }
+
+// document.querySelector(".projects__1").addEventListener("mouseenter", () => {
+//     projectsCursor.style.setProperty("background-image", "url(public/images/keeper-homepage.png)");
+// });
+// document.querySelector(".projects__2").addEventListener("mouseenter", () => {
+//     function changeNum() {
+//         return Math.floor((Math.random() * 5) + 1)
+//     };
+//     function changeImg() {
+//         projectsCursor.style.setProperty("background-image", `url(public/images/project-5-${changeNum()}.jpg)`);
+//     }
+//     setInterval(changeImg, 500);
+// });
+// document.querySelector(".projects__3").addEventListener("mouseenter", () => {
+//     projectsCursor.style.setProperty("background-image", "url(public/images/image-3.jpg)");
+// });
+
+// projectsOverlay.forEach(b => b.addEventListener("mousemove", () => {
+//     TweenLite.to(projectsCursor, 0.3, { scale: 1, autoAlpha: 1 });
+//     projectsOverlay.forEach(b => b.addEventListener("mousemove", moveCircle))
+// }));
+
+// projectsOverlay.forEach(b => b.addEventListener("mouseout", () => {
+//     TweenLite.to(projectsCursor, 0.3, { scale: 0.1, autoAlpha: 0 });
+// }));

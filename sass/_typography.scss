@@ -1,55 +1,88 @@
 body {
-    font-family: $font-display-1;
-    font-weight: 400;
+    font-family: $font-display;
     color: $color-black;
-    line-height: 1.6;
 }
 
-.heading-1 {
+//logo name
+.text-initial {
     font-family: $font-primary;
-    font-size: 14.8rem;
-}
-
-.heading-2 {
-    font-family: $font-primary;
-    font-size: 5rem;
-    line-height: 1.4;
-    letter-spacing: 2px;
-}
-
-.heading-3 {
-    font-family: $font-primary;
-    font-size: 4rem;
-}
-
-.heading-sub-1 {
-    font-family: $font-primary;
-    font-size: 2.4rem;
+    font-size: 1.4rem;
+    color: $color-red;
     text-transform: uppercase;
 }
-
-.text-body-1 {
-    font-family: $font-display-1;
-    font-size: 2rem;
+//section heading
+.heading-section {
+    font-family: $font-primary;
+    font-size: 14.8rem;
+    color: $color-black;
 }
-
-.text-nav-1 {
-    font-family: $font-display-1;
-    font-size: 1.3rem;
+//home heading
+.heading-home-1 {
+    font-family: $font-primary;
+    font-size: 7.5rem;
+    color: $color-black;
+    text-transform: uppercase;
 }
-
-.text-body-2 {
-    font-family: $font-display-1;
-    font-size: 1.5rem;
-    color: $color-red-dark !important;
+.heading-home-2 {
+    font-family: $font-primary-2;
+    font-size: 6rem;
+    color: $color-red;
+    text-transform: lowercase;
 }
-
-.text-body-3 {
-    font-family: $font-display-2;
+//nav bar
+.text-nav {
+    font-family: $font-display;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $color-red;
+    text-transform: uppercase;
+}
+//contact links 
+.text-contact {
+    font-family: $font-display;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $color-red;
+    text-transform: uppercase;
+}
+//info heading
+.heading-info {
+    font-family: $font-primary-2;
+    font-size: 1.8rem;
+    color: $color-red;
+    line-height: 1.6;
+}
+.heading-info-2 {
+    font-family: $font-primary-2;
+    font-size: 1.6rem;
+    color: $color-black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+// description for info & projects
+.text-description {
+    font-family: $font-display;
     font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: $color-brown;
 }
-
-.text-body-4 {
-    font-family: $font-display-3;
-    font-size: 1.2rem;
+//circle
+.text-circle {
+    font-family: $font-display;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: $color-black;
+}
+//project heading
+.heading-projects {
+    font-family: $font-primary-2;
+    font-size: 4rem;
+    color: $color-brown;
+}
+//project index
+.text-index {
+    font-family: $font-display-2;
+    font-size: 1rem;
+    color: $color-brown;
 }

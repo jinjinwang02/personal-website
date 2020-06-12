@@ -1,61 +1,29 @@
 //COLOURS
-$color-background: #F8F6F0;
-$color-red-dark: #BE020D;
-$color-orange-light: #f93700;
-$color-pink-light: #f9dddd;
-
-$color-grey-dark: #777;
-$color-grey-dark-2: #999;
-$color-grey-dark-3: #333;
-
-$color-grey-light: #E8E8E8;
-
+$color-beige: #F8F6F0;
+$color-pink: #EACCC7;
+$color-red: #BE020D;
+$color-orange: #f93700;
+$color-brown: #5E5351;
+$color-black: #333;
 $color-white: #fff;
-$color-black: #000;
 
 //FONT
-$font-primary: 'Prata', serif;
-$font-display-1: 'Gilda Display', serif;
-$font-display-2: 'Raleway', sans-serif;
-$font-display-3: 'Roboto mono', monospace;
+$font-primary: 'Abril Fatface', cursive;
+$font-primary-2: 'Prata', serif;
+$font-display: 'Raleway', sans-serif;
+$font-display-2: 'Roboto Mono', monospace;
 
 //BORDER
-$border-thin-red: 1px solid $color-red-dark;
-$border-thin-black: 1px solid $color-black;
-$border-thin-white: 2px solid $color-white;
+$border-thick-white: 2px solid $color-white;
+$border-thin-white: 1px solid $color-white;
+$border-thin-orange: 1px solid $color-orange;
+$border-thin-pink: 1px solid $color-pink;
+$border-thin-red: 1px solid $color-red;
+$border-thick-red: 2px solid $color-red;
+$border-thin-brown: 1px solid $color-brown;
 
 //ANIMATIONS
-@keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(10rem);
-    }
 
-    80% {
-        transform: translateX(-1rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-@keyframes moveInBottom{
-    0% {
-        opacity: 0;
-        transform: translateY(5rem);
-    }
-
-    40% {
-        opacity: 0.2;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
 
 *,
 *::after,
@@ -66,19 +34,21 @@ $border-thin-white: 2px solid $color-white;
 }
 
 html {
-    // This defines what 1rem is
     font-size: 62.5%;
-    cursor: none;
+    cursor: none !important;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     box-sizing: border-box;
-    background-color: $color-background;
+    background-color: $color-beige;
+    width: 100%;
 }
 
 ::selection {
-    background: $color-pink-light;
-    color: $color-orange-light;
+    background: $color-orange;
+    color: $color-beige;
 }
 
 a,
@@ -89,7 +59,3 @@ a:hover {
       text-decoration: none;
       color: inherit;
     }
-    
-// .container {
-//     margin-top: 9rem;
-// }

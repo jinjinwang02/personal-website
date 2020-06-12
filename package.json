@@ -4,8 +4,6 @@
   "description": "Personal website 2020",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss public/css/style.css -w",
-    "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass sass/main.scss public/css/style.comp.css",
     "concat:css": "concat -o public/css/style.concat.css public/css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/css/style.comp.css -o public/css/style.prefix.css",
