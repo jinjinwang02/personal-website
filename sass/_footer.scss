@@ -32,7 +32,7 @@
     &__contactLinks {
         display: block;
         list-style: none;
-        margin-bottom: 22rem;
+        margin-bottom: 20rem;
         
         &-item {
             display: inline-block;
@@ -54,5 +54,7 @@
     &__copyright {
         position: relative;
         display: block;
+        color: $color-red;
+        margin-bottom: .5rem;
     }
 }

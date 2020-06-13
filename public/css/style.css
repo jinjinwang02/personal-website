@@ -29,6 +29,15 @@ a:hover {
   color: inherit;
   cursor: none; }
 
+.fade-in-and-rise {
+  opacity: 0;
+  transform: translateY(6rem);
+  transition: opacity .5s ease-out, transform .5s ease-out; }
+
+.fade-in-and-rise.appear {
+  opacity: 1;
+  transform: translateY(0); }
+
 .footer {
   position: absolute;
   width: 100%;
@@ -55,7 +64,7 @@ a:hover {
   .footer__contactLinks {
     display: block;
     list-style: none;
-    margin-bottom: 22rem; }
+    margin-bottom: 20rem; }
     .footer__contactLinks-item {
       display: inline-block;
       margin-top: 3rem; }
@@ -68,7 +77,9 @@ a:hover {
       letter-spacing: -1.5px; }
   .footer__copyright {
     position: relative;
-    display: block; }
+    display: block;
+    color: #BE020D;
+    margin-bottom: .5rem; }
 
 .nav__container {
   position: sticky;
@@ -381,18 +392,6 @@ body {
     width: 1px;
     background-color: #f93700;
     height: 245vh; }
-  .projects__cursor {
-    position: absolute;
-    width: 50rem;
-    height: 30rem;
-    top: 33%;
-    left: 50%;
-    transform: scale(0.1);
-    opacity: 0;
-    margin: -100px 0 0 -100px;
-    background: url(../images/keeper-homepage.png) no-repeat 50% 50%;
-    background-size: cover;
-    z-index: 1; }
   .projects__container-left {
     position: absolute;
     top: 27%;
@@ -432,8 +431,7 @@ body {
       grid-column: 1 / 2;
       justify-self: flex-end;
       margin-bottom: .5rem;
-      text-align: end;
-      z-index: 999; }
+      text-align: end; }
     .projects__left .projects__info {
       grid-row: 3 / 4;
       grid-column: 1 / 2;
@@ -465,8 +463,7 @@ body {
       grid-row: 2 / 3;
       grid-column: 2 / 3;
       justify-self: flex-start;
-      margin-bottom: .5rem;
-      z-index: 999; }
+      margin-bottom: .5rem; }
     .projects__right .projects__info {
       grid-row: 3 / 4;
       grid-column: 2 / 3;
@@ -482,18 +479,30 @@ body {
       margin-left: 0.2rem;
       height: 0.8rem;
       width: 0.8rem; }
+  .projects__cursor {
+    position: absolute;
+    width: 50rem;
+    height: 30rem;
+    top: 400%;
+    left: 50%;
+    transform: scale(0.5);
+    opacity: 0;
+    margin: -100px 0 0 -100px;
+    background-repeat: no-repeat;
+    background-origin: 50% 50%;
+    background-size: cover; }
   .projects__overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; }
+    z-index: 998; }
   .projects__1, .projects__2, .projects__3, .projects__4, .projects__5, .projects__6, .projects__7, .projects__8 {
     position: relative;
     color: #5E5351;
-    z-index: 2;
-    transition: color .2s ease; }
+    z-index: 999;
+    transition: color .2s ease, opacity .5s ease-out, transform .5s ease-out; }
     .projects__1 svg, .projects__2 svg, .projects__3 svg, .projects__4 svg, .projects__5 svg, .projects__6 svg, .projects__7 svg, .projects__8 svg {
       stroke: #5E5351;
       transition: stroke .2s ease; }

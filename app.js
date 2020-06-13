@@ -32,7 +32,7 @@
 const anim1 = () => {
     anime({
         targets: ".hoverIn-1 > .char",
-        translateY: [15, 0],
+        translateY: [12, 0],
         translateZ: 0,
         opacity: [0, 1],
         easing: "easeInOutCubic",
@@ -43,7 +43,7 @@ const anim1 = () => {
 const anim2 = () => {
     anime({
         targets: ".hoverIn-2 > .char",
-        translateY: [15, 0],
+        translateY: [12, 0],
         translateZ: 0,
         opacity: [0, 1],
         easing: "easeInOutCubic",
@@ -54,7 +54,7 @@ const anim2 = () => {
 const anim3 = () => {
     anime({
         targets: ".hoverIn-3 > .char",
-        translateY: [15, 0],
+        translateY: [12, 0],
         translateZ: 0,
         opacity: [0, 1],
         easing: "easeInOutCubic",
@@ -65,7 +65,7 @@ const anim3 = () => {
 const anim4 = () => {
     anime({
         targets: ".hoverIn-4 > .char",
-        translateY: [15, 0],
+        translateY: [12, 0],
         translateZ: 0,
         opacity: [0, 1],
         easing: "easeInOutCubic",
@@ -92,25 +92,27 @@ function parallaxHome(element, distance, speed) {
 window.addEventListener("scroll", () => {
     parallaxHome(".home", window.scrollY, 0.3);
 
-    const name = document.querySelector(".home__heading-1");
-    let newPosition = (window.scrollY || window.pageYOffset) / 4;
-    name.style.transform = `translateX(-${newPosition}px)`;
+    // const name = document.querySelector(".home__heading-1");
+    // let newPosition = (window.scrollY || window.pageYOffset) / 4;
+    // name.style.transform = `translateX(-${newPosition}px)`;
 
-    const role1 = document.querySelector(".home__heading-2");
-    role1.style.transform = `translateX(${newPosition}px)`;
+    // const role1 = document.querySelector(".home__heading-2");
+    // role1.style.transform = `translateX(${newPosition}px)`;
 
-    const role2 = document.querySelector(".home__heading-3");
-    role2.style.transform = `translateX(${newPosition}px)`;
-
-    const cube = document.querySelector(".home__cube");
-    let newOpacity = 1 - ((window.scrollY || window.pageYOffset) * 2 / 1000);
-    cube.style.opacity = `${newOpacity}`;
+    // const role2 = document.querySelector(".home__heading-3");
+    // role2.style.transform = `translateX(${newPosition}px)`;
 
     const line = document.querySelector(".home__line-rt");
-    let newHeight = 506 - (window.scrollY || window.pageYOffset) * 1.2;
-    line.style.height = `${newHeight}px`;
-});
+    // let newHeight = 506 - (window.scrollY || window.pageYOffset) * 1.2;
+    // line.style.height = `${newHeight}px`;
 
+    const cube = document.querySelector(".home__cube");
+    let newOpacity = 1 - ((window.scrollY || window.pageYOffset) * 2.5 / 1000);
+    cube.style.opacity = `${newOpacity}`;
+    line.style.opacity = `${newOpacity}`;
+
+
+});
 
 function smoothScroll(target, duration) {
     var target = document.querySelector(target);
@@ -162,6 +164,25 @@ TweenMax.from(".home__circle", 2, {
     ease: Expo.easeInOut
 });
 
+//INFO FADE IN
+const faders = document.querySelectorAll(".fade-in-and-rise");
+const appearOptions = {
+    thresohld: 1
+}
+const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add("appear");
+            appearOnScroll.unobserve(entry.target);
+        }
+    })
+}, appearOptions);
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+})
+
 //INFO SPLIT SCREEN
 function splitScroll() {
     const controller = new ScrollMagic.Controller();
@@ -204,40 +225,122 @@ window.addEventListener("scroll", () => {
 });
 
 // PROJECT IMAGES
-// const projectsCursor = document.querySelector(".projects__cursor");
-// const projectsOverlay = document.querySelectorAll(".projects__overlay");
+const projectsCursor = document.querySelector(".projects__cursor");
+const projectsOverlay = document.querySelectorAll(".projects__overlay");
 
-// function moveCircle(e) {
-//     TweenLite.to(projectsCursor, 0.5, {
-//         css: {
-//             left: e.pageX,
-//             top: e.pageY
-//         },
-//         delay: 0.03
-//     });
-// }
+function moveCircle(e) {
+    TweenLite.to(projectsCursor, 0.5, {
+        css: {
+            left: e.pageX,
+            top: e.pageY
+        },
+        delay: 0.03
+    });
+}
+//p1
+document.querySelector(".projects__1").addEventListener("mouseenter", () => {
+    projectsCursor.style.setProperty("background-image", "none");
+});
+//p2
+document.querySelector(".projects__2").addEventListener("mouseenter", () => {
+    projectsCursor.style.setProperty("background-image", "url(public/images/project-2-1.jpg)");
+    projectsCursor.style.setProperty("width", "54rem");
+    projectsCursor.style.setProperty("height", "30rem");
+});
+document.querySelector(".projects__2").addEventListener("mouseleave", () => {
+    projectsCursor.style.setProperty("background-image", "none");
+});
+//p3
+document.querySelector(".projects__3").addEventListener("mouseenter", () => {
+    projectsCursor.style.setProperty("width", "54rem");
+    projectsCursor.style.setProperty("height", "30rem");
+    function changeNum() {
+        return Math.floor((Math.random() * 4) + 1)
+    };
+    function changeImg() {
+        projectsCursor.style.setProperty("background-image", `url(public/images/project-3-${changeNum()}.jpg)`);
+    }
+    interval3 = setInterval(changeImg, 300);
+});
+document.querySelector(".projects__3").addEventListener("mouseleave", () => {
+    projectsCursor.style.setProperty("background-image", "none");
+    clearInterval(interval3);
+});
+//p4
+document.querySelector(".projects__4").addEventListener("mouseenter", () => {
+    projectsCursor.style.setProperty("width", "54rem");
+    projectsCursor.style.setProperty("height", "30rem");
+    function changeNum() {
+        return Math.floor((Math.random() * 4) + 1)
+    };
+    function changeImg() {
+        projectsCursor.style.setProperty("background-image", `url(public/images/project-4-${changeNum()}.jpg)`);
+    }
+    interval4 = setInterval(changeImg, 300);
+});
+document.querySelector(".projects__4").addEventListener("mouseleave", () => {
+    projectsCursor.style.setProperty("background-image", "none");
+    clearInterval(interval4);
+});
+//p5
+document.querySelector(".projects__5").addEventListener("mouseenter", () => {
+    projectsCursor.style.setProperty("background-image", "none");
+});
+//6
+document.querySelector(".projects__6").addEventListener("mouseenter", () => {
+    projectsCursor.style.setProperty("width", "55rem");
+    projectsCursor.style.setProperty("height", "34rem");
+    function changeNum() {
+        return Math.floor((Math.random() * 6) + 1)
+    };
+    function changeImg() {
+        projectsCursor.style.setProperty("background-image", `url(public/images/project-6-${changeNum()}.jpg)`);
+    }
+    interval6 = setInterval(changeImg, 300);
+});
+document.querySelector(".projects__6").addEventListener("mouseleave", () => {
+    projectsCursor.style.setProperty("background-image", "none");
+    clearInterval(interval6);
+});
+//p7
+document.querySelector(".projects__7").addEventListener("mouseenter", () => {
+    projectsCursor.style.setProperty("width", "35rem");
+    projectsCursor.style.setProperty("height", "50rem");
+    function changeNum() {
+        return Math.floor((Math.random() * 4) + 1)
+    };
+    function changeImg() {
+        projectsCursor.style.setProperty("background-image", `url(public/images/project-7-${changeNum()}.jpg)`);
+    }
+    interval7 = setInterval(changeImg, 300);
+});
+document.querySelector(".projects__7").addEventListener("mouseleave", () => {
+    projectsCursor.style.setProperty("background-image", "none");
+    clearInterval(interval7);
+});
+//8
+document.querySelector(".projects__8").addEventListener("mouseenter", () => {
+    projectsCursor.style.setProperty("width", "53rem");
+    projectsCursor.style.setProperty("height", "40rem");
+    function changeNum() {
+        return Math.floor((Math.random() * 6) + 1);
+    };
+    function changeImg() {
+        projectsCursor.style.setProperty("background-image", `url(public/images/project-8-${changeNum()}.jpg)`);
+    }
+    interval8 = setInterval(changeImg, 300);
+});
 
-// document.querySelector(".projects__1").addEventListener("mouseenter", () => {
-//     projectsCursor.style.setProperty("background-image", "url(public/images/keeper-homepage.png)");
-// });
-// document.querySelector(".projects__2").addEventListener("mouseenter", () => {
-//     function changeNum() {
-//         return Math.floor((Math.random() * 5) + 1)
-//     };
-//     function changeImg() {
-//         projectsCursor.style.setProperty("background-image", `url(public/images/project-5-${changeNum()}.jpg)`);
-//     }
-//     setInterval(changeImg, 500);
-// });
-// document.querySelector(".projects__3").addEventListener("mouseenter", () => {
-//     projectsCursor.style.setProperty("background-image", "url(public/images/image-3.jpg)");
-// });
+document.querySelector(".projects__8").addEventListener("mouseleave", () => {
+    projectsCursor.style.setProperty("background-image", "none");
+    clearInterval(interval8);
+});
 
-// projectsOverlay.forEach(b => b.addEventListener("mousemove", () => {
-//     TweenLite.to(projectsCursor, 0.3, { scale: 1, autoAlpha: 1 });
-//     projectsOverlay.forEach(b => b.addEventListener("mousemove", moveCircle))
-// }));
+projectsOverlay.forEach(b => b.addEventListener("mousemove", () => {
+    TweenLite.to(projectsCursor, 0.3, { scale: 1, autoAlpha: 1 });
+    projectsOverlay.forEach(b => b.addEventListener("mousemove", moveCircle))
+}));
 
-// projectsOverlay.forEach(b => b.addEventListener("mouseout", () => {
-//     TweenLite.to(projectsCursor, 0.3, { scale: 0.1, autoAlpha: 0 });
-// }));
+projectsOverlay.forEach(b => b.addEventListener("mouseout", () => {
+    TweenLite.to(projectsCursor, 0.3, { scale: 0.5, autoAlpha: 0 });
+}));
