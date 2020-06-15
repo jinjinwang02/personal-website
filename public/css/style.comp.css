@@ -718,7 +718,7 @@ body {
       .info__heading-media {
         top: 4rem;
         writing-mode: horizontal-tb;
-        transform: rotate(0) translate(19.5rem, 1rem); } }
+        transform: rotate(0) translate(19rem, 1rem); } }
   @media (max-width: 68.75em) {
     .info .scrollmagic-pin-spacer {
       display: none !important; } }
@@ -935,7 +935,7 @@ body {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      letter-spacing: 1px; }
+      letter-spacing: 2px; }
       @media (max-width: 56.25em) {
         .projects__circle-glow span {
           opacity: 0; } }

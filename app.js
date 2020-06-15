@@ -222,10 +222,25 @@ function moveCircle(e) {
         delay: 0.03
     });
 }
+
 //p1
 document.querySelector(".projects__1").addEventListener("mouseenter", () => {
-    projectsCursor.style.setProperty("background-image", "none");
+    projectsCursor.style.setProperty("width", "50rem");
+    projectsCursor.style.setProperty("height", "30rem");
+    let i = 1;
+    function changeImg() {
+        if (i < 6) {
+            projectsCursor.style.setProperty("background-image", `url(public/images/project-1-${i}.jpg)`);
+            i++;
+        } else { i = 1; }
+    }
+    interval1 = setInterval(changeImg, 250);
 });
+document.querySelector(".projects__1").addEventListener("mouseleave", () => {
+    projectsCursor.style.setProperty("background-image", "none");
+    clearInterval(interval1);
+});
+
 //p2
 document.querySelector(".projects__2").addEventListener("mouseenter", () => {
     projectsCursor.style.setProperty("background-image", "url(public/images/project-2-1.jpg)");
