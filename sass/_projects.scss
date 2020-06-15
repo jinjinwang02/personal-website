@@ -322,7 +322,7 @@
             margin-top: 17rem;
 
             @include respond(phone-lg) {
-                margin-top: 12.5rem;
+                margin-top: 12rem;
             }
         }
         &:last-child {
@@ -437,6 +437,47 @@
 
         svg {
             stroke: $color-orange;
+        }
+    }
+
+    &__1 {
+        @include respond (phone) {
+                animation: lightUp-1 5s infinite;
+        }
+    }
+    &__2 {
+        @include respond (phone) {
+                animation: lightUp-2 5s infinite;
+        }
+    }
+    &__3 {
+        @include respond (phone) {
+                animation: lightUp-3 5s infinite;
+        }
+    }
+    &__4 {
+        @include respond (phone) {
+                animation: lightUp-4 5s infinite;
+        }
+    }
+    &__5 {
+        @include respond (phone) {
+                animation: lightUp-5 5s infinite;
+        }
+    }
+    &__6 {
+        @include respond (phone) {
+                animation: lightUp-6 5s infinite;
+        }
+    }
+    &__7 {
+        @include respond (phone) {
+                animation: lightUp-7 5s infinite;
+        }
+    }
+    &__8 {
+        @include respond (phone) {
+                animation: lightUp-8 5s infinite;
         }
     }
 

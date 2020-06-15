@@ -112,6 +112,166 @@ $border-thin-red: 1px solid $color-red;
         transform: translateX(0) scaleX(0.5);
     }
 }
+@keyframes lightUp-1 {
+    0% {
+        color: $color-brown;
+    }
+    5% {
+        color: $color-brown;
+    }
+    10% {
+        color: $color-orange;
+    }
+    15% {
+        color: $color-orange;
+    }
+    20% {
+        color: $color-brown;
+    }
+    100% {
+        color: $color-brown;
+    }
+}
+@keyframes lightUp-2 {
+    0% {
+        color: $color-brown;
+    }
+    15% {
+        color: $color-brown;
+    }
+    20% {
+        color: $color-orange;
+    }
+    25% {
+        color: $color-orange;
+    }
+    30% {
+        color: $color-brown;
+    }
+    100% {
+        color: $color-brown;
+    }
+}
+@keyframes lightUp-3 {
+    0% {
+        color: $color-brown;
+    }
+    25% {
+        color: $color-brown;
+    }
+    30% {
+        color: $color-orange;
+    }
+    35% {
+        color: $color-orange;
+    }
+    40% {
+        color: $color-brown;
+    }
+    100% {
+        color: $color-brown;
+    }
+}
+@keyframes lightUp-4 {
+    0% {
+        color: $color-brown;
+    }
+    35% {
+        color: $color-brown;
+    }
+    40% {
+        color: $color-orange;
+    }
+    45% {
+        color: $color-orange;
+    }
+    50% {
+        color: $color-brown;
+    }
+    100% {
+        color: $color-brown;
+    }
+}
+@keyframes lightUp-5 {
+    0% {
+        color: $color-brown;
+    }
+    45% {
+        color: $color-brown;
+    }
+    50% {
+        color: $color-orange;
+    }
+    55% {
+        color: $color-orange;
+    }
+    60% {
+        color: $color-brown;
+    }
+    100% {
+        color: $color-brown;
+    }
+}
+@keyframes lightUp-6 {
+    0% {
+        color: $color-brown;
+    }
+    55% {
+        color: $color-brown;
+    }
+    60% {
+        color: $color-orange;
+    }
+    65% {
+        color: $color-orange;
+    }
+    70% {
+        color: $color-brown;
+    }
+    100% {
+        color: $color-brown;
+    }
+}
+@keyframes lightUp-7 {
+    0% {
+        color: $color-brown;
+    }
+    65% {
+        color: $color-brown;
+    }
+    70% {
+        color: $color-orange;
+    }
+    75% {
+        color: $color-orange;
+    }
+    80% {
+        color: $color-brown;
+    }
+    100% {
+        color: $color-brown;
+    }
+}
+@keyframes lightUp-8 {
+    0% {
+        color: $color-brown;
+    }
+    75% {
+        color: $color-brown;
+    }
+    80% {
+        color: $color-orange;
+    }
+    85% {
+        color: $color-orange;
+    }
+    90% {
+        color: $color-brown;
+    }
+    100% {
+        color: $color-brown;
+    }
+}
 
 
 //MEDIA QUERY MANAGER
