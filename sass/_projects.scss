@@ -120,19 +120,18 @@
 
     &__line-ct {
         position: absolute;
-        top: 54.5%;
+        top: 26%;
         left: 50%;
-        transform: scaleX(0.5) translate(-50%, -50%);
-        width: 1px;
         background-color: $color-orange;
-        // height: 171rem;
-        height: 125vw;
+        height:171rem;
+        transform: scaleX(0.5);
+        width: 1px;
 
         @include respond(tab-land-lg) { //1400
-            top: 52.5%;
+            top: 26.5%;
         }
         @include respond(tab-land) { //1200
-            top: 53.5%;
+            top: 28.5%;
         }
         @include respond(phone-lg){
             opacity: 0;
@@ -174,8 +173,8 @@
             top: 78%;
             right: 53%;
             opacity: .4;
-            height: 15rem;
-            width: 15rem;
+            height: 12rem;
+            width: 12rem;
         }
     }
 

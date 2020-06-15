@@ -62,6 +62,118 @@
   100% {
     transform: translateX(0) scaleX(0.5); } }
 
+@keyframes lightUp-1 {
+  0% {
+    color: #5E5351; }
+  5% {
+    color: #5E5351; }
+  10% {
+    color: #f93700; }
+  15% {
+    color: #f93700; }
+  20% {
+    color: #5E5351; }
+  100% {
+    color: #5E5351; } }
+
+@keyframes lightUp-2 {
+  0% {
+    color: #5E5351; }
+  15% {
+    color: #5E5351; }
+  20% {
+    color: #f93700; }
+  25% {
+    color: #f93700; }
+  30% {
+    color: #5E5351; }
+  100% {
+    color: #5E5351; } }
+
+@keyframes lightUp-3 {
+  0% {
+    color: #5E5351; }
+  25% {
+    color: #5E5351; }
+  30% {
+    color: #f93700; }
+  35% {
+    color: #f93700; }
+  40% {
+    color: #5E5351; }
+  100% {
+    color: #5E5351; } }
+
+@keyframes lightUp-4 {
+  0% {
+    color: #5E5351; }
+  35% {
+    color: #5E5351; }
+  40% {
+    color: #f93700; }
+  45% {
+    color: #f93700; }
+  50% {
+    color: #5E5351; }
+  100% {
+    color: #5E5351; } }
+
+@keyframes lightUp-5 {
+  0% {
+    color: #5E5351; }
+  45% {
+    color: #5E5351; }
+  50% {
+    color: #f93700; }
+  55% {
+    color: #f93700; }
+  60% {
+    color: #5E5351; }
+  100% {
+    color: #5E5351; } }
+
+@keyframes lightUp-6 {
+  0% {
+    color: #5E5351; }
+  55% {
+    color: #5E5351; }
+  60% {
+    color: #f93700; }
+  65% {
+    color: #f93700; }
+  70% {
+    color: #5E5351; }
+  100% {
+    color: #5E5351; } }
+
+@keyframes lightUp-7 {
+  0% {
+    color: #5E5351; }
+  65% {
+    color: #5E5351; }
+  70% {
+    color: #f93700; }
+  75% {
+    color: #f93700; }
+  80% {
+    color: #5E5351; }
+  100% {
+    color: #5E5351; } }
+
+@keyframes lightUp-8 {
+  0% {
+    color: #5E5351; }
+  75% {
+    color: #5E5351; }
+  80% {
+    color: #f93700; }
+  85% {
+    color: #f93700; }
+  90% {
+    color: #5E5351; }
+  100% {
+    color: #5E5351; } }
+
 *,
 *::after,
 *::before {
@@ -475,7 +587,7 @@ body {
         font-size: 2rem; } }
     @media (max-width: 37.5em) {
       .home__logo {
-        left: 12%;
+        left: 11%;
         top: 4.5%; } }
   .home__circle {
     position: absolute;
@@ -500,11 +612,11 @@ body {
   .home__circle-phone {
     opacity: 0;
     position: absolute;
-    top: 42%;
-    left: 13.3%;
+    top: 47%;
+    left: 46%;
     border: 2px solid #fff;
-    height: 100rem;
-    width: 100rem;
+    height: 94rem;
+    width: 94rem;
     transform: scale(0.5) translate(-50%, -50%);
     border-radius: 50%;
     z-index: 1; }
@@ -801,18 +913,18 @@ body {
         opacity: 1; } }
   .projects__line-ct {
     position: absolute;
-    top: 54.5%;
+    top: 26%;
     left: 50%;
-    transform: scaleX(0.5) translate(-50%, -50%);
-    width: 1px;
     background-color: #f93700;
-    height: 125vw; }
+    height: 171rem;
+    transform: scaleX(0.5);
+    width: 1px; }
     @media (max-width: 87.5em) {
       .projects__line-ct {
-        top: 52.5%; } }
+        top: 26.5%; } }
     @media (max-width: 75em) {
       .projects__line-ct {
-        top: 53.5%; } }
+        top: 28.5%; } }
     @media (max-width: 50em) {
       .projects__line-ct {
         opacity: 0; } }
@@ -848,8 +960,8 @@ body {
         top: 78%;
         right: 53%;
         opacity: .4;
-        height: 15rem;
-        width: 15rem; } }
+        height: 12rem;
+        width: 12rem; } }
   .projects__container-left {
     position: absolute;
     top: 28%;
@@ -965,7 +1077,7 @@ body {
       margin-top: 17rem; }
       @media (max-width: 50em) {
         .projects__right:first-child {
-          margin-top: 12.5rem; } }
+          margin-top: 12rem; } }
     @media (max-width: 50em) {
       .projects__right:last-child {
         margin-top: 3rem; } }
@@ -1049,3 +1161,27 @@ body {
     color: #f93700; }
     .projects__1:hover svg, .projects__2:hover svg, .projects__3:hover svg, .projects__4:hover svg, .projects__6:hover svg, .projects__7:hover svg, .projects__8:hover svg {
       stroke: #f93700; }
+  @media (max-width: 37.5em) {
+    .projects__1 {
+      animation: lightUp-1 5s infinite; } }
+  @media (max-width: 37.5em) {
+    .projects__2 {
+      animation: lightUp-2 5s infinite; } }
+  @media (max-width: 37.5em) {
+    .projects__3 {
+      animation: lightUp-3 5s infinite; } }
+  @media (max-width: 37.5em) {
+    .projects__4 {
+      animation: lightUp-4 5s infinite; } }
+  @media (max-width: 37.5em) {
+    .projects__5 {
+      animation: lightUp-5 5s infinite; } }
+  @media (max-width: 37.5em) {
+    .projects__6 {
+      animation: lightUp-6 5s infinite; } }
+  @media (max-width: 37.5em) {
+    .projects__7 {
+      animation: lightUp-7 5s infinite; } }
+  @media (max-width: 37.5em) {
+    .projects__8 {
+      animation: lightUp-8 5s infinite; } }
