@@ -298,6 +298,6 @@ $border-thin-red: 1px solid $color-red;
         @media(max-width: 87.5em) { @content }; //1400
     }
     @if $breakpoint ==  big-desktop {
-        @media(mix-width: 112.5em) { @content }; //1800
+        @media(min-width: 112.5em) { @content }; //1800
     }
 }

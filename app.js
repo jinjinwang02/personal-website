@@ -234,7 +234,7 @@ document.querySelector(".projects__1").addEventListener("mouseenter", () => {
             i++;
         } else { i = 1; }
     }
-    interval1 = setInterval(changeImg, 250);
+    interval1 = setInterval(changeImg, 300);
 });
 document.querySelector(".projects__1").addEventListener("mouseleave", () => {
     projectsCursor.style.setProperty("background-image", "none");
@@ -262,7 +262,7 @@ document.querySelector(".projects__3").addEventListener("mouseenter", () => {
             i++;
         } else { i = 1; }
     }
-    interval3 = setInterval(changeImg, 250);
+    interval3 = setInterval(changeImg, 300);
 });
 document.querySelector(".projects__3").addEventListener("mouseleave", () => {
     projectsCursor.style.setProperty("background-image", "none");
@@ -280,7 +280,7 @@ document.querySelector(".projects__4").addEventListener("mouseenter", () => {
             i++;
         } else { i = 1; }
     }
-    interval4 = setInterval(changeImg, 250);
+    interval4 = setInterval(changeImg, 300);
 });
 document.querySelector(".projects__4").addEventListener("mouseleave", () => {
     projectsCursor.style.setProperty("background-image", "none");
@@ -320,7 +320,7 @@ document.querySelector(".projects__7").addEventListener("mouseenter", () => {
             i++;
         } else { i = 1; }
     }
-    interval7 = setInterval(changeImg, 250);
+    interval7 = setInterval(changeImg, 300);
 });
 document.querySelector(".projects__7").addEventListener("mouseleave", () => {
     projectsCursor.style.setProperty("background-image", "none");
@@ -338,7 +338,7 @@ document.querySelector(".projects__8").addEventListener("mouseenter", () => {
             i++;
         } else { i = 1; }
     }
-    interval8 = setInterval(changeImg, 250);
+    interval8 = setInterval(changeImg, 300);
 });
 
 document.querySelector(".projects__8").addEventListener("mouseleave", () => {
