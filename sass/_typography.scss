@@ -49,7 +49,7 @@ body {
     font-family: $font-primary-2;
     font-size: 1.8rem;
     color: $color-red;
-    line-height: 1.6;
+    line-height: 1.8;
     @include respond(phone) {
         font-size: 2rem;
     }
