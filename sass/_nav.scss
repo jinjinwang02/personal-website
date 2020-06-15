@@ -4,7 +4,9 @@
     top: 0;
     z-index: 100;
     user-select: none;
+
   }
+
     &__links {
       top: 6vh;
       display: flex;
@@ -17,23 +19,30 @@
     
     &__item {
       transition: all .3s ease;
-
+    
+      @include respond(phone) {
+        opacity: 0;
+    }
       span {
         display: inline-block;
         transition: transform .1s linear;
-      }
+        z-index: 999;
+
+    }
+  }
+    &__item-2{  
+      margin-right: 56%;
+
+      @include respond(phone) {
+        margin-right: 0;
+    }
     }
 
-    &__item-2{ 
-      margin-right: 56.2vw;
-    }
+      &__item:hover ~ &__cursor {
+        background-color: $color-red;
+        transform: translate(-50%, -50%) scale(14);
+      }  
 
-
-    &__item:hover ~ &__cursor {
-      background-color: $color-red;
-      transform: translate(-50%, -50%) scale(14);
-    }
-    
     &__cursor {
       pointer-events: none;
       position: fixed;
@@ -41,6 +50,10 @@
       background-color: $color-red;
       border-radius: 50%;
       mix-blend-mode: difference;
-      transition: transform .3s ease;
+      transition: transform .2s ease;
+
+      @include respond(tab-land) {
+        opacity: 0;
+    }
     }
   }

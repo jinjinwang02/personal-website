@@ -1,0 +1,115 @@
+//COLOURS
+$color-beige: #F8F6F0;
+$color-pink: #EACCC7;
+$color-red: #BE020D;
+$color-orange: #f93700;
+$color-brown: #5E5351;
+$color-black: #333;
+$color-white: #fff;
+
+//FONT
+$font-primary: 'Abril Fatface', cursive;
+$font-primary-2: 'Prata', serif;
+$font-display: 'Raleway', sans-serif;
+$font-display-2: 'Roboto Mono', monospace;
+
+//BORDER
+$border-thick-white: 2px solid $color-white;
+$border-thin-white: 1px solid $color-white;
+$border-thin-orange: 1px solid $color-orange;
+$border-thin-pink: 1px solid $color-pink;
+$border-thin-red: 1px solid $color-red;
+
+//ANIMATIONS
+@keyframes expandToBottomLeftandDisappear {
+    0% {
+        height: 0;
+    }
+    100%{
+        height: 39rem;
+    }
+}
+@keyframes expandToRight {
+    0% {
+        transform: scaleX(0);
+    }
+    60% {
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+@keyframes moveRandomly {
+    0% {
+        transform: translate(0,0);
+    }
+    20% {
+        transform: translate(3rem,2rem);
+    }
+    40% {
+        transform: translate(1.5rem,-1.3rem);
+    }
+    60% {
+        transform: translate(-1rem,-2rem);
+    }
+    80% {
+        transform: translate(4rem,-0.5rem);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+@keyframes moveRandomly-hr {
+    0% {
+        transform: translateX(0) scaleX(0.5);
+    }
+    50% {
+        transform: translateX(-45rem) scaleX(0.5);
+    }
+    100% {
+        transform: translateX(0) scaleX(0.5);
+    }
+}
+@keyframes moveRandomly-vt {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(15rem);
+    }
+    75% {
+        transform: translateY(-15rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+//MEDIA QUERY MANAGER
+@mixin respond($breakpoint) {
+    @if $breakpoint ==  phone {
+        @media(max-width: 37.5em) { @content }; //600
+    }
+    @if $breakpoint ==  phone-lg {
+        @media(max-width: 50em) { @content }; //800
+    }
+    @if $breakpoint ==  tab-port {
+        @media(max-width: 56.25em) { @content }; //900
+    }
+    @if $breakpoint ==  tab-port-md {
+        @media(max-width: 62.5em) { @content }; //1000
+    }
+    @if $breakpoint ==  tab-port-lg {
+        @media(max-width: 68.75em) { @content }; //1100
+    }
+    @if $breakpoint ==  tab-land {
+        @media(max-width: 75em) { @content }; //1200
+    }
+    @if $breakpoint ==  tab-land-lg {
+        @media(max-width: 87.5em) { @content }; //1400
+    }
+    @if $breakpoint ==  big-desktop {
+        @media(mix-width: 112.5em) { @content }; //1800
+    }
+}

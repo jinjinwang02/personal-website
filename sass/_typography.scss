@@ -50,6 +50,9 @@ body {
     font-size: 1.8rem;
     color: $color-red;
     line-height: 1.6;
+    @include respond(phone) {
+        font-size: 2rem;
+    }
 }
 .heading-info-2 {
     font-family: $font-primary-2;
@@ -81,4 +84,27 @@ body {
 .text-index {
     font-family: $font-display-2;
     font-size: 1rem;
+}
+//project hover text
+.text-hover {
+    font-family: $font-primary-2;
+    font-size: 1.2rem;
+    color: $color-orange;
+}
+
+//FONTS FOR PHONE////////////////// 1rem = 8px
+
+//info heading and sub heading
+.heading-info-phone{
+    font-family: $font-primary-2;
+    font-size: 2rem;
+}
+.sub-heading-info-phone{
+    font-family: $font-primary-2;
+    font-size: 1.75rem;
+}
+//projects heading
+.heading-projects-phone {
+    font-family: $font-primary-2;
+    font-size: 3.75rem;
 }

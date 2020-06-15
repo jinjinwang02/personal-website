@@ -92,20 +92,7 @@ function parallaxHome(element, distance, speed) {
 window.addEventListener("scroll", () => {
     parallaxHome(".home", window.scrollY, 0.3);
 
-    // const name = document.querySelector(".home__heading-1");
-    // let newPosition = (window.scrollY || window.pageYOffset) / 4;
-    // name.style.transform = `translateX(-${newPosition}px)`;
-
-    // const role1 = document.querySelector(".home__heading-2");
-    // role1.style.transform = `translateX(${newPosition}px)`;
-
-    // const role2 = document.querySelector(".home__heading-3");
-    // role2.style.transform = `translateX(${newPosition}px)`;
-
     const line = document.querySelector(".home__line-rt");
-    // let newHeight = 506 - (window.scrollY || window.pageYOffset) * 1.2;
-    // line.style.height = `${newHeight}px`;
-
     const cube = document.querySelector(".home__cube");
     let newOpacity = 1 - ((window.scrollY || window.pageYOffset) * 2.5 / 1000);
     cube.style.opacity = `${newOpacity}`;
@@ -136,7 +123,6 @@ function smoothScroll(target, duration) {
 }
 
 const homeTag = document.getElementById('homeTag');
-
 homeTag.addEventListener('click', () => {
     smoothScroll(".home", 300);
 });
@@ -188,7 +174,7 @@ function splitScroll() {
     const controller = new ScrollMagic.Controller();
 
     new ScrollMagic.Scene({
-        duration: 300,
+        duration: 400,
         triggerElement: ".info__heading",
         triggerHook: 0,
     }).setPin(".info__heading")
@@ -254,13 +240,15 @@ document.querySelector(".projects__2").addEventListener("mouseleave", () => {
 document.querySelector(".projects__3").addEventListener("mouseenter", () => {
     projectsCursor.style.setProperty("width", "54rem");
     projectsCursor.style.setProperty("height", "30rem");
-    function changeNum() {
-        return Math.floor((Math.random() * 4) + 1)
-    };
+
+    let i = 1;
     function changeImg() {
-        projectsCursor.style.setProperty("background-image", `url(public/images/project-3-${changeNum()}.jpg)`);
+        if (i < 5) {
+            projectsCursor.style.setProperty("background-image", `url(public/images/project-3-${i}.jpg)`);
+            i++;
+        } else { i = 1; }
     }
-    interval3 = setInterval(changeImg, 300);
+    interval3 = setInterval(changeImg, 250);
 });
 document.querySelector(".projects__3").addEventListener("mouseleave", () => {
     projectsCursor.style.setProperty("background-image", "none");
@@ -270,13 +258,15 @@ document.querySelector(".projects__3").addEventListener("mouseleave", () => {
 document.querySelector(".projects__4").addEventListener("mouseenter", () => {
     projectsCursor.style.setProperty("width", "54rem");
     projectsCursor.style.setProperty("height", "30rem");
-    function changeNum() {
-        return Math.floor((Math.random() * 4) + 1)
-    };
+
+    let i = 1;
     function changeImg() {
-        projectsCursor.style.setProperty("background-image", `url(public/images/project-4-${changeNum()}.jpg)`);
+        if (i < 5) {
+            projectsCursor.style.setProperty("background-image", `url(public/images/project-4-${i}.jpg)`);
+            i++;
+        } else { i = 1; }
     }
-    interval4 = setInterval(changeImg, 300);
+    interval4 = setInterval(changeImg, 250);
 });
 document.querySelector(".projects__4").addEventListener("mouseleave", () => {
     projectsCursor.style.setProperty("background-image", "none");
@@ -286,15 +276,17 @@ document.querySelector(".projects__4").addEventListener("mouseleave", () => {
 document.querySelector(".projects__5").addEventListener("mouseenter", () => {
     projectsCursor.style.setProperty("background-image", "none");
 });
-//6
+//p6
 document.querySelector(".projects__6").addEventListener("mouseenter", () => {
     projectsCursor.style.setProperty("width", "55rem");
     projectsCursor.style.setProperty("height", "34rem");
-    function changeNum() {
-        return Math.floor((Math.random() * 6) + 1)
-    };
+
+    let i = 1;
     function changeImg() {
-        projectsCursor.style.setProperty("background-image", `url(public/images/project-6-${changeNum()}.jpg)`);
+        if (i < 7) {
+            projectsCursor.style.setProperty("background-image", `url(public/images/project-6-${i}.jpg)`);
+            i++;
+        } else { i = 1; }
     }
     interval6 = setInterval(changeImg, 300);
 });
@@ -306,29 +298,33 @@ document.querySelector(".projects__6").addEventListener("mouseleave", () => {
 document.querySelector(".projects__7").addEventListener("mouseenter", () => {
     projectsCursor.style.setProperty("width", "35rem");
     projectsCursor.style.setProperty("height", "50rem");
-    function changeNum() {
-        return Math.floor((Math.random() * 4) + 1)
-    };
+
+    let i = 1;
     function changeImg() {
-        projectsCursor.style.setProperty("background-image", `url(public/images/project-7-${changeNum()}.jpg)`);
+        if (i < 5) {
+            projectsCursor.style.setProperty("background-image", `url(public/images/project-7-${i}.jpg)`);
+            i++;
+        } else { i = 1; }
     }
-    interval7 = setInterval(changeImg, 300);
+    interval7 = setInterval(changeImg, 250);
 });
 document.querySelector(".projects__7").addEventListener("mouseleave", () => {
     projectsCursor.style.setProperty("background-image", "none");
     clearInterval(interval7);
 });
-//8
+//p8
 document.querySelector(".projects__8").addEventListener("mouseenter", () => {
     projectsCursor.style.setProperty("width", "53rem");
     projectsCursor.style.setProperty("height", "40rem");
-    function changeNum() {
-        return Math.floor((Math.random() * 6) + 1);
-    };
+
+    let i = 1;
     function changeImg() {
-        projectsCursor.style.setProperty("background-image", `url(public/images/project-8-${changeNum()}.jpg)`);
+        if (i < 7) {
+            projectsCursor.style.setProperty("background-image", `url(public/images/project-8-${i}.jpg)`);
+            i++;
+        } else { i = 1; }
     }
-    interval8 = setInterval(changeImg, 300);
+    interval8 = setInterval(changeImg, 250);
 });
 
 document.querySelector(".projects__8").addEventListener("mouseleave", () => {

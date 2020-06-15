@@ -5,6 +5,19 @@
     top: 86%;
     text-align: center;
 
+    @include respond(tab-land) {
+        top: 87%;
+    }
+    @include respond(tab-port){
+        top: 89%;
+    }
+    @include respond(phone-lg) {
+        top: 82%;
+    }
+    @include respond(phone) {
+        top: 88%;
+    }
+
     &__contact {
         position: relative;
         display: inline-block;
@@ -25,14 +38,17 @@
             bottom: 1rem;
             z-index: -1;
             transform-origin: left center;
-            transition: transform .2s ease-in-out;
+            transition: transform .2s ease-in-out, opacity .5s ease-out;
+
+            @include respond(phone){
+                background-color: $color-beige;
+            }
         }
         }
 
     &__contactLinks {
         display: block;
         list-style: none;
-        margin-bottom: 20rem;
         
         &-item {
             display: inline-block;
@@ -50,11 +66,24 @@
             letter-spacing: -1.5px;
         }
     }
-
     &__copyright {
         position: relative;
-        display: block;
-        color: $color-red;
-        margin-bottom: .5rem;
-    }
+        margin-top: 19rem;
+    
+        &-2{
+            display: inline-block;
+            margin-top: .8rem;
+            color: $color-red;
+        }
+
+        @include respond(tab-land) {
+            margin-top: 16rem;
+        }
+        @include respond(phone-lg){
+            margin-top: 28rem;
+        }
+        @include respond(phone){
+            margin-top: 5rem;
+        }
+}
 }
