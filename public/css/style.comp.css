@@ -28,19 +28,19 @@
 
 @keyframes moveRandomly-hr {
   0% {
-    transform: translateX(0) scaleX(0.5); }
-  50% {
     transform: translateX(-45rem) scaleX(0.5); }
+  50% {
+    transform: translateX(0) scaleX(0.5); }
   100% {
-    transform: translateX(0) scaleX(0.5); } }
+    transform: translateX(-45rem) scaleX(0.5); } }
 
 @keyframes moveRandomly-vt {
   0% {
     transform: translateY(0); }
-  25% {
+  33% {
     transform: translateY(15rem); }
-  75% {
-    transform: translateY(-15rem); }
+  66% {
+    transform: translateY(-20rem); }
   100% {
     transform: translateY(0); } }
 
@@ -656,7 +656,7 @@ body {
         top: 60%;
         z-index: 98;
         border: 1px solid #fff;
-        animation: moveRandomly-vt-phone 15s ease  infinite; } }
+        animation: moveRandomly-vt-phone 15s ease infinite; } }
   .home__line-vt {
     position: absolute;
     left: 90%;
@@ -664,7 +664,7 @@ body {
     width: 1px;
     height: 100vh;
     z-index: -2;
-    animation: moveRandomly-hr 20s ease  infinite; }
+    animation: moveRandomly-hr 15s ease infinite; }
     @media (max-width: 37.5em) {
       .home__line-vt {
         z-index: 98;

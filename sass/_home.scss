@@ -266,7 +266,7 @@
             top: 60%;
             z-index: 98;
             border: $border-thin-white;
-            animation: moveRandomly-vt-phone 15s ease  infinite;
+            animation: moveRandomly-vt-phone 15s ease infinite;
         }
     }
     &__line-vt {
@@ -276,7 +276,7 @@
         width: 1px;
         height: 100vh;
         z-index: -2;
-        animation: moveRandomly-hr 20s ease  infinite;
+        animation: moveRandomly-hr 15s ease infinite;
         @include respond(phone) {
             z-index: 98;
             border: $border-thin-red;
