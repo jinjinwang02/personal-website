@@ -186,7 +186,7 @@ splitScroll();
 // PROJECTS ROTAING CIRCLE AND HEADING
 const circle = document.querySelector(".projects__circle");
 const circleTrail = document.querySelector(".projects__circle-trail");
-const projectsHeading = document.querySelector(".projects__heading")
+const projectsHeading = document.querySelector(".projects__heading");
 
 window.addEventListener("scroll", () => {
     let offset = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;

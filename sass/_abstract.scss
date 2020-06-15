@@ -84,7 +84,35 @@ $border-thin-red: 1px solid $color-red;
     100% {
         transform: translateY(0);
     }
+
 }
+@keyframes moveRandomly-vt-phone {
+    0% {
+        transform: translateY(0) scaleY(0.5);
+    }
+    25% {
+        transform: translateY(20rem) scaleY(0.5);
+    }
+    75% {
+        transform: translateY(-10rem) scaleY(0.5);
+    }
+    100% {
+        transform: translateY(0) scaleY(0.5);
+    }
+    }
+
+@keyframes moveRandomly-hr-phone {
+    0% {
+        transform: translateX(0) scaleX(0.5);
+    }
+    50% {
+        transform: translateX(-35rem) scaleX(0.5);
+    }
+    100% {
+        transform: translateX(0) scaleX(0.5);
+    }
+}
+
 
 //MEDIA QUERY MANAGER
 @mixin respond($breakpoint) {

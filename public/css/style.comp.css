@@ -44,6 +44,24 @@
   100% {
     transform: translateY(0); } }
 
+@keyframes moveRandomly-vt-phone {
+  0% {
+    transform: translateY(0) scaleY(0.5); }
+  25% {
+    transform: translateY(20rem) scaleY(0.5); }
+  75% {
+    transform: translateY(-10rem) scaleY(0.5); }
+  100% {
+    transform: translateY(0) scaleY(0.5); } }
+
+@keyframes moveRandomly-hr-phone {
+  0% {
+    transform: translateX(0) scaleX(0.5); }
+  50% {
+    transform: translateX(-35rem) scaleX(0.5); }
+  100% {
+    transform: translateX(0) scaleX(0.5); } }
+
 *,
 *::after,
 *::before {
@@ -523,8 +541,10 @@ body {
     animation: moveRandomly-vt 20s ease infinite; }
     @media (max-width: 37.5em) {
       .home__line-hr {
-        opacity: 0;
-        animation-play-state: paused; } }
+        top: 60%;
+        z-index: 98;
+        border: 1px solid #fff;
+        animation: moveRandomly-vt-phone 20s ease  infinite; } }
   .home__line-vt {
     position: absolute;
     left: 90%;
@@ -535,8 +555,9 @@ body {
     animation: moveRandomly-hr 20s ease  infinite; }
     @media (max-width: 37.5em) {
       .home__line-vt {
-        opacity: 0;
-        animation-play-state: paused; } }
+        z-index: 98;
+        border: 1px solid #BE020D;
+        animation: moveRandomly-hr-phone 20s ease  infinite; } }
   .home__cube {
     position: absolute;
     top: 39.5%;
@@ -593,7 +614,7 @@ body {
       .info__heading-media {
         top: 4rem;
         writing-mode: horizontal-tb;
-        transform: rotate(0) translate(19rem, 1rem); } }
+        transform: rotate(0) translate(18.5rem, 1rem); } }
   @media (max-width: 68.75em) {
     .info .scrollmagic-pin-spacer {
       display: none !important; } }
@@ -708,7 +729,7 @@ body {
         top: 2.5%; } }
     @media (max-width: 50em) {
       .projects__arrow-1 {
-        top: 3.5%; } }
+        top: 3%; } }
   .projects__arrow-2 {
     position: absolute;
     top: 10%;
@@ -768,8 +789,15 @@ body {
         top: 17%; } }
     @media (max-width: 50em) {
       .projects__heading {
-        top: 21%;
-        transition: 1s ease-out .2s; } }
+        opacity: 0; } }
+  .projects__heading-phone {
+    position: absolute;
+    top: 21%;
+    opacity: 0;
+    transform: translateX(-5rem); }
+    @media (max-width: 50em) {
+      .projects__heading-phone {
+        opacity: 1; } }
   .projects__line-ct {
     position: absolute;
     top: 54.5%;

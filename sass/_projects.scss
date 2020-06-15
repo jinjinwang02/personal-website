@@ -32,7 +32,7 @@
             top: 2.5%;
         }
         @include respond(phone-lg){
-            top: 3.5%;
+            top: 3%;
         }
     }
     &__arrow-2 {
@@ -103,8 +103,17 @@
             top: 17%;
         }
         @include respond(phone-lg) {
-            top: 21%;
-            transition: 1s ease-out .2s;
+            opacity: 0;
+        }
+    }
+
+    &__heading-phone {
+        position: absolute;
+        top: 21%;
+        opacity: 0;
+        transform: translateX(-5rem);
+        @include respond(phone-lg) {
+            opacity: 1;
         }
     }
 

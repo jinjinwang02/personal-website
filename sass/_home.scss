@@ -263,8 +263,10 @@
         z-index: -1;
         animation: moveRandomly-vt 20s ease infinite;
         @include respond(phone) {
-            opacity: 0;
-            animation-play-state: paused;
+            top: 60%;
+            z-index: 98;
+            border: $border-thin-white;
+            animation: moveRandomly-vt-phone 20s ease  infinite;
         }
     }
     &__line-vt {
@@ -276,8 +278,10 @@
         z-index: -2;
         animation: moveRandomly-hr 20s ease  infinite;
         @include respond(phone) {
-            opacity: 0;
-            animation-play-state: paused;
+            z-index: 98;
+            border: $border-thin-red;
+            animation: moveRandomly-hr-phone 20s ease  infinite;
+            
         }
     }
     &__cube {
