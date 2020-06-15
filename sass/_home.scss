@@ -54,10 +54,8 @@
 
     &__heading-1-phone {
         position: absolute;
-        // left: -2.3rem;
-        // top: 31.5rem;
         right: 47.5%;;
-        top: 30%;
+        top: 25%;
         font-family: $font-primary;
         font-size: 19.75rem;
         text-transform: uppercase;
@@ -68,10 +66,8 @@
     }
     &__heading-2-phone {
         position: absolute;
-        // left: 10.1rem;
-        // top: 13.5rem;
         right: 21.7%;
-        top: 13.5%;
+        top: 10.5%;
         font-family: $font-primary;
         font-size: 19.75rem;
         text-transform: uppercase;
@@ -84,7 +80,7 @@
     &__heading-3-phone{
         position: absolute;
         right: 12%;            
-        top: 74%;
+        top: 71%;
         font-family: $font-display;
         font-weight: 700;
         font-size: 1.5rem;
@@ -96,7 +92,7 @@
     &__heading-4-phone{
         position: absolute;
         right: 12%; 
-        top: 77%;
+        top: 74%;
         font-family: $font-display;
         font-weight: 700;
         font-size: 1.5rem;
@@ -175,7 +171,7 @@
                 color: $color-white;
                 font-size: 1.5rem;
                 font-weight: 300;
-                top: 83%;
+                top: 80%;
                 right: 12%;
                 text-align: end;
             }
@@ -199,10 +195,10 @@
 
     &__circle {
         position: absolute;
-        top: 9%;
+        top: 8%;
         left: 32.5%;
-        height: 65rem;
-        width: 65rem;
+        height: 62rem;
+        width: 62rem;
         border-radius: 50%;
         border: $border-thick-white;
         z-index: 99;

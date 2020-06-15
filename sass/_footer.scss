@@ -42,6 +42,7 @@
 
             @include respond(phone){
                 background-color: $color-beige;
+                opacity: .3;
             }
         }
         }

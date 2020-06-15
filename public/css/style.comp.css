@@ -134,7 +134,8 @@ a:hover {
       transition: transform .2s ease-in-out, opacity .5s ease-out; }
       @media (max-width: 37.5em) {
         .footer__contact-heading-bg {
-          background-color: #F8F6F0; } }
+          background-color: #F8F6F0;
+          opacity: .3; } }
   .footer__contactLinks {
     display: block;
     list-style: none; }
@@ -350,7 +351,7 @@ body {
   .home__heading-1-phone {
     position: absolute;
     right: 47.5%;
-    top: 30%;
+    top: 25%;
     font-family: "Abril Fatface", cursive;
     font-size: 19.75rem;
     text-transform: uppercase;
@@ -361,7 +362,7 @@ body {
   .home__heading-2-phone {
     position: absolute;
     right: 21.7%;
-    top: 13.5%;
+    top: 10.5%;
     font-family: "Abril Fatface", cursive;
     font-size: 19.75rem;
     text-transform: uppercase;
@@ -372,7 +373,7 @@ body {
   .home__heading-3-phone {
     position: absolute;
     right: 12%;
-    top: 74%;
+    top: 71%;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
@@ -382,7 +383,7 @@ body {
   .home__heading-4-phone {
     position: absolute;
     right: 12%;
-    top: 77%;
+    top: 74%;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
@@ -444,7 +445,7 @@ body {
         color: #fff;
         font-size: 1.5rem;
         font-weight: 300;
-        top: 83%;
+        top: 80%;
         right: 12%;
         text-align: end; } }
   .home__logo {
@@ -460,10 +461,10 @@ body {
         top: 4.5%; } }
   .home__circle {
     position: absolute;
-    top: 9%;
+    top: 8%;
     left: 32.5%;
-    height: 65rem;
-    width: 65rem;
+    height: 62rem;
+    width: 62rem;
     border-radius: 50%;
     border: 2px solid #fff;
     z-index: 99; }
@@ -761,13 +762,14 @@ body {
     position: absolute;
     top: 15%;
     transform: translateX(145rem);
-    transition: .2s ease-out; }
+    transition: .3s ease-out; }
     @media (max-width: 75em) {
       .projects__heading {
         top: 17%; } }
     @media (max-width: 50em) {
       .projects__heading {
-        top: 21%; } }
+        top: 21%;
+        transition: 1s ease-out .2s; } }
   .projects__line-ct {
     position: absolute;
     top: 54.5%;

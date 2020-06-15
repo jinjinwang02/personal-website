@@ -181,7 +181,6 @@ function splitScroll() {
         // .addIndicators()
         .addTo(controller);
 }
-
 splitScroll();
 
 // PROJECTS ROTAING CIRCLE AND HEADING
