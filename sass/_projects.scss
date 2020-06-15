@@ -113,8 +113,6 @@
         opacity: 0;
         transform: translateX(-1rem);
         font-size: 13rem;
-        color: $color-orange;
-        // color: $color-beige;
         @include respond(phone-lg) {
             opacity: 1;
         }

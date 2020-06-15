@@ -795,8 +795,7 @@ body {
     top: 21%;
     opacity: 0;
     transform: translateX(-1rem);
-    font-size: 13rem;
-    color: #f93700; }
+    font-size: 13rem; }
     @media (max-width: 50em) {
       .projects__heading-phone {
         opacity: 1; } }
