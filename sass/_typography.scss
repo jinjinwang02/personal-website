@@ -81,7 +81,7 @@ body {
     font-size: 4rem;
 
     @include respond(phone) {
-        font-size: 3.5rem;
+        font-size: 3.75rem;
     }
 }
 //project index
@@ -94,21 +94,4 @@ body {
     font-family: $font-primary-2;
     font-size: 1.2rem;
     color: $color-orange;
-}
-
-//FONTS FOR PHONE////////////////// 1rem = 8px
-
-//info heading and sub heading
-.heading-info-phone{
-    font-family: $font-primary-2;
-    font-size: 2rem;
-}
-.sub-heading-info-phone{
-    font-family: $font-primary-2;
-    font-size: 1.75rem;
-}
-//projects heading
-.heading-projects-phone {
-    font-family: $font-primary-2;
-    font-size: 3.75rem;
 }

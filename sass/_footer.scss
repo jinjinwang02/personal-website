@@ -58,6 +58,10 @@
             &:not(:last-child) {
                 margin-right: 3rem;
             }
+
+            @include respond(phone) {
+                margin-top: 1rem;
+            }
         }
         
         span {
@@ -84,7 +88,7 @@
             margin-top: 28rem;
         }
         @include respond(phone){
-            margin-top: 5rem;
+            margin-top: 10rem;
         }
 }
 }

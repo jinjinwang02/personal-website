@@ -274,6 +274,9 @@ a:hover {
       margin-top: 3rem; }
       .footer__contactLinks-item:not(:last-child) {
         margin-right: 3rem; }
+      @media (max-width: 37.5em) {
+        .footer__contactLinks-item {
+          margin-top: 1rem; } }
     .footer__contactLinks span {
       display: inline-block;
       color: #5E5351;
@@ -294,7 +297,7 @@ a:hover {
         margin-top: 28rem; } }
     @media (max-width: 37.5em) {
       .footer__copyright {
-        margin-top: 5rem; } }
+        margin-top: 10rem; } }
 
 .nav__container {
   z-index: 100;
@@ -414,7 +417,7 @@ body {
   font-size: 4rem; }
   @media (max-width: 37.5em) {
     .heading-projects {
-      font-size: 3.5rem; } }
+      font-size: 3.75rem; } }
 
 .text-index {
   font-family: "Roboto Mono", monospace;
@@ -424,18 +427,6 @@ body {
   font-family: "Prata", serif;
   font-size: 1.2rem;
   color: #f93700; }
-
-.heading-info-phone {
-  font-family: "Prata", serif;
-  font-size: 2rem; }
-
-.sub-heading-info-phone {
-  font-family: "Prata", serif;
-  font-size: 1.75rem; }
-
-.heading-projects-phone {
-  font-family: "Prata", serif;
-  font-size: 3.75rem; }
 
 .home {
   min-height: 100vh;
