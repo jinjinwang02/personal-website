@@ -182,14 +182,14 @@
         position: absolute;
         top: 85%;
         left: 8rem;
-        
+
         span {
             @include respond(phone){
                 font-size: 2rem;
             }
         }
         @include respond(phone){
-            left: 11%;
+            left: 11.5%;
             top: 4.5%;
         }
     }
@@ -250,7 +250,7 @@
         @include respond(tab-port) {
             left: 64%;
         }
-        @include respond(phone) {
+        @include respond(phone-lg) {
             opacity: 0;
             animation-play-state: paused;
         }
