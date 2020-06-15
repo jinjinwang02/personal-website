@@ -79,6 +79,10 @@ body {
 .heading-projects {
     font-family: $font-primary-2;
     font-size: 4rem;
+
+    @include respond(phone) {
+        font-size: 3.5rem;
+    }
 }
 //project index
 .text-index {

@@ -1,17 +1,14 @@
 .nav {
   &__container {
-    position: sticky;
-    top: 0;
     z-index: 100;
     user-select: none;
 
   }
-
     &__links {
       top: 6vh;
       display: flex;
       justify-content: space-between;
-      position: absolute;
+      position: fixed;
       width: 100%;
       z-index: 101;
       padding: 0 8rem;
@@ -35,7 +32,7 @@
 
       @include respond(phone) {
         margin-right: 0;
-    }
+      }
     }
 
       &__item:hover ~ &__cursor {

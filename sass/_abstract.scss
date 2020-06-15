@@ -62,24 +62,24 @@ $border-thin-red: 1px solid $color-red;
 }
 @keyframes moveRandomly-hr {
     0% {
-        transform: translateX(-45rem) scaleX(0.5);
-    }
-    50% {
         transform: translateX(0) scaleX(0.5);
     }
-    100% {
+    50% {
         transform: translateX(-45rem) scaleX(0.5);
+    }
+    100% {
+        transform: translateX(0) scaleX(0.5);
     }
 }
 @keyframes moveRandomly-vt {
     0% {
         transform: translateY(0);
     }
-    33% {
+    25% {
         transform: translateY(15rem);
     }
-    66% {
-        transform: translateY(-20rem);
+    75% {
+        transform: translateY(-15rem);
     }
     100% {
         transform: translateY(0);
@@ -90,10 +90,10 @@ $border-thin-red: 1px solid $color-red;
     0% {
         transform: translateY(0) scaleY(0.5);
     }
-    25% {
+    33% {
         transform: translateY(20rem) scaleY(0.5);
     }
-    75% {
+    88% {
         transform: translateY(-10rem) scaleY(0.5);
     }
     100% {

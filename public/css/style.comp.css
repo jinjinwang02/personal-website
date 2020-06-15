@@ -28,28 +28,28 @@
 
 @keyframes moveRandomly-hr {
   0% {
-    transform: translateX(-45rem) scaleX(0.5); }
-  50% {
     transform: translateX(0) scaleX(0.5); }
+  50% {
+    transform: translateX(-45rem) scaleX(0.5); }
   100% {
-    transform: translateX(-45rem) scaleX(0.5); } }
+    transform: translateX(0) scaleX(0.5); } }
 
 @keyframes moveRandomly-vt {
   0% {
     transform: translateY(0); }
-  33% {
+  25% {
     transform: translateY(15rem); }
-  66% {
-    transform: translateY(-20rem); }
+  75% {
+    transform: translateY(-15rem); }
   100% {
     transform: translateY(0); } }
 
 @keyframes moveRandomly-vt-phone {
   0% {
     transform: translateY(0) scaleY(0.5); }
-  25% {
+  33% {
     transform: translateY(20rem) scaleY(0.5); }
-  75% {
+  88% {
     transform: translateY(-10rem) scaleY(0.5); }
   100% {
     transform: translateY(0) scaleY(0.5); } }
@@ -297,8 +297,6 @@ a:hover {
         margin-top: 5rem; } }
 
 .nav__container {
-  position: sticky;
-  top: 0;
   z-index: 100;
   user-select: none; }
 
@@ -306,7 +304,7 @@ a:hover {
   top: 6vh;
   display: flex;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 101;
   padding: 0 8rem; }
@@ -414,6 +412,9 @@ body {
 .heading-projects {
   font-family: "Prata", serif;
   font-size: 4rem; }
+  @media (max-width: 37.5em) {
+    .heading-projects {
+      font-size: 3.5rem; } }
 
 .text-index {
   font-family: "Roboto Mono", monospace;
@@ -558,7 +559,7 @@ body {
     height: 20%;
     width: 1px;
     position: absolute;
-    top: 40%;
+    top: 38%;
     left: 8rem;
     background-color: #EACCC7; }
     @media (max-width: 37.5em) {
@@ -566,7 +567,7 @@ body {
         opacity: 0; } }
   .home__location-item {
     position: absolute;
-    top: 62%;
+    top: 60%;
     left: 8rem;
     writing-mode: vertical-lr; }
     @media (max-width: 37.5em) {
@@ -580,7 +581,7 @@ body {
         text-align: end; } }
   .home__logo {
     position: absolute;
-    top: 87%;
+    top: 85%;
     left: 8rem; }
     @media (max-width: 37.5em) {
       .home__logo span {
@@ -669,7 +670,7 @@ body {
       .home__line-vt {
         z-index: 98;
         border: 1px solid #BE020D;
-        animation: moveRandomly-hr-phone 20s ease  infinite; } }
+        animation: moveRandomly-hr-phone 20s ease infinite; } }
   .home__cube {
     position: absolute;
     top: 39.5%;
