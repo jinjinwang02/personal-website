@@ -384,6 +384,17 @@
         display: inline;
         z-index: 1000;
 
+        background-image: linear-gradient($color-orange, $color-orange);
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        background-size: 0 0.1rem;
+        transition: background-size .3s ease;
+
+        &:not(.coming-soon):hover {
+            background-position: 0 100%;
+            background-size: 100% 0.1rem;
+        }
+
         svg{
             margin-left: 0.2rem;
             height: 0.8rem;

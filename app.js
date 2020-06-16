@@ -35,7 +35,7 @@ const anim1 = () => {
         translateY: [12, 0],
         translateZ: 0,
         opacity: [0, 1],
-        easing: "easeInOutCubic",
+        easing: "easeOutQuint",
         duration: 100,
         delay: (el, i) => 100 + 15 * i
     });
@@ -46,7 +46,7 @@ const anim2 = () => {
         translateY: [12, 0],
         translateZ: 0,
         opacity: [0, 1],
-        easing: "easeInOutCubic",
+        easing: "easeOutQuint",
         duration: 100,
         delay: (el, i) => 100 + 15 * i
     });
@@ -57,7 +57,7 @@ const anim3 = () => {
         translateY: [12, 0],
         translateZ: 0,
         opacity: [0, 1],
-        easing: "easeInOutCubic",
+        easing: "easeOutQuint",
         duration: 100,
         delay: (el, i) => 100 + 15 * i
     });
@@ -68,7 +68,7 @@ const anim4 = () => {
         translateY: [12, 0],
         translateZ: 0,
         opacity: [0, 1],
-        easing: "easeInOutCubic",
+        easing: "easeOutQuint",
         duration: 100,
         delay: (el, i) => 100 + 15 * i
     });
@@ -97,8 +97,6 @@ window.addEventListener("scroll", () => {
     let newOpacity = 1 - ((window.scrollY || window.pageYOffset) * 2.5 / 1000);
     cube.style.opacity = `${newOpacity}`;
     line.style.opacity = `${newOpacity}`;
-
-
 });
 
 function smoothScroll(target, duration) {
