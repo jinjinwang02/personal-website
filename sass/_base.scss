@@ -47,14 +47,3 @@ a:hover {
       color: inherit;
       cursor: none;
 }
-
-.fade-in-and-rise {
-    opacity: 0;
-    transform: translateY(12rem);
-    transition: opacity .5s ease-out, transform .5s ease-out;
-}
-
-.fade-in-and-rise.appear {
-    opacity: 1;
-    transform: translateY(0);
-}

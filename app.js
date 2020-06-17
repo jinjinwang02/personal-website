@@ -28,7 +28,7 @@
     window.addEventListener("mousemove", editCursor);
 })();
 
-//CONTACT LINKS
+//CONTACT LINKS ANIMATION
 const anim1 = () => {
     anime({
         targets: ".hoverIn-1 > .char",
@@ -238,7 +238,6 @@ document.querySelector(".projects__1").addEventListener("mouseleave", () => {
     projectsCursor.style.setProperty("background-image", "none");
     clearInterval(interval1);
 });
-
 //p2
 document.querySelector(".projects__2").addEventListener("mouseenter", () => {
     projectsCursor.style.setProperty("background-image", "url(public/images/project-2-1.jpg)");
@@ -338,7 +337,6 @@ document.querySelector(".projects__8").addEventListener("mouseenter", () => {
     }
     interval8 = setInterval(changeImg, 300);
 });
-
 document.querySelector(".projects__8").addEventListener("mouseleave", () => {
     projectsCursor.style.setProperty("background-image", "none");
     clearInterval(interval8);

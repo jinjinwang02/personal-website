@@ -21,6 +21,17 @@ $border-thin-pink: 1px solid $color-pink;
 $border-thin-red: 1px solid $color-red;
 
 //ANIMATIONS
+.fade-in-and-rise {
+    opacity: 0;
+    transform: translateY(12rem);
+    transition: opacity .5s ease-out, transform .5s ease-out;
+}
+
+.fade-in-and-rise.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @keyframes expandToBottomLeftandDisappear {
     0% {
         height: 0;
@@ -272,7 +283,6 @@ $border-thin-red: 1px solid $color-red;
         color: $color-brown;
     }
 }
-
 
 //MEDIA QUERY MANAGER
 @mixin respond($breakpoint) {
