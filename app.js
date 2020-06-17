@@ -74,10 +74,23 @@ const anim4 = () => {
     });
 }
 
-document.querySelectorAll(".home__contactLinks-item")[0].addEventListener("mouseenter", anim1);
-document.querySelectorAll(".home__contactLinks-item")[1].addEventListener("mouseenter", anim2);
-document.querySelectorAll(".home__contactLinks-item")[2].addEventListener("mouseenter", anim3);
-document.querySelectorAll(".home__contactLinks-item")[3].addEventListener("mouseenter", anim4);
+const addAnimeToHomeLinks = (index, func) => {
+    document.querySelectorAll(".home__contactLinks-item")[index].addEventListener("mouseenter", func);
+};
+addAnimeToHomeLinks(0, anim1);
+addAnimeToHomeLinks(1, anim2);
+addAnimeToHomeLinks(2, anim3);
+addAnimeToHomeLinks(3, anim4);
+
+const addAnimeToFooterLinks = (index, func) => {
+    document.querySelectorAll(".footer__contactLinks-item")[index].addEventListener("mouseenter", func);
+}
+addAnimeToFooterLinks(0, anim1);
+addAnimeToFooterLinks(1, anim2);
+addAnimeToFooterLinks(2, anim3);
+addAnimeToFooterLinks(3, anim4);
+
+
 document.querySelectorAll(".footer__contactLinks-item")[0].addEventListener("mouseenter", anim1);
 document.querySelectorAll(".footer__contactLinks-item")[1].addEventListener("mouseenter", anim2);
 document.querySelectorAll(".footer__contactLinks-item")[2].addEventListener("mouseenter", anim3);
@@ -221,125 +234,94 @@ function moveCircle(e) {
     });
 }
 
-//p1
-document.querySelector(".projects__1").addEventListener("mouseenter", () => {
-    projectsCursor.style.setProperty("width", "50rem");
-    projectsCursor.style.setProperty("height", "30rem");
+const clearImg = () => { projectsCursor.style.setProperty("background-image", "none") };
+const setImgSize = (width, height) => {
+    projectsCursor.style.setProperty("width", `${width}rem`);
+    projectsCursor.style.setProperty("height", `${height}rem`);
+};
+
+const changeImages = (total, index) => {
     let i = 1;
-    function changeImg() {
-        if (i < 6) {
-            projectsCursor.style.setProperty("background-image", `url(public/images/project-1-${i}.jpg)`);
+    myInterval = setInterval(() => {
+        if (i < total) {
+            projectsCursor.style.setProperty("background-image", `url(public/images/project-${index}-${i}.jpg)`);
             i++;
         } else { i = 1; }
-    }
-    interval1 = setInterval(changeImg, 300);
+    }, 300);
+};
+
+//p1
+document.querySelector(".projects__1").addEventListener("mouseenter", () => {
+    setImgSize(50, 30);
+    changeImages(6, 1);
 });
 document.querySelector(".projects__1").addEventListener("mouseleave", () => {
-    projectsCursor.style.setProperty("background-image", "none");
-    clearInterval(interval1);
+    clearImg();
+    clearInterval(myInterval);
 });
+
 //p2
 document.querySelector(".projects__2").addEventListener("mouseenter", () => {
     projectsCursor.style.setProperty("background-image", "url(public/images/project-2-1.jpg)");
-    projectsCursor.style.setProperty("width", "54rem");
-    projectsCursor.style.setProperty("height", "30rem");
+    setImgSize(53, 30);
 });
 document.querySelector(".projects__2").addEventListener("mouseleave", () => {
-    projectsCursor.style.setProperty("background-image", "none");
+    clearImg();
 });
+
 //p3
 document.querySelector(".projects__3").addEventListener("mouseenter", () => {
-    projectsCursor.style.setProperty("width", "54rem");
-    projectsCursor.style.setProperty("height", "30rem");
-
-    let i = 1;
-    function changeImg() {
-        if (i < 5) {
-            projectsCursor.style.setProperty("background-image", `url(public/images/project-3-${i}.jpg)`);
-            i++;
-        } else { i = 1; }
-    }
-    interval3 = setInterval(changeImg, 300);
+    setImgSize(54, 30);
+    changeImages(5, 3);
 });
 document.querySelector(".projects__3").addEventListener("mouseleave", () => {
-    projectsCursor.style.setProperty("background-image", "none");
-    clearInterval(interval3);
+    clearImg();
+    clearInterval(myInterval);
 });
+
 //p4
 document.querySelector(".projects__4").addEventListener("mouseenter", () => {
-    projectsCursor.style.setProperty("width", "54rem");
-    projectsCursor.style.setProperty("height", "30rem");
-
-    let i = 1;
-    function changeImg() {
-        if (i < 5) {
-            projectsCursor.style.setProperty("background-image", `url(public/images/project-4-${i}.jpg)`);
-            i++;
-        } else { i = 1; }
-    }
-    interval4 = setInterval(changeImg, 300);
+    setImgSize(54, 30);
+    changeImages(5, 4);
 });
 document.querySelector(".projects__4").addEventListener("mouseleave", () => {
-    projectsCursor.style.setProperty("background-image", "none");
-    clearInterval(interval4);
+    clearImg();
+    clearInterval(myInterval);
 });
+
 //p5
 document.querySelector(".projects__5").addEventListener("mouseenter", () => {
-    projectsCursor.style.setProperty("background-image", "none");
+    clearImg();
 });
+
 //p6
 document.querySelector(".projects__6").addEventListener("mouseenter", () => {
-    projectsCursor.style.setProperty("width", "55rem");
-    projectsCursor.style.setProperty("height", "34rem");
-
-    let i = 1;
-    function changeImg() {
-        if (i < 7) {
-            projectsCursor.style.setProperty("background-image", `url(public/images/project-6-${i}.jpg)`);
-            i++;
-        } else { i = 1; }
-    }
-    interval6 = setInterval(changeImg, 300);
+    setImgSize(55, 34);
+    changeImages(7, 6);
 });
 document.querySelector(".projects__6").addEventListener("mouseleave", () => {
-    projectsCursor.style.setProperty("background-image", "none");
-    clearInterval(interval6);
+    clearImg();
+    clearInterval(myInterval);
 });
+
 //p7
 document.querySelector(".projects__7").addEventListener("mouseenter", () => {
-    projectsCursor.style.setProperty("width", "35rem");
-    projectsCursor.style.setProperty("height", "50rem");
-
-    let i = 1;
-    function changeImg() {
-        if (i < 5) {
-            projectsCursor.style.setProperty("background-image", `url(public/images/project-7-${i}.jpg)`);
-            i++;
-        } else { i = 1; }
-    }
-    interval7 = setInterval(changeImg, 300);
+    setImgSize(35, 50);
+    changeImages(5, 7);
 });
 document.querySelector(".projects__7").addEventListener("mouseleave", () => {
-    projectsCursor.style.setProperty("background-image", "none");
-    clearInterval(interval7);
+    clearImg();
+    clearInterval(myInterval);
 });
+
 //p8
 document.querySelector(".projects__8").addEventListener("mouseenter", () => {
-    projectsCursor.style.setProperty("width", "53rem");
-    projectsCursor.style.setProperty("height", "40rem");
-
-    let i = 1;
-    function changeImg() {
-        if (i < 7) {
-            projectsCursor.style.setProperty("background-image", `url(public/images/project-8-${i}.jpg)`);
-            i++;
-        } else { i = 1; }
-    }
-    interval8 = setInterval(changeImg, 300);
+    setImgSize(53, 40);
+    changeImages(7, 8);
 });
 document.querySelector(".projects__8").addEventListener("mouseleave", () => {
-    projectsCursor.style.setProperty("background-image", "none");
-    clearInterval(interval8);
+    clearImg();
+    clearInterval(myInterval);
 });
 
 projectsOverlay.forEach(b => b.addEventListener("mousemove", () => {

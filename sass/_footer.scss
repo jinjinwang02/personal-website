@@ -74,8 +74,11 @@
     &__copyright {
         position: relative;
         margin-top: 22.5rem;
+        &-1 {
+            font-weight: 1rem;
+        }
     
-        &-2{
+        &-2 {
             display: inline-block;
             margin-top: .8rem;
             color: $color-red;
