@@ -709,7 +709,7 @@ body {
   .info__heading-media {
     position: absolute;
     top: 0;
-    left: 2.5rem;
+    left: 5vw;
     opacity: 0;
     visibility: hidden;
     writing-mode: vertical-lr;
@@ -901,8 +901,9 @@ body {
   .projects__heading-phone {
     position: absolute;
     top: 22%;
+    left: 50%;
     opacity: 0;
-    transform: translateX(-1rem);
+    transform: translateX(-50%);
     font-size: 13rem; }
     @media (max-width: 50em) {
       .projects__heading-phone {

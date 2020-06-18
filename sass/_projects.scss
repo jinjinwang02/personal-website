@@ -110,8 +110,9 @@
     &__heading-phone {
         position: absolute;
         top: 22%;
+        left: 50%;
         opacity: 0;
-        transform: translateX(-1rem);
+        transform: translateX(-50%);
         font-size: 13rem;
         @include respond(phone-lg) {
             opacity: 1;
