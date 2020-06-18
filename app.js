@@ -29,9 +29,9 @@
 })();
 
 //CONTACT LINKS ANIMATION
-const anim1 = () => {
+const linkAnime = (linkIndex) => {
     anime({
-        targets: ".hoverIn-1 > .char",
+        targets: `.hoverIn-${linkIndex}> .char`,
         translateY: [12, 0],
         translateZ: 0,
         opacity: [0, 1],
@@ -39,62 +39,23 @@ const anim1 = () => {
         duration: 100,
         delay: (el, i) => 100 + 15 * i
     });
-}
-const anim2 = () => {
-    anime({
-        targets: ".hoverIn-2 > .char",
-        translateY: [12, 0],
-        translateZ: 0,
-        opacity: [0, 1],
-        easing: "easeOutQuint",
-        duration: 100,
-        delay: (el, i) => 100 + 15 * i
-    });
-}
-const anim3 = () => {
-    anime({
-        targets: ".hoverIn-3 > .char",
-        translateY: [12, 0],
-        translateZ: 0,
-        opacity: [0, 1],
-        easing: "easeOutQuint",
-        duration: 100,
-        delay: (el, i) => 100 + 15 * i
-    });
-}
-const anim4 = () => {
-    anime({
-        targets: ".hoverIn-4 > .char",
-        translateY: [12, 0],
-        translateZ: 0,
-        opacity: [0, 1],
-        easing: "easeOutQuint",
-        duration: 100,
-        delay: (el, i) => 100 + 15 * i
-    });
-}
-
-const addAnimeToHomeLinks = (index, func) => {
-    document.querySelectorAll(".home__contactLinks-item")[index].addEventListener("mouseenter", func);
 };
-addAnimeToHomeLinks(0, anim1);
-addAnimeToHomeLinks(1, anim2);
-addAnimeToHomeLinks(2, anim3);
-addAnimeToHomeLinks(3, anim4);
 
-const addAnimeToFooterLinks = (index, func) => {
-    document.querySelectorAll(".footer__contactLinks-item")[index].addEventListener("mouseenter", func);
+const addAnimeToHomeLinks = (index, func, linkIndex) => {
+    document.querySelectorAll(".home__contactLinks-item")[index].addEventListener("mouseenter", () => { func(linkIndex) });
+};
+addAnimeToHomeLinks(0, linkAnime, 1);
+addAnimeToHomeLinks(1, linkAnime, 2);
+addAnimeToHomeLinks(2, linkAnime, 3);
+addAnimeToHomeLinks(3, linkAnime, 4);
+
+const addAnimeToFooterLinks = (index, func, linkIndex) => {
+    document.querySelectorAll(".footer__contactLinks-item")[index].addEventListener("mouseenter", () => { func(linkIndex) });
 }
-addAnimeToFooterLinks(0, anim1);
-addAnimeToFooterLinks(1, anim2);
-addAnimeToFooterLinks(2, anim3);
-addAnimeToFooterLinks(3, anim4);
-
-
-document.querySelectorAll(".footer__contactLinks-item")[0].addEventListener("mouseenter", anim1);
-document.querySelectorAll(".footer__contactLinks-item")[1].addEventListener("mouseenter", anim2);
-document.querySelectorAll(".footer__contactLinks-item")[2].addEventListener("mouseenter", anim3);
-document.querySelectorAll(".footer__contactLinks-item")[3].addEventListener("mouseenter", anim4);
+addAnimeToFooterLinks(0, linkAnime, 1);
+addAnimeToFooterLinks(1, linkAnime, 2);
+addAnimeToFooterLinks(2, linkAnime, 3);
+addAnimeToFooterLinks(3, linkAnime, 4);
 
 // HOME PARALLAX
 function parallaxHome(element, distance, speed) {
