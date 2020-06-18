@@ -13,7 +13,7 @@
     
     &__heading{
         height: 100vh;
-        left: 22%;
+        left: 23%;
         writing-mode: vertical-lr;
         transform: rotate(180deg);
 
@@ -71,7 +71,7 @@
     &__text {
         position: absolute;
         top: 20%;
-        left: 46%;
+        left: 45%;
         height: 100%;
         width: 41%;
         @include respond(tab-port-lg) { //1100

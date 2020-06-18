@@ -700,7 +700,7 @@ body {
       background-color: #F8F6F0; } }
   .info__heading {
     height: 100vh;
-    left: 22%;
+    left: 23%;
     writing-mode: vertical-lr;
     transform: rotate(180deg); }
     @media (max-width: 68.75em) {
@@ -747,7 +747,7 @@ body {
   .info__text {
     position: absolute;
     top: 20%;
-    left: 46%;
+    left: 45%;
     height: 100%;
     width: 41%; }
     @media (max-width: 68.75em) {
@@ -932,6 +932,7 @@ body {
     width: 15rem;
     background-color: #fff;
     border-radius: 50%;
+    opacity: 0.9;
     box-shadow: 0 0 2.5rem 3rem #fff;
     animation: moveRandomly 4s ease infinite; }
     .projects__circle-glow span {
@@ -955,7 +956,7 @@ body {
       .projects__circle-glow {
         top: 78%;
         right: 53%;
-        opacity: .4;
+        opacity: 0.4;
         height: 12rem;
         width: 12rem; } }
   .projects__container-left {
@@ -1153,17 +1154,18 @@ body {
     width: 100%;
     height: 100%;
     z-index: 998; }
-  .projects__1, .projects__2, .projects__3, .projects__4, .projects__5, .projects__6, .projects__7, .projects__8 {
+  .projects__project-container {
     position: relative;
     color: #5E5351;
     z-index: 999;
     transition: color .2s ease, opacity .5s ease-out, transform .5s ease-out; }
-    .projects__1 svg, .projects__2 svg, .projects__3 svg, .projects__4 svg, .projects__5 svg, .projects__6 svg, .projects__7 svg, .projects__8 svg {
+    .projects__project-container svg {
       stroke: #5E5351;
       transition: stroke .2s ease; }
-  .projects__1:hover, .projects__2:hover, .projects__3:hover, .projects__4:hover, .projects__6:hover, .projects__7:hover, .projects__8:hover {
-    color: #f93700; }
-    .projects__1:hover svg, .projects__2:hover svg, .projects__3:hover svg, .projects__4:hover svg, .projects__6:hover svg, .projects__7:hover svg, .projects__8:hover svg {
+  .projects__project-container:not(.projects__5):hover {
+    color: #f93700;
+    cursor: none; }
+    .projects__project-container:not(.projects__5):hover svg {
       stroke: #f93700; }
   @media (max-width: 37.5em) {
     .projects__1 {

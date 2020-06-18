@@ -250,79 +250,45 @@ const changeImages = (total, index) => {
     }, 300);
 };
 
-//p1
 document.querySelector(".projects__1").addEventListener("mouseenter", () => {
     setImgSize(50, 30);
     changeImages(6, 1);
 });
-document.querySelector(".projects__1").addEventListener("mouseleave", () => {
-    clearImg();
-    clearInterval(myInterval);
-});
 
-//p2
 document.querySelector(".projects__2").addEventListener("mouseenter", () => {
     projectsCursor.style.setProperty("background-image", "url(public/images/project-2-1.jpg)");
     setImgSize(53, 30);
 });
-document.querySelector(".projects__2").addEventListener("mouseleave", () => {
-    clearImg();
-});
 
-//p3
 document.querySelector(".projects__3").addEventListener("mouseenter", () => {
     setImgSize(54, 30);
     changeImages(5, 3);
 });
-document.querySelector(".projects__3").addEventListener("mouseleave", () => {
-    clearImg();
-    clearInterval(myInterval);
-});
 
-//p4
 document.querySelector(".projects__4").addEventListener("mouseenter", () => {
     setImgSize(54, 30);
     changeImages(5, 4);
 });
-document.querySelector(".projects__4").addEventListener("mouseleave", () => {
-    clearImg();
-    clearInterval(myInterval);
-});
 
-//p5
-document.querySelector(".projects__5").addEventListener("mouseenter", () => {
-    clearImg();
-});
-
-//p6
 document.querySelector(".projects__6").addEventListener("mouseenter", () => {
     setImgSize(55, 34);
     changeImages(7, 6);
 });
-document.querySelector(".projects__6").addEventListener("mouseleave", () => {
-    clearImg();
-    clearInterval(myInterval);
-});
 
-//p7
 document.querySelector(".projects__7").addEventListener("mouseenter", () => {
     setImgSize(35, 50);
     changeImages(5, 7);
 });
-document.querySelector(".projects__7").addEventListener("mouseleave", () => {
-    clearImg();
-    clearInterval(myInterval);
-});
 
-//p8
 document.querySelector(".projects__8").addEventListener("mouseenter", () => {
     setImgSize(53, 40);
     changeImages(7, 8);
 });
-document.querySelector(".projects__8").addEventListener("mouseleave", () => {
+
+document.querySelectorAll(".projects__project-container").forEach(b => b.addEventListener("mouseleave", () => {
     clearImg();
     clearInterval(myInterval);
-});
+}));
 
 projectsOverlay.forEach(b => b.addEventListener("mousemove", () => {
     TweenLite.to(projectsCursor, 0.3, { scale: 1, autoAlpha: 1 });

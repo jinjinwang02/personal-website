@@ -146,6 +146,7 @@
         width: 15rem;
         background-color: $color-white;
         border-radius: 50%;
+        opacity: 0.9;
         box-shadow: 0 0 2.5rem 3rem $color-white;
         animation: moveRandomly 4s ease infinite;
         
@@ -172,7 +173,7 @@
         @include respond(phone){
             top: 78%;
             right: 53%;
-            opacity: .4;
+            opacity: 0.4;
             height: 12rem;
             width: 12rem;
         }
@@ -429,8 +430,7 @@
         z-index: 998;
     }
 
-
-    &__1, &__2, &__3, &__4, &__5, &__6, &__7, &__8 {
+    &__project-container{
         position: relative;
         color: $color-brown;
         z-index: 999;
@@ -442,8 +442,9 @@
         }
     }
 
-    &__1:hover, &__2:hover, &__3:hover, &__4:hover, &__6:hover, &__7:hover, &__8:hover {
+    &__project-container:not(.projects__5):hover {
         color: $color-orange;
+        cursor: none;
 
         svg {
             stroke: $color-orange;
