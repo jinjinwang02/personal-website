@@ -820,7 +820,7 @@ body {
       min-height: 310vh; } }
   @media (max-width: 50em) {
     .projects {
-      min-height: 200vh; } }
+      min-height: 220vh; } }
   @media (max-width: 37.5em) {
     .projects {
       background-color: #EACCC7; } }
