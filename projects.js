@@ -74,6 +74,11 @@ document.querySelector(".projects__4").addEventListener("mouseenter", () => {
     changeImages(5, 4);
 });
 
+document.querySelector(".projects__5").addEventListener("mouseenter", () => {
+    setImgSize(55, 30);
+    changeImages(6, 5);
+});
+
 document.querySelector(".projects__6").addEventListener("mouseenter", () => {
     setImgSize(55, 34);
     changeImages(7, 6);

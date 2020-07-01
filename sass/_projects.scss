@@ -58,6 +58,7 @@
         position: absolute;
         top: 10%;
         left: 50%;
+        transform: translate(-50%, -50%);
         transition: 0.5s ease-out;
         height: 30rem;
         width: 30rem;
@@ -77,6 +78,7 @@
         position: absolute;
         top: 10%;
         left: 50%;
+        transform: translate(-50%, -50%);
         transition: 0.8s ease-out;
         opacity: 0.3;
         height: 30rem;
@@ -237,21 +239,8 @@
         margin-bottom: 23rem;
 
         @include respond(phone-lg) {
-            margin-bottom: 10rem;
             display: flex;
             flex-direction: column;
-        }
-
-        &:last-child {
-            @include respond(phone-lg) {
-                margin-top: 0.5rem;
-            }
-        }
-
-        &:first-child {
-            @include respond(phone) {
-                margin-bottom: 9.5rem;
-            }
         }
 
         .projects__index {
@@ -262,6 +251,7 @@
             margin-left: .2rem;
             @include respond(phone-lg){
                 opacity: 0;
+                display: none;
             }
         }
     
@@ -293,6 +283,7 @@
             text-align: end;
             @include respond(phone-lg){
                 opacity: 0;
+                display: none;
             }
         }
     
@@ -302,6 +293,7 @@
             justify-self: flex-end;
             @include respond(phone-lg){
                 opacity: 0;
+                display: none;
             }
         }
     }
@@ -316,20 +308,11 @@
         @include respond(phone-lg) {
             display: flex;
             flex-direction: column;
-            margin-bottom: 10rem;
+            // margin-bottom: 10rem;
         }
 
         &:first-child {
-            margin-top: 17rem;
-
-            @include respond(phone-lg) {
-                margin-top: 12rem;
-            }
-        }
-        &:last-child {
-            @include respond(phone-lg) {
-                margin-top: 3rem;
-            }
+            margin-top: 16rem;
         }
 
         .projects__index {
@@ -340,6 +323,7 @@
             margin-right: .2rem;
             @include respond(phone-lg){
                 opacity: 0;
+                display: none;
             }
         }
     
@@ -369,6 +353,7 @@
             justify-self: flex-start;
             @include respond(phone-lg){
                 opacity: 0;
+                display: none;
             }
         }
     
@@ -378,6 +363,7 @@
             justify-self: flex-start;
             @include respond(phone-lg){
                 opacity: 0;
+                display: none;
             }
         }
     }
@@ -443,7 +429,7 @@
         }
     }
 
-    &__project-container:not(.projects__5):hover {
+    &__project-container:hover {
         color: $color-orange;
         cursor: none;
 
@@ -473,11 +459,16 @@
         }
     }
     &__5 {
+        margin-bottom: 22rem;
         @include respond (phone) {
-                animation: lightUp-5 5s infinite;
+            animation: lightUp-5 5s infinite;
         }
     }
     &__6 {
+        margin-top: 1.2rem;
+        @include respond (phone-lg) {
+            margin-top: 0;
+        }
         @include respond (phone) {
                 animation: lightUp-6 5s infinite;
         }
