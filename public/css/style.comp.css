@@ -243,7 +243,7 @@ a:hover {
       top: 82%; } }
   @media (max-width: 37.5em) {
     .footer {
-      top: 88%; } }
+      top: 86%; } }
   .footer__contact {
     position: relative;
     display: inline-block;
@@ -820,7 +820,7 @@ body {
       min-height: 310vh; } }
   @media (max-width: 50em) {
     .projects {
-      min-height: 240vh; } }
+      min-height: 200vh; } }
   @media (max-width: 37.5em) {
     .projects {
       background-color: #EACCC7; } }
