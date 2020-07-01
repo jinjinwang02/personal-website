@@ -315,7 +315,7 @@
         &:first-child {
             margin-top: 16rem;
             @include respond(phone-lg){
-                margin-top: 10.5rem;
+                margin-top: 10rem;
             }
         }
 
