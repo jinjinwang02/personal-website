@@ -241,6 +241,7 @@
         @include respond(phone-lg) {
             display: flex;
             flex-direction: column;
+            margin-bottom: 13rem!important;
         }
 
         .projects__index {
@@ -308,11 +309,14 @@
         @include respond(phone-lg) {
             display: flex;
             flex-direction: column;
-            // margin-bottom: 10rem;
+            margin-bottom: 13rem!important;
         }
 
         &:first-child {
             margin-top: 16rem;
+            @include respond(phone-lg){
+                margin-top: 10.5rem;
+            }
         }
 
         .projects__index {

@@ -1013,7 +1013,8 @@ body {
     @media (max-width: 50em) {
       .projects__left {
         display: flex;
-        flex-direction: column; } }
+        flex-direction: column;
+        margin-bottom: 13rem !important; } }
     .projects__left .projects__index {
       grid-row: 1 / 3;
       grid-column: 2 / 3;
@@ -1067,9 +1068,13 @@ body {
     @media (max-width: 50em) {
       .projects__right {
         display: flex;
-        flex-direction: column; } }
+        flex-direction: column;
+        margin-bottom: 13rem !important; } }
     .projects__right:first-child {
       margin-top: 16rem; }
+      @media (max-width: 50em) {
+        .projects__right:first-child {
+          margin-top: 10.5rem; } }
     .projects__right .projects__index {
       grid-row: 1 / 3;
       grid-column: 1 / 2;
