@@ -32,7 +32,7 @@
             top: 2.5%;
         }
         @include respond(phone-lg){
-            top: 3%;
+            opacity: 0;
         }
     }
     &__arrow-2 {
@@ -50,7 +50,7 @@
             top: 10%;
         }
         @include respond(phone-lg) {
-            top: 13%;
+            top: 12%;
         }
     }
 
@@ -70,7 +70,7 @@
             top: 10%;
         }
         @include respond(phone-lg) {
-            top: 13%;
+            top: 12%;
         }
     }
 
@@ -91,7 +91,7 @@
             top: 10%;
         }
         @include respond(phone-lg) {
-            top: 13%;
+            top: 12%;
         }
     }
 
@@ -203,7 +203,7 @@
             width: 100%;
             align-items: center;
             padding-right: 0;
-            top: 34%;
+            top: 35%;
         }
     }
 
@@ -227,7 +227,7 @@
             width: 100%;
             align-items: center;
             padding-left: 0;
-            top: 34%;
+            top: 35%;
         }
     }
 
