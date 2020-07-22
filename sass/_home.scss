@@ -1,310 +1,309 @@
 .home {
-    min-height: 100vh;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-        @include respond(phone) {
-            background-color: $color-pink;
-        }
-    &__heading {
-        @include respond(phone) {
-            opacity: 0;
-        }
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  @include respond(phone) {
+    background-color: $color-pink;
+  }
+  &__heading {
+    @include respond(phone) {
+      opacity: 0;
     }
-    &__heading-1 {
-        position: absolute;
-        top: 32%;
-        left: 26.5%;
-        z-index: 99;
+  }
+  &__heading-1 {
+    position: absolute;
+    top: 32%;
+    left: 26.5%;
+    z-index: 99;
 
-        @include respond(tab-port-lg) {
-            left: 23%;
-        }
+    @include respond(tab-port-lg) {
+      left: 23%;
+    }
+  }
+
+  &__heading-2 {
+    position: absolute;
+    top: 45.5%;
+    left: 50%;
+    z-index: 99;
+    @include respond(tab-port-lg) {
+      left: 50%;
+    }
+  }
+
+  &__heading-3 {
+    position: absolute;
+    top: 54%;
+    left: 41%;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $color-red;
+    @include respond(tab-port-lg) {
+      left: 39%;
+    }
+  }
+
+  &__heading-phone {
+    opacity: 0;
+
+    @include respond(phone) {
+      opacity: 1;
+    }
+  }
+
+  &__heading-1-phone {
+    position: absolute;
+    right: 47.5%;
+    top: 25%;
+    font-family: $font-primary;
+    font-size: 19.75rem;
+    text-transform: uppercase;
+    color: $color-white;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    z-index: 99;
+  }
+  &__heading-2-phone {
+    position: absolute;
+    right: 21.7%;
+    top: 10.5%;
+    font-family: $font-primary;
+    font-size: 19.75rem;
+    text-transform: uppercase;
+    color: $color-red;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    z-index: 99;
+  }
+
+  &__heading-3-phone {
+    position: absolute;
+    right: 12%;
+    top: 71%;
+    font-family: $font-display;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: end;
+    color: $color-red;
+  }
+
+  &__heading-4-phone {
+    position: absolute;
+    right: 12%;
+    top: 74%;
+    font-family: $font-display;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: end;
+    color: $color-red;
+  }
+
+  &__contact {
+    position: absolute;
+    top: 63%;
+    right: 8rem;
+    @include respond(phone) {
+      opacity: 0;
     }
 
-    &__heading-2 {
-        position: absolute;
-        top: 45.5%;
-        left: 50%;
-        z-index: 99;
-        @include respond(tab-port-lg) {
-            left: 50%;
-        }
+    &-line {
+      height: 20%;
+      width: 1px;
+      position: absolute;
+      bottom: 0;
+      right: 8rem;
+      background-color: $color-pink;
     }
+  }
 
-    &__heading-3 {
-        position: absolute;
-        top: 54%;
-        left: 41%;
-        color: transparent;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: $color-red;
-        @include respond(tab-port-lg) {
-            left: 39%;
-        }
-    }
+  &__contactLinks {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
-    &__heading-phone {
-        opacity: 0;
+    &-item {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 101;
 
-        @include respond(phone){
-            opacity: 1;
-        }
-    }
-
-    &__heading-1-phone {
-        position: absolute;
-        right: 47.5%;;
-        top: 25%;
-        font-family: $font-primary;
-        font-size: 19.75rem;
-        text-transform: uppercase;
-        color: $color-white;
-        writing-mode: vertical-lr;
-        transform: rotate(-180deg);
-        z-index: 99;
-    }
-    &__heading-2-phone {
-        position: absolute;
-        right: 21.7%;
-        top: 10.5%;
-        font-family: $font-primary;
-        font-size: 19.75rem;
-        text-transform: uppercase;
-        color: $color-red;
-        writing-mode: vertical-lr;
-        transform: rotate(-180deg);
-        z-index: 99;
-    }
-
-    &__heading-3-phone{
-        position: absolute;
-        right: 12%;            
-        top: 71%;
-        font-family: $font-display;
-        font-weight: 700;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        text-align: end;
-        color: $color-red;
-    }
-
-    &__heading-4-phone{
-        position: absolute;
-        right: 12%; 
-        top: 74%;
-        font-family: $font-display;
-        font-weight: 700;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        text-align: end;
-        color: $color-red;
-    }
-
-      &__contact {
-        position: absolute;
-        top: 63%;
-        right: 8rem;
-        @include respond(phone) {
-            opacity: 0;
-        }
-
-        &-line {
-            height: 20%;
-            width: 1px;
-            position: absolute;
-            bottom: 0;
-            right: 8rem;
-            background-color: $color-pink;
-        }
+      .hoverIn-1,
+      .hoverIn-2,
+      .hoverIn-3,
+      .hoverIn-4 {
+        display: inline-block;
+        margin-right: 2px;
+        margin-bottom: 1.5rem;
       }
-  
-      &__contactLinks {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-  
-        &-item {
-          display: inline-block;
-          margin-bottom: .5rem;
-          position: relative;
-          z-index: 101;
 
-            .hoverIn-1,
-            .hoverIn-2,
-            .hoverIn-3,
-            .hoverIn-4 {
-            display: inline-block;
-            margin-right: 2px;
-            margin-bottom: 1.5rem;
-            }
-
-            .char {
-            display: inline-block;
-            letter-spacing: -2px;
-            font-size: 1.1rem;
-            }
-        }
-        }
-
-        &__location {
-            &-line {
-                height: 20%;
-                width: 1px;
-                position: absolute;
-                top: 38%;
-                left: 8rem;
-                background-color: $color-pink;
-                @include respond(phone) {
-                    opacity: 0;
-                }
-            }
-
-        &-item {
-            position: absolute;
-            top: 60%;
-            left: 8rem;
-            writing-mode: vertical-lr;
-            font-size: 1.1rem;
-
-            @include respond(phone) {
-                writing-mode: horizontal-tb;
-                color: $color-white;
-                font-size: 1.5rem;
-                font-weight: 300;
-                top: 80%;
-                right: 12%;
-                text-align: end;
-            }
-        }
+      .char {
+        display: inline-block;
+        letter-spacing: -2px;
+        font-size: 1.1rem;
+      }
     }
+  }
 
-    &__logo {
-        position: absolute;
-        top: 85%;
-        left: 8rem;
-
-        span {
-            @include respond(phone){
-                font-size: 2rem;
-            }
-        }
-        @include respond(phone){
-            left: 11.5%;
-            top: 4.5%;
-        }
-    }
-
-    &__circle {
-        position: absolute;
-        top: 8%;
-        left: 32.5%;
-        height: 62rem;
-        width: 62rem;
-        border-radius: 50%;
-        border: $border-thick-white;
-        z-index: 99;
-        @include respond(tab-port-lg) {
-            top: 11%;
-            left: 30%;
-        }
-        @include respond(tab-port){
-            top: 15%;
-            left: 27%;
-        }
-        @include respond(phone-lg){
-            opacity: 0;
-        }
-    }
-
-    &__circle-phone {
+  &__location {
+    &-line {
+      height: 20%;
+      width: 1px;
+      position: absolute;
+      top: 38%;
+      left: 8rem;
+      background-color: $color-pink;
+      @include respond(phone) {
         opacity: 0;
-        position: absolute;
-        top: 47%;
-        left: 46%;
-        border: $border-thick-white;
-        height: 94rem;
-        width: 94rem;
-        transform: scale(0.5) translate(-50%, -50%);
-        border-radius: 50%;
-        z-index: 1;
-
-        @include respond(phone) {
-            opacity: 1;
-        }
+      }
     }
 
-    &__line-rt {
-        position: absolute;
-        top: 30%;
-        left: 57%;
-        width: 1px;
-        height: 39rem;
-        transform: rotate(39deg);
-        border-left: $border-thin-orange;
-        transform-origin: 0% 0%;
-        animation: expandToBottomLeftandDisappear 1.6s ease;
+    &-item {
+      position: absolute;
+      top: 60%;
+      left: 8rem;
+      writing-mode: vertical-lr;
+      font-size: 1.1rem;
 
-        @include respond (tab-land-lg) {
-            left: 59%;
-        }
-        @include respond(tab-port) {
-            left: 64%;
-        }
-        @include respond(phone-lg) {
-            opacity: 0;
-            animation-play-state: paused;
-        }
+      @include respond(phone) {
+        writing-mode: horizontal-tb;
+        color: $color-white;
+        font-size: 1.5rem;
+        font-weight: 300;
+        top: 80%;
+        right: 12%;
+        text-align: end;
+      }
     }
-    &__line-hr {
-        position: absolute;
-        top: 50%;
-        border: $border-thin-white;
-        height: 1px;
-        width: 100vw;
-        z-index: -1;
-        animation: moveRandomly-vt 20s ease infinite;
-        @include respond(phone) {
-            top: 60%;
-            z-index: 98;
-            border: $border-thin-white;
-            animation: moveRandomly-vt-phone 15s ease infinite;
-        }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 85%;
+    left: 8rem;
+
+    span {
+      @include respond(phone) {
+        font-size: 2rem;
+      }
     }
-    &__line-vt {
-        position: absolute;
-        left: 90%;
-        border: $border-thin-pink;
-        width: 1px;
-        height: 100vh;
-        z-index: -2;
-        animation: moveRandomly-hr 15s ease infinite;
-        @include respond(phone) {
-            z-index: 98;
-            border: $border-thin-red;
-            animation: moveRandomly-hr-phone 20s ease infinite;
-            
-        }
+    @include respond(phone) {
+      left: 11.5%;
+      top: 4.5%;
     }
-    &__cube {
-        position: absolute;
-        top: 39.5%;
-        left: 54%;
-        height: 14rem;
-        width: 24rem;
-        transform-origin: left;
-        background-color: $color-pink;
-        border: none;
-        z-index: -2;
-        animation: expandToRight 2s ease;
-        @include respond(tab-port-lg) {
-            left: 55%;
-            height: 15rem;
-        }
-        @include respond(phone) {
-            opacity: 0;
-            animation-play-state: paused;
-        }
+  }
+
+  &__circle {
+    position: absolute;
+    top: 8%;
+    left: 32.5%;
+    height: 62rem;
+    width: 62rem;
+    border-radius: 50%;
+    border: $border-thick-white;
+    z-index: 99;
+    @include respond(tab-port-lg) {
+      top: 11%;
+      left: 30%;
     }
+    @include respond(tab-port) {
+      top: 15%;
+      left: 27%;
+    }
+    @include respond(phone-lg) {
+      opacity: 0;
+    }
+  }
+
+  &__circle-phone {
+    opacity: 0;
+    position: absolute;
+    top: 47%;
+    left: 46%;
+    border: $border-thick-white;
+    height: 94rem;
+    width: 94rem;
+    transform: scale(0.5) translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+
+    @include respond(phone) {
+      opacity: 1;
+    }
+  }
+
+  &__line-rt {
+    position: absolute;
+    top: 30%;
+    left: 57%;
+    width: 1px;
+    height: 39rem;
+    transform: rotate(39deg);
+    border-left: $border-thin-orange;
+    transform-origin: 0% 0%;
+    animation: expandToBottomLeftandDisappear 1.6s ease;
+
+    @include respond(tab-land-lg) {
+      left: 59%;
+    }
+    @include respond(tab-port) {
+      left: 64%;
+    }
+    @include respond(phone-lg) {
+      opacity: 0;
+      animation-play-state: paused;
+    }
+  }
+  &__line-hr {
+    position: absolute;
+    top: 50%;
+    border: $border-thin-white;
+    height: 1px;
+    width: 100vw;
+    z-index: -1;
+    animation: moveRandomly-vt 20s ease infinite;
+    @include respond(phone) {
+      top: 60%;
+      z-index: 98;
+      border: $border-thin-white;
+      animation: moveRandomly-vt-phone 15s ease infinite;
+    }
+  }
+  &__line-vt {
+    position: absolute;
+    left: 90%;
+    border: $border-thin-pink;
+    width: 1px;
+    height: 100vh;
+    z-index: -2;
+    animation: moveRandomly-hr 15s ease infinite;
+    @include respond(phone) {
+      z-index: 98;
+      border: $border-thin-red;
+      animation: moveRandomly-hr-phone 20s ease infinite;
+    }
+  }
+  &__cube {
+    position: absolute;
+    top: 39.5%;
+    left: 54%;
+    height: 14rem;
+    width: 24rem;
+    transform-origin: left;
+    background-color: $color-pink;
+    border: none;
+    z-index: -2;
+    animation: expandToRight 2s ease;
+    @include respond(tab-port-lg) {
+      left: 55%;
+      height: 15rem;
+    }
+    @include respond(phone) {
+      opacity: 0;
+      animation-play-state: paused;
+    }
+  }
 }

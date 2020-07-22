@@ -535,7 +535,7 @@ body {
     align-items: flex-end; }
     .home__contactLinks-item {
       display: inline-block;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
       position: relative;
       z-index: 101; }
       .home__contactLinks-item .hoverIn-1,
@@ -694,9 +694,10 @@ body {
   width: 100%; }
   @media (max-width: 68.75em) {
     .info {
-      min-height: 120vh; } }
+      height: 160vh; } }
   @media (max-width: 37.5em) {
     .info {
+      height: 120vh;
       background-color: #F8F6F0; } }
   .info__heading {
     height: 100vh;
@@ -746,7 +747,7 @@ body {
         opacity: 0.8; } }
   .info__text {
     position: absolute;
-    top: 20%;
+    top: 18%;
     left: 45%;
     height: 100%;
     width: 41%; }

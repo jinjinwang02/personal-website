@@ -1,150 +1,151 @@
 .info {
-    min-height: 100vh;
-    background-color: $color-pink;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    @include respond(tab-port-lg){
-        min-height: 120vh;
+  min-height: 100vh;
+  background-color: $color-pink;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  @include respond(tab-port-lg) {
+    height: 160vh;
+  }
+  @include respond(phone) {
+    height: 120vh;
+    background-color: $color-beige;
+  }
+
+  &__heading {
+    height: 100vh;
+    left: 23%;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+
+    @include respond(tab-port-lg) {
+      opacity: 0;
     }
-    @include respond (phone) {
-        background-color: $color-beige;
+  }
+
+  &__heading-media {
+    position: absolute;
+    top: 0;
+    left: 5vw;
+    opacity: 0;
+    visibility: hidden;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+
+    @include respond(tab-port-lg) {
+      opacity: 1;
+      visibility: visible;
     }
-    
-    &__heading{
-        height: 100vh;
-        left: 23%;
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
-
-        @include respond(tab-port-lg) {
-            opacity: 0;
-        }
+    @include respond(phone) {
+      top: 4rem;
+      writing-mode: horizontal-tb;
+      transform: rotate(0) translate(19rem, 1rem);
     }
+  }
 
-    &__heading-media {
-        position: absolute;
-        top: 0;
-        left: 5vw;
-        opacity: 0;
-        visibility: hidden;
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
-
-        @include respond(tab-port-lg){
-            opacity: 1;
-            visibility: visible;
-        }
-        @include respond(phone){
-            top: 4rem;
-            writing-mode: horizontal-tb;
-            transform: rotate(0) translate(19rem,1rem);
-        }
+  .scrollmagic-pin-spacer {
+    @include respond(tab-port-lg) {
+      display: none !important;
     }
+  }
 
-    .scrollmagic-pin-spacer {
-        @include respond(tab-port-lg){
-            display: none!important;
-        }
+  &__circle-glow {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    height: 15rem;
+    width: 15rem;
+    background-color: $color-white;
+    border-radius: 50%;
+    box-shadow: 0 0 2.5rem 3rem $color-white;
+    opacity: 0.4;
+    animation: moveRandomly 5s ease infinite;
+    @include respond(phone-lg) {
+      top: 80%;
+      left: 40%;
     }
-
-    &__circle-glow {
-        position: absolute;
-        top: 50%;
-        left: 15%;
-        height:15rem;
-        width: 15rem;
-        background-color: $color-white;
-        border-radius: 50%;
-        box-shadow: 0 0 2.5rem 3rem $color-white;
-        opacity: 0.4;
-        animation: moveRandomly 5s ease infinite;
-        @include respond(phone-lg) {
-            top: 80%;
-            left: 40%;
-        }
-        @include respond(phone){
-            opacity: 0.8;
-        }
+    @include respond(phone) {
+      opacity: 0.8;
     }
+  }
 
-    &__text {
-        position: absolute;
-        top: 20%;
-        left: 45%;
-        height: 100%;
-        width: 41%;
-        @include respond(tab-port-lg) { //1100
-            left: 30%;
-            width: 60%;
-            top: 15%;
-        }
-        @include respond(phone){
-            top: 25%;
-            left: 0;
-            width: 100%;
-            padding: 0 4.5rem;
-        }
-
-        &-title {
-            margin-bottom: 1rem;
-            display: block;
-            @include respond(phone){
-                margin-bottom: 0;
-            }
-        }
-
-        &-subtitle {
-            display: block;
-            border-bottom: $border-thin-red;
-            padding-bottom: 1.1rem;
-            padding-top: 5rem;
-
-            @include respond(tab-land) {
-                margin-top: 2rem;
-            }
-            @include respond (tab-port-lg) {
-                margin-top: 4rem;
-            }
-            @include respond(phone){
-                margin-top: 0;
-            }
-
-        }
-
-        &-body {
-            border-bottom: $border-thin-red;
-            padding: 1.1rem 0;
-            display: grid;
-            grid-template-columns: 12rem max-content 1fr;
-
-            @include respond(tab-port-lg) {
-                grid-template-columns: 8.5rem max-content 1fr;
-            }
-
-            @include respond(phone) {
-                grid-template-rows: min-content min-content;
-                grid-template-columns: max-content 1fr;
-                padding: 1rem 0;
-                grid-gap: 0.5rem;
-            }
-            .role {
-            @include respond(phone) {
-                grid-row: 2 /3;
-            }  
-            }
-            .last{
-                justify-self: flex-end;
-                @include respond(phone) {
-                    grid-row: 2 /3;
-                }  
-            }
-        }
+  &__text {
+    position: absolute;
+    top: 18%;
+    left: 45%;
+    height: 100%;
+    width: 41%;
+    @include respond(tab-port-lg) {
+      //1100
+      left: 30%;
+      width: 60%;
+      top: 15%;
+    }
+    @include respond(phone) {
+      top: 25%;
+      left: 0;
+      width: 100%;
+      padding: 0 4.5rem;
     }
 
-    &__section-crs {
+    &-title {
+      margin-bottom: 1rem;
+      display: block;
+      @include respond(phone) {
+        margin-bottom: 0;
+      }
+    }
+
+    &-subtitle {
+      display: block;
+      border-bottom: $border-thin-red;
+      padding-bottom: 1.1rem;
+      padding-top: 5rem;
+
+      @include respond(tab-land) {
+        margin-top: 2rem;
+      }
+      @include respond(tab-port-lg) {
+        margin-top: 4rem;
+      }
+      @include respond(phone) {
+        margin-top: 0;
+      }
+    }
+
+    &-body {
+      border-bottom: $border-thin-red;
+      padding: 1.1rem 0;
+      display: grid;
+      grid-template-columns: 12rem max-content 1fr;
+
+      @include respond(tab-port-lg) {
+        grid-template-columns: 8.5rem max-content 1fr;
+      }
+
+      @include respond(phone) {
+        grid-template-rows: min-content min-content;
+        grid-template-columns: max-content 1fr;
+        padding: 1rem 0;
+        grid-gap: 0.5rem;
+      }
+      .role {
         @include respond(phone) {
-          opacity: 0!important;
+          grid-row: 2 /3;
         }
       }
+      .last {
+        justify-self: flex-end;
+        @include respond(phone) {
+          grid-row: 2 /3;
+        }
+      }
+    }
+  }
+
+  &__section-crs {
+    @include respond(phone) {
+      opacity: 0 !important;
+    }
+  }
 }
