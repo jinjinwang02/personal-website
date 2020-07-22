@@ -7,8 +7,10 @@
   @include respond(tab-port-lg) {
     height: 160vh;
   }
+  @include respond(phone-lg) {
+    height: 135vh;
+  }
   @include respond(phone) {
-    height: 120vh;
     background-color: $color-beige;
   }
 

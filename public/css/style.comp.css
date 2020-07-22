@@ -695,9 +695,11 @@ body {
   @media (max-width: 68.75em) {
     .info {
       height: 160vh; } }
+  @media (max-width: 50em) {
+    .info {
+      height: 135vh; } }
   @media (max-width: 37.5em) {
     .info {
-      height: 120vh;
       background-color: #F8F6F0; } }
   .info__heading {
     height: 100vh;
