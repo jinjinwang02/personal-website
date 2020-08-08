@@ -213,7 +213,7 @@
       top: 15%;
       left: 27%;
     }
-    @include respond(phone-lg) {
+    @include respond(phone) {
       opacity: 0;
     }
   }
@@ -252,7 +252,7 @@
     @include respond(tab-port) {
       left: 64%;
     }
-    @include respond(phone-lg) {
+    @include respond(phone) {
       opacity: 0;
       animation-play-state: paused;
     }

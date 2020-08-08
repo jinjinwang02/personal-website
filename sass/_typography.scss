@@ -1,97 +1,97 @@
 body {
-    font-family: $font-display;
-    color: $color-black;
+  font-family: $font-display;
+  color: $color-black;
 }
 
 //logo name
 .text-initial {
-    font-family: $font-primary;
-    font-size: 1.4rem;
-    color: $color-red;
-    text-transform: uppercase;
+  font-family: $font-primary;
+  font-size: 1.4rem;
+  color: $color-red;
+  text-transform: uppercase;
 }
 //section heading
 .heading-section {
-    font-family: $font-primary;
-    font-size: 14.8rem;
-    color: $color-black;
+  font-family: $font-primary;
+  font-size: 14.8rem;
+  color: $color-black;
 }
 //home heading
 .heading-home-1 {
-    font-family: $font-primary;
-    font-size: 7.5rem;
-    color: $color-black;
-    text-transform: uppercase;
+  font-family: $font-primary;
+  font-size: 7.5rem;
+  color: $color-black;
+  text-transform: uppercase;
 }
 .heading-home-2 {
-    font-family: $font-primary-2;
-    font-size: 6rem;
-    color: $color-red;
+  font-family: $font-primary-2;
+  font-size: 6rem;
+  color: $color-red;
 }
 //nav bar
 .text-nav {
-    font-family: $font-display;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: $color-red;
-    text-transform: uppercase;
+  font-family: $font-display;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $color-red;
+  text-transform: uppercase;
 }
-//contact links 
+//contact links
 .text-contact {
-    font-family: $font-display;
-    font-size: 1rem;
-    font-weight: 400;
-    color: $color-red;
-    text-transform: uppercase;
+  font-family: $font-display;
+  font-size: 1rem;
+  font-weight: 400;
+  color: $color-red;
+  text-transform: uppercase;
 }
 //info heading
 .heading-info {
-    font-family: $font-primary-2;
-    font-size: 1.8rem;
-    color: $color-red;
-    line-height: 1.8;
-    @include respond(phone) {
-        font-size: 2rem;
-    }
+  font-family: $font-primary-2;
+  font-size: 1.8rem;
+  color: $color-red;
+  line-height: 1.8;
+  @include respond(phone) {
+    font-size: 2rem;
+  }
 }
 .heading-info-2 {
-    font-family: $font-primary-2;
-    font-size: 1.6rem;
-    color: $color-black;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  font-family: $font-primary-2;
+  font-size: 1.6rem;
+  color: $color-black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 // description for info & projects
 .text-description {
-    font-family: $font-display;
-    font-size: 1.4rem;
-    font-weight: 300;
-    line-height: 1.6;
+  font-family: $font-display;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.6;
 }
 //circle
 .text-circle {
-    font-family: $font-display;
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: $color-black;
+  font-family: $font-display;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: $color-black;
 }
 //project heading
 .heading-projects {
-    font-family: $font-primary-2;
-    font-size: 4rem;
+  font-family: $font-primary-2;
+  font-size: 4rem;
 
-    @include respond(phone) {
-        font-size: 3.75rem;
-    }
+  @include respond(phone) {
+    font-size: 3.75rem;
+  }
 }
 //project index
 .text-index {
-    font-family: $font-display-2;
-    font-size: 1rem;
+  font-family: $font-display-2;
+  font-size: 1rem;
 }
 //project hover text
 .text-hover {
-    font-family: $font-primary-2;
-    font-size: 1.2rem;
-    color: $color-orange;
+  font-family: $font-primary-2;
+  font-size: 1.2rem;
+  color: $color-orange;
 }

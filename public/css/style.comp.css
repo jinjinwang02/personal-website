@@ -254,18 +254,18 @@ a:hover {
     .footer__contact-heading-bg {
       position: absolute;
       background-color: #EACCC7;
-      opacity: .5;
+      opacity: 0.5;
       height: 5rem;
       width: 96%;
       left: 0;
       bottom: 1rem;
       z-index: -1;
       transform-origin: left center;
-      transition: transform .2s ease-in-out, opacity .5s ease-out; }
+      transition: transform 0.2s ease-in-out, opacity 0.5s ease-out; }
       @media (max-width: 37.5em) {
         .footer__contact-heading-bg {
           background-color: #F8F6F0;
-          opacity: .3; } }
+          opacity: 0.3; } }
   .footer__contactLinks {
     display: block;
     list-style: none; }
@@ -289,7 +289,7 @@ a:hover {
       font-weight: 1rem; }
     .footer__copyright-2 {
       display: inline-block;
-      margin-top: .8rem;
+      margin-top: 0.8rem;
       color: #BE020D; }
     @media (max-width: 75em) {
       .footer__copyright {
@@ -602,7 +602,7 @@ body {
       .home__circle {
         top: 15%;
         left: 27%; } }
-    @media (max-width: 50em) {
+    @media (max-width: 37.5em) {
       .home__circle {
         opacity: 0; } }
   .home__circle-phone {
@@ -635,7 +635,7 @@ body {
     @media (max-width: 56.25em) {
       .home__line-rt {
         left: 64%; } }
-    @media (max-width: 50em) {
+    @media (max-width: 37.5em) {
       .home__line-rt {
         opacity: 0;
         animation-play-state: paused; } }
@@ -896,7 +896,7 @@ body {
     position: absolute;
     top: 15%;
     transform: translateX(145rem);
-    transition: .3s ease-out; }
+    transition: 0.5s ease-out; }
     @media (max-width: 75em) {
       .projects__heading {
         top: 17%; } }
@@ -941,15 +941,6 @@ body {
     opacity: 0.9;
     box-shadow: 0 0 2.5rem 3rem #fff;
     animation: moveRandomly 4s ease infinite; }
-    .projects__circle-glow span {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      letter-spacing: 2px; }
-      @media (max-width: 56.25em) {
-        .projects__circle-glow span {
-          opacity: 0; } }
     @media (max-width: 75em) {
       .projects__circle-glow {
         top: 27%; } }
@@ -1023,7 +1014,7 @@ body {
       grid-column: 2 / 3;
       justify-self: flex-end;
       align-self: flex-end;
-      margin-left: .2rem; }
+      margin-left: 0.2rem; }
       @media (max-width: 50em) {
         .projects__left .projects__index {
           opacity: 0;
@@ -1039,7 +1030,7 @@ body {
       grid-row: 2 / 3;
       grid-column: 1 / 2;
       justify-self: flex-end;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
       text-align: end; }
       @media (max-width: 50em) {
         .projects__left .projects__title {
@@ -1083,7 +1074,7 @@ body {
       grid-column: 1 / 2;
       justify-self: flex-start;
       align-self: flex-end;
-      margin-right: .2rem; }
+      margin-right: 0.2rem; }
       @media (max-width: 50em) {
         .projects__right .projects__index {
           opacity: 0;
@@ -1099,7 +1090,7 @@ body {
       grid-row: 2 / 3;
       grid-column: 2 / 3;
       justify-self: flex-start;
-      margin-bottom: .5rem; }
+      margin-bottom: 0.5rem; }
       @media (max-width: 50em) {
         .projects__right .projects__title {
           align-self: center;
@@ -1127,7 +1118,7 @@ body {
     background-position: 100% 100%;
     background-repeat: no-repeat;
     background-size: 0 0.1rem;
-    transition: background-size .3s ease; }
+    transition: background-size 0.3s ease; }
     .projects__view:not(.coming-soon):hover {
       background-position: 0 100%;
       background-size: 100% 0.1rem; }
@@ -1161,10 +1152,10 @@ body {
     position: relative;
     color: #5E5351;
     z-index: 999;
-    transition: color .2s ease, opacity .5s ease-out, transform .5s ease-out; }
+    transition: color 0.2s ease, opacity 0.5s ease-out, transform 0.5s ease-out; }
     .projects__project-container svg {
       stroke: #5E5351;
-      transition: stroke .2s ease; }
+      transition: stroke 0.2s ease; }
   .projects__project-container:hover {
     color: #f93700;
     cursor: none; }

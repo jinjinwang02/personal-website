@@ -1,97 +1,95 @@
-
 .footer {
-    position: absolute;
-    width: 100%;
+  position: absolute;
+  width: 100%;
+  top: 86%;
+  text-align: center;
+
+  @include respond(tab-land) {
+    top: 87%;
+  }
+  @include respond(tab-port) {
+    top: 89%;
+  }
+  @include respond(phone-lg) {
+    top: 82%;
+  }
+  @include respond(phone) {
     top: 86%;
-    text-align: center;
+  }
+
+  &__contact {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+    &-heading:hover ~ &-heading-bg {
+      transform-origin: right center;
+      transform: scaleX(0);
+    }
+    &-heading-bg {
+      position: absolute;
+      background-color: $color-pink;
+      opacity: 0.5;
+      height: 5rem;
+      width: 96%;
+      left: 0;
+      bottom: 1rem;
+      z-index: -1;
+      transform-origin: left center;
+      transition: transform 0.2s ease-in-out, opacity 0.5s ease-out;
+
+      @include respond(phone) {
+        background-color: $color-beige;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__contactLinks {
+    display: block;
+    list-style: none;
+
+    &-item {
+      display: inline-block;
+      margin-top: 3rem;
+
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+
+      @include respond(phone) {
+        margin-top: 1rem;
+      }
+    }
+
+    span {
+      display: inline-block;
+      color: $color-brown;
+      text-transform: uppercase;
+      letter-spacing: -1.5px;
+    }
+  }
+  &__copyright {
+    position: relative;
+    margin-top: 22.5rem;
+    &-1 {
+      font-weight: 1rem;
+    }
+
+    &-2 {
+      display: inline-block;
+      margin-top: 0.8rem;
+      color: $color-red;
+    }
 
     @include respond(tab-land) {
-        top: 87%;
-    }
-    @include respond(tab-port){
-        top: 89%;
+      margin-top: 19rem;
     }
     @include respond(phone-lg) {
-        top: 82%;
+      margin-top: 28rem;
     }
     @include respond(phone) {
-        top: 86%;
+      margin-top: 7rem;
     }
-
-    &__contact {
-        position: relative;
-        display: inline-block;
-        overflow: hidden;
-
-        &-heading:hover ~  &-heading-bg {
-            transform-origin: right center;
-            transform: scaleX(0)
-
-        }
-        &-heading-bg{
-            position: absolute;
-            background-color: $color-pink;
-            opacity: .5;
-            height: 5rem;
-            width: 96%;
-            left: 0;
-            bottom: 1rem;
-            z-index: -1;
-            transform-origin: left center;
-            transition: transform .2s ease-in-out, opacity .5s ease-out;
-
-            @include respond(phone){
-                background-color: $color-beige;
-                opacity: .3;
-            }
-        }
-        }
-
-    &__contactLinks {
-        display: block;
-        list-style: none;
-        
-        &-item {
-            display: inline-block;
-            margin-top: 3rem;
-            
-            &:not(:last-child) {
-                margin-right: 3rem;
-            }
-
-            @include respond(phone) {
-                margin-top: 1rem;
-            }
-        }
-        
-        span {
-            display: inline-block;
-            color: $color-brown;
-            text-transform: uppercase;
-            letter-spacing: -1.5px;
-        }
-    }
-    &__copyright {
-        position: relative;
-        margin-top: 22.5rem;
-        &-1 {
-            font-weight: 1rem;
-        }
-    
-        &-2 {
-            display: inline-block;
-            margin-top: .8rem;
-            color: $color-red;
-        }
-
-        @include respond(tab-land) {
-            margin-top: 19rem;
-        }
-        @include respond(phone-lg){
-            margin-top: 28rem;
-        }
-        @include respond(phone){
-            margin-top: 7rem;
-        }
-}
+  }
 }
