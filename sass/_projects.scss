@@ -369,13 +369,13 @@
     z-index: 1000;
 
     background-image: linear-gradient($color-orange, $color-orange);
-    background-position: 100% 100%;
+    background-position: 100% 100%; // bottom right
     background-repeat: no-repeat;
     background-size: 0 0.1rem;
     transition: background-size 0.3s ease;
 
     &:not(.coming-soon):hover {
-      background-position: 0 100%;
+      background-position: 0 100%; // bottom left
       background-size: 100% 0.1rem;
     }
 
