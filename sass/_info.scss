@@ -5,10 +5,10 @@
   overflow: hidden;
   width: 100%;
   @include respond(tab-port-lg) {
-    height: 160vh;
+    height: 170vh;
   }
   @include respond(phone-lg) {
-    height: 135vh;
+    height: 150vh;
   }
   @include respond(phone) {
     background-color: $color-beige;
