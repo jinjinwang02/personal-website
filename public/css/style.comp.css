@@ -694,10 +694,10 @@ body {
   width: 100%; }
   @media (max-width: 68.75em) {
     .info {
-      height: 160vh; } }
+      height: 170vh; } }
   @media (max-width: 50em) {
     .info {
-      height: 135vh; } }
+      height: 150vh; } }
   @media (max-width: 37.5em) {
     .info {
       background-color: #F8F6F0; } }
