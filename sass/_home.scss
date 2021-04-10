@@ -55,7 +55,7 @@
   &__heading-1-phone {
     position: absolute;
     right: 47.5%;
-    top: 25%;
+    top: 18%;
     font-family: $font-primary;
     font-size: 19.75rem;
     text-transform: uppercase;
@@ -67,7 +67,7 @@
   &__heading-2-phone {
     position: absolute;
     right: 21.7%;
-    top: 10.5%;
+    top: 8%;
     font-family: $font-primary;
     font-size: 19.75rem;
     text-transform: uppercase;
@@ -80,7 +80,7 @@
   &__heading-3-phone {
     position: absolute;
     right: 12%;
-    top: 71%;
+    top: 68%;
     font-family: $font-display;
     font-weight: 700;
     font-size: 1.5rem;
@@ -92,7 +92,7 @@
   &__heading-4-phone {
     position: absolute;
     right: 12%;
-    top: 74%;
+    top: 72%;
     font-family: $font-display;
     font-weight: 700;
     font-size: 1.5rem;
@@ -135,6 +135,7 @@
       .hoverIn-2,
       .hoverIn-3,
       .hoverIn-4 {
+        cursor: pointer;
         display: inline-block;
         margin-right: 2px;
         margin-bottom: 1.5rem;
@@ -173,7 +174,7 @@
         color: $color-white;
         font-size: 1.5rem;
         font-weight: 300;
-        top: 80%;
+        top: 78%;
         right: 12%;
         text-align: end;
       }
@@ -198,10 +199,10 @@
 
   &__circle {
     position: absolute;
-    top: 8%;
+    top: 7%;
     left: 29%;
-    height: 70rem;
-    width: 70rem;
+    height: 65rem;
+    width: 65rem;
     border-radius: 50%;
     border: $border-thick-white;
     z-index: 99;
@@ -274,14 +275,14 @@
   }
   &__line-vt {
     position: absolute;
-    left: 90%;
-    border: $border-thin-pink;
-    width: 1px;
-    height: 100vh;
+    left: 75%;
+    background-color: $color-pink;
+    width: 2px;
+    height: 50vh;
     z-index: -2;
-    animation: moveRandomly-hr 15s ease infinite;
     @include respond(phone) {
       z-index: 98;
+      height: 100vh;
       border: $border-thin-red;
       animation: moveRandomly-hr-phone 20s ease infinite;
     }
@@ -293,10 +294,8 @@
     height: 30rem;
     width: 28rem;
     background-color: $color-pink;
-    // border: 1px solid $color-pink;
     z-index: -2;
     animation: expandToRight 1.5s ease;
-    // shrinkToLeft 1s ease forwards 2.3s;
     @include respond(tab-port-lg) {
       left: 55%;
       height: 35rem;
@@ -314,13 +313,14 @@
     position: absolute;
     top: 41%;
     left: 32%;
-    height: 2.2rem;
+    height: 1.9rem;
     width: 52rem;
     transform-origin: left;
     background-color: $color-orange;
     z-index: -1;
     opacity: 0;
-    animation: expandToBottom 0.8s ease forwards 0.8s;
+    animation: expandToBottom 0.8s ease forwards 0.8s,
+      shrinkToBottom 0.6s ease forwards 1.6s;
     @include respond(phone) {
       opacity: 0;
       animation-play-state: paused;

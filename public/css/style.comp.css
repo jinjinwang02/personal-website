@@ -23,23 +23,23 @@
     transform-origin: left;
     transform: scaleX(1); } }
 
-@keyframes shrinkToLeft {
+@keyframes shrinkToBottom {
   0% {
-    transform-origin: right;
-    transform: scaleX(1); }
+    transform-origin: top;
+    transform: scaleY(0); }
   100% {
-    transform-origin: right;
-    transform: scaleX(0); } }
+    transform-origin: top;
+    transform: scaleY(1); } }
 
 @keyframes expandToBottom {
   0% {
     opacity: 0;
-    transform-origin: top;
-    transform: scaleY(0); }
+    transform-origin: bottom;
+    transform: scaleY(6); }
   100% {
     opacity: 1;
-    transform-origin: top;
-    transform: scaley(1); } }
+    transform-origin: bottom;
+    transform: scaleY(0); } }
 
 @keyframes moveRandomly {
   0% {
@@ -59,7 +59,7 @@
   0% {
     transform: translateX(0) scaleX(0.5); }
   50% {
-    transform: translateX(-45rem) scaleX(0.5); }
+    transform: translateX(-65rem) scaleX(0.5); }
   100% {
     transform: translateX(0) scaleX(0.5); } }
 
@@ -301,7 +301,8 @@ a:hover {
       display: inline-block;
       color: #5e5351;
       text-transform: uppercase;
-      letter-spacing: -1.5px; }
+      letter-spacing: -1.5px;
+      cursor: pointer; }
   .footer__copyright {
     position: relative;
     margin-top: 22.5rem; }
@@ -495,7 +496,7 @@ body {
   .home__heading-1-phone {
     position: absolute;
     right: 47.5%;
-    top: 25%;
+    top: 18%;
     font-family: "Abril Fatface", cursive;
     font-size: 19.75rem;
     text-transform: uppercase;
@@ -506,7 +507,7 @@ body {
   .home__heading-2-phone {
     position: absolute;
     right: 21.7%;
-    top: 10.5%;
+    top: 8%;
     font-family: "Abril Fatface", cursive;
     font-size: 19.75rem;
     text-transform: uppercase;
@@ -517,7 +518,7 @@ body {
   .home__heading-3-phone {
     position: absolute;
     right: 12%;
-    top: 71%;
+    top: 68%;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
@@ -527,7 +528,7 @@ body {
   .home__heading-4-phone {
     position: absolute;
     right: 12%;
-    top: 74%;
+    top: 72%;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
@@ -562,6 +563,7 @@ body {
       .home__contactLinks-item .hoverIn-2,
       .home__contactLinks-item .hoverIn-3,
       .home__contactLinks-item .hoverIn-4 {
+        cursor: pointer;
         display: inline-block;
         margin-right: 2px;
         margin-bottom: 1.5rem; }
@@ -591,7 +593,7 @@ body {
         color: #fff;
         font-size: 1.5rem;
         font-weight: 300;
-        top: 80%;
+        top: 78%;
         right: 12%;
         text-align: end; } }
   .home__logo {
@@ -607,10 +609,10 @@ body {
         top: 4.5%; } }
   .home__circle {
     position: absolute;
-    top: 8%;
+    top: 7%;
     left: 29%;
-    height: 70rem;
-    width: 70rem;
+    height: 65rem;
+    width: 65rem;
     border-radius: 50%;
     border: 2px solid #fff;
     z-index: 99; }
@@ -675,15 +677,15 @@ body {
         animation: moveRandomly-vt-phone 15s ease infinite; } }
   .home__line-vt {
     position: absolute;
-    left: 90%;
-    border: 1px solid #eaccc7;
-    width: 1px;
-    height: 100vh;
-    z-index: -2;
-    animation: moveRandomly-hr 15s ease infinite; }
+    left: 75%;
+    background-color: #eaccc7;
+    width: 2px;
+    height: 50vh;
+    z-index: -2; }
     @media (max-width: 37.5em) {
       .home__line-vt {
         z-index: 98;
+        height: 100vh;
         border: 1px solid #be020d;
         animation: moveRandomly-hr-phone 20s ease infinite; } }
   .home__cube_hr {
@@ -710,13 +712,13 @@ body {
     position: absolute;
     top: 41%;
     left: 32%;
-    height: 2.2rem;
+    height: 1.9rem;
     width: 52rem;
     transform-origin: left;
     background-color: #f93700;
     z-index: -1;
     opacity: 0;
-    animation: expandToBottom 0.8s ease forwards 0.8s; }
+    animation: expandToBottom 0.8s ease forwards 0.8s, shrinkToBottom 0.6s ease forwards 1.6s; }
     @media (max-width: 37.5em) {
       .home__cube_vt {
         opacity: 0;
@@ -842,7 +844,7 @@ body {
       opacity: 0 !important; } }
 
 .projects {
-  min-height: 370vh;
+  min-height: 400vh;
   position: relative;
   overflow: hidden;
   width: 100%; }

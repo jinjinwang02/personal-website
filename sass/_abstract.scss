@@ -52,26 +52,26 @@ $border-thin-red: 1px solid $color-red;
     transform: scaleX(1);
   }
 }
-@keyframes shrinkToLeft {
+@keyframes shrinkToBottom {
   0% {
-    transform-origin: right;
-    transform: scaleX(1);
+    transform-origin: top;
+    transform: scaleY(0);
   }
   100% {
-    transform-origin: right;
-    transform: scaleX(0);
+    transform-origin: top;
+    transform: scaleY(1);
   }
 }
 @keyframes expandToBottom {
   0% {
     opacity: 0;
-    transform-origin: top;
-    transform: scaleY(0);
+    transform-origin: bottom;
+    transform: scaleY(6);
   }
   100% {
     opacity: 1;
-    transform-origin: top;
-    transform: scaley(1);
+    transform-origin: bottom;
+    transform: scaleY(0);
   }
 }
 @keyframes moveRandomly {
@@ -99,7 +99,7 @@ $border-thin-red: 1px solid $color-red;
     transform: translateX(0) scaleX(0.5);
   }
   50% {
-    transform: translateX(-45rem) scaleX(0.5);
+    transform: translateX(-65rem) scaleX(0.5);
   }
   100% {
     transform: translateX(0) scaleX(0.5);
