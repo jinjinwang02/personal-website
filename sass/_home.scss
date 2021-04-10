@@ -13,19 +13,19 @@
   }
   &__heading-1 {
     position: absolute;
-    top: 32%;
-    left: 26.5%;
+    top: 30%;
+    left: 22%;
     z-index: 99;
 
     @include respond(tab-port-lg) {
-      left: 23%;
+      left: 14%;
     }
   }
 
   &__heading-2 {
     position: absolute;
     top: 45.5%;
-    left: 50%;
+    left: 53%;
     z-index: 99;
     @include respond(tab-port-lg) {
       left: 50%;
@@ -35,7 +35,7 @@
   &__heading-3 {
     position: absolute;
     top: 54%;
-    left: 41%;
+    left: 43%;
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $color-red;
@@ -199,9 +199,9 @@
   &__circle {
     position: absolute;
     top: 8%;
-    left: 32.5%;
-    height: 62rem;
-    width: 62rem;
+    left: 29%;
+    height: 70rem;
+    width: 70rem;
     border-radius: 50%;
     border: $border-thick-white;
     z-index: 99;
@@ -211,7 +211,7 @@
     }
     @include respond(tab-port) {
       top: 15%;
-      left: 27%;
+      left: 17%;
     }
     @include respond(phone) {
       opacity: 0;
@@ -237,20 +237,21 @@
 
   &__line-rt {
     position: absolute;
-    top: 30%;
-    left: 57%;
+    top: 18%;
+    left: 63%;
     width: 1px;
-    height: 39rem;
-    transform: rotate(39deg);
+    height: 69rem;
+    transform: rotate(45deg);
     border-left: $border-thin-orange;
     transform-origin: 0% 0%;
     animation: expandToBottomLeftandDisappear 1.6s ease;
 
     @include respond(tab-land-lg) {
-      left: 59%;
+      left: 65%;
     }
     @include respond(tab-port) {
-      left: 64%;
+      top: 22%;
+      left: 76%;
     }
     @include respond(phone) {
       opacity: 0;
@@ -264,7 +265,6 @@
     height: 1px;
     width: 100vw;
     z-index: -1;
-    animation: moveRandomly-vt 20s ease infinite;
     @include respond(phone) {
       top: 60%;
       z-index: 98;
@@ -286,21 +286,41 @@
       animation: moveRandomly-hr-phone 20s ease infinite;
     }
   }
-  &__cube {
+  &__cube_hr {
     position: absolute;
-    top: 39.5%;
-    left: 54%;
-    height: 14rem;
-    width: 24rem;
-    transform-origin: left;
+    top: 32%;
+    left: 57%;
+    height: 30rem;
+    width: 28rem;
     background-color: $color-pink;
-    border: none;
+    // border: 1px solid $color-pink;
     z-index: -2;
-    animation: expandToRight 2s ease;
+    animation: expandToRight 1.5s ease;
+    // shrinkToLeft 1s ease forwards 2.3s;
     @include respond(tab-port-lg) {
       left: 55%;
-      height: 15rem;
+      height: 35rem;
     }
+    @include respond(tab-port) {
+      left: 60%;
+    }
+    @include respond(phone) {
+      opacity: 0;
+      animation-play-state: paused;
+    }
+  }
+
+  &__cube_vt {
+    position: absolute;
+    top: 41%;
+    left: 32%;
+    height: 2.2rem;
+    width: 52rem;
+    transform-origin: left;
+    background-color: $color-orange;
+    z-index: -1;
+    opacity: 0;
+    animation: expandToBottom 0.8s ease forwards 0.8s;
     @include respond(phone) {
       opacity: 0;
       animation-play-state: paused;

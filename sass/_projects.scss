@@ -1,5 +1,5 @@
 .projects {
-  min-height: 430vh;
+  min-height: 370vh;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -129,7 +129,7 @@
     top: 26%;
     left: 50%;
     background-color: $color-orange;
-    height: 171rem;
+    height: 174rem;
     transform: scaleX(0.5);
     width: 1px;
 
@@ -307,7 +307,7 @@
     &:first-child {
       margin-top: 16rem;
       @include respond(phone-lg) {
-        margin-top: 10rem;
+        margin-top: 11rem;
       }
     }
 
@@ -463,7 +463,7 @@
   &__6 {
     margin-top: 1.2rem;
     @include respond(phone-lg) {
-      margin-top: 0;
+      margin-top: -0.2rem;
     }
     @include respond(phone) {
       animation: lightUp-6 5s infinite;

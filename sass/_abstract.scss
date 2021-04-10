@@ -1,9 +1,9 @@
 //COLOURS
-$color-beige: #F8F6F0;
-$color-pink: #EACCC7;
-$color-red: #BE020D;
+$color-beige: #f8f6f0;
+$color-pink: #eaccc7;
+$color-red: #be020d;
 $color-orange: #f93700;
-$color-brown: #5E5351;
+$color-brown: #5e5351;
 $color-black: #333;
 $color-white: #fff;
 
@@ -14,7 +14,7 @@ $font-display: 'Raleway', sans-serif;
 $font-display-2: 'Roboto Mono', monospace;
 
 //BORDER
-$border-thick-white: 2px solid $color-white;
+$border-thick-white: 3px solid $color-white;
 $border-thin-white: 1px solid $color-white;
 $border-thin-orange: 1px solid $color-orange;
 $border-thin-pink: 1px solid $color-pink;
@@ -22,292 +22,330 @@ $border-thin-red: 1px solid $color-red;
 
 //ANIMATIONS
 .fade-in-and-rise {
-    opacity: 0;
-    transform: translateY(12rem);
-    transition: opacity .5s ease-out, transform .5s ease-out;
+  opacity: 0;
+  transform: translateY(12rem);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .fade-in-and-rise.appear {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @keyframes expandToBottomLeftandDisappear {
-    0% {
-        height: 0;
-    }
-    100%{
-        height: 39rem;
-    }
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 69rem;
+  }
 }
 @keyframes expandToRight {
-    0% {
-        transform: scaleX(0);
-    }
-    60% {
-        transform: scaleX(0);
-    }
-    100%{
-        transform: scaleX(1);
-    }
+  0% {
+    opacity: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+}
+@keyframes shrinkToLeft {
+  0% {
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+  100% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+}
+@keyframes expandToBottom {
+  0% {
+    opacity: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: top;
+    transform: scaley(1);
+  }
 }
 @keyframes moveRandomly {
-    0% {
-        transform: translate(0,0);
-    }
-    20% {
-        transform: translate(3rem,2rem);
-    }
-    40% {
-        transform: translate(1.5rem,-1.3rem);
-    }
-    60% {
-        transform: translate(-1rem,-2rem);
-    }
-    80% {
-        transform: translate(4rem,-0.5rem);
-    }
-    100% {
-        transform: translate(0,0);
-    }
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(3rem, 2rem);
+  }
+  40% {
+    transform: translate(1.5rem, -1.3rem);
+  }
+  60% {
+    transform: translate(-1rem, -2rem);
+  }
+  80% {
+    transform: translate(4rem, -0.5rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 @keyframes moveRandomly-hr {
-    0% {
-        transform: translateX(0) scaleX(0.5);
-    }
-    50% {
-        transform: translateX(-45rem) scaleX(0.5);
-    }
-    100% {
-        transform: translateX(0) scaleX(0.5);
-    }
+  0% {
+    transform: translateX(0) scaleX(0.5);
+  }
+  50% {
+    transform: translateX(-45rem) scaleX(0.5);
+  }
+  100% {
+    transform: translateX(0) scaleX(0.5);
+  }
 }
 @keyframes moveRandomly-vt {
-    0% {
-        transform: translateY(0);
-    }
-    25% {
-        transform: translateY(15rem);
-    }
-    75% {
-        transform: translateY(-15rem);
-    }
-    100% {
-        transform: translateY(0);
-    }
-
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(15rem);
+  }
+  75% {
+    transform: translateY(-15rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 @keyframes moveRandomly-vt-phone {
-    0% {
-        transform: translateY(0) scaleY(0.5);
-    }
-    33% {
-        transform: translateY(20rem) scaleY(0.5);
-    }
-    88% {
-        transform: translateY(-10rem) scaleY(0.5);
-    }
-    100% {
-        transform: translateY(0) scaleY(0.5);
-    }
-    }
+  0% {
+    transform: translateY(0) scaleY(0.5);
+  }
+  33% {
+    transform: translateY(20rem) scaleY(0.5);
+  }
+  88% {
+    transform: translateY(-10rem) scaleY(0.5);
+  }
+  100% {
+    transform: translateY(0) scaleY(0.5);
+  }
+}
 
 @keyframes moveRandomly-hr-phone {
-    0% {
-        transform: translateX(0) scaleX(0.5);
-    }
-    50% {
-        transform: translateX(-35rem) scaleX(0.5);
-    }
-    100% {
-        transform: translateX(0) scaleX(0.5);
-    }
+  0% {
+    transform: translateX(0) scaleX(0.5);
+  }
+  50% {
+    transform: translateX(-35rem) scaleX(0.5);
+  }
+  100% {
+    transform: translateX(0) scaleX(0.5);
+  }
 }
 @keyframes lightUp-1 {
-    0% {
-        color: $color-brown;
-    }
-    5% {
-        color: $color-brown;
-    }
-    10% {
-        color: $color-orange;
-    }
-    15% {
-        color: $color-orange;
-    }
-    20% {
-        color: $color-brown;
-    }
-    100% {
-        color: $color-brown;
-    }
+  0% {
+    color: $color-brown;
+  }
+  5% {
+    color: $color-brown;
+  }
+  10% {
+    color: $color-orange;
+  }
+  15% {
+    color: $color-orange;
+  }
+  20% {
+    color: $color-brown;
+  }
+  100% {
+    color: $color-brown;
+  }
 }
 @keyframes lightUp-2 {
-    0% {
-        color: $color-brown;
-    }
-    15% {
-        color: $color-brown;
-    }
-    20% {
-        color: $color-orange;
-    }
-    25% {
-        color: $color-orange;
-    }
-    30% {
-        color: $color-brown;
-    }
-    100% {
-        color: $color-brown;
-    }
+  0% {
+    color: $color-brown;
+  }
+  15% {
+    color: $color-brown;
+  }
+  20% {
+    color: $color-orange;
+  }
+  25% {
+    color: $color-orange;
+  }
+  30% {
+    color: $color-brown;
+  }
+  100% {
+    color: $color-brown;
+  }
 }
 @keyframes lightUp-3 {
-    0% {
-        color: $color-brown;
-    }
-    25% {
-        color: $color-brown;
-    }
-    30% {
-        color: $color-orange;
-    }
-    35% {
-        color: $color-orange;
-    }
-    40% {
-        color: $color-brown;
-    }
-    100% {
-        color: $color-brown;
-    }
+  0% {
+    color: $color-brown;
+  }
+  25% {
+    color: $color-brown;
+  }
+  30% {
+    color: $color-orange;
+  }
+  35% {
+    color: $color-orange;
+  }
+  40% {
+    color: $color-brown;
+  }
+  100% {
+    color: $color-brown;
+  }
 }
 @keyframes lightUp-4 {
-    0% {
-        color: $color-brown;
-    }
-    35% {
-        color: $color-brown;
-    }
-    40% {
-        color: $color-orange;
-    }
-    45% {
-        color: $color-orange;
-    }
-    50% {
-        color: $color-brown;
-    }
-    100% {
-        color: $color-brown;
-    }
+  0% {
+    color: $color-brown;
+  }
+  35% {
+    color: $color-brown;
+  }
+  40% {
+    color: $color-orange;
+  }
+  45% {
+    color: $color-orange;
+  }
+  50% {
+    color: $color-brown;
+  }
+  100% {
+    color: $color-brown;
+  }
 }
 @keyframes lightUp-5 {
-    0% {
-        color: $color-brown;
-    }
-    45% {
-        color: $color-brown;
-    }
-    50% {
-        color: $color-orange;
-    }
-    55% {
-        color: $color-orange;
-    }
-    60% {
-        color: $color-brown;
-    }
-    100% {
-        color: $color-brown;
-    }
+  0% {
+    color: $color-brown;
+  }
+  45% {
+    color: $color-brown;
+  }
+  50% {
+    color: $color-orange;
+  }
+  55% {
+    color: $color-orange;
+  }
+  60% {
+    color: $color-brown;
+  }
+  100% {
+    color: $color-brown;
+  }
 }
 @keyframes lightUp-6 {
-    0% {
-        color: $color-brown;
-    }
-    55% {
-        color: $color-brown;
-    }
-    60% {
-        color: $color-orange;
-    }
-    65% {
-        color: $color-orange;
-    }
-    70% {
-        color: $color-brown;
-    }
-    100% {
-        color: $color-brown;
-    }
+  0% {
+    color: $color-brown;
+  }
+  55% {
+    color: $color-brown;
+  }
+  60% {
+    color: $color-orange;
+  }
+  65% {
+    color: $color-orange;
+  }
+  70% {
+    color: $color-brown;
+  }
+  100% {
+    color: $color-brown;
+  }
 }
 @keyframes lightUp-7 {
-    0% {
-        color: $color-brown;
-    }
-    65% {
-        color: $color-brown;
-    }
-    70% {
-        color: $color-orange;
-    }
-    75% {
-        color: $color-orange;
-    }
-    80% {
-        color: $color-brown;
-    }
-    100% {
-        color: $color-brown;
-    }
+  0% {
+    color: $color-brown;
+  }
+  65% {
+    color: $color-brown;
+  }
+  70% {
+    color: $color-orange;
+  }
+  75% {
+    color: $color-orange;
+  }
+  80% {
+    color: $color-brown;
+  }
+  100% {
+    color: $color-brown;
+  }
 }
 @keyframes lightUp-8 {
-    0% {
-        color: $color-brown;
-    }
-    75% {
-        color: $color-brown;
-    }
-    80% {
-        color: $color-orange;
-    }
-    85% {
-        color: $color-orange;
-    }
-    90% {
-        color: $color-brown;
-    }
-    100% {
-        color: $color-brown;
-    }
+  0% {
+    color: $color-brown;
+  }
+  75% {
+    color: $color-brown;
+  }
+  80% {
+    color: $color-orange;
+  }
+  85% {
+    color: $color-orange;
+  }
+  90% {
+    color: $color-brown;
+  }
+  100% {
+    color: $color-brown;
+  }
 }
 
 //MEDIA QUERY MANAGER
 @mixin respond($breakpoint) {
-    @if $breakpoint ==  phone {
-        @media(max-width: 37.5em) { @content }; //600
-    }
-    @if $breakpoint ==  phone-lg {
-        @media(max-width: 50em) { @content }; //800
-    }
-    @if $breakpoint ==  tab-port {
-        @media(max-width: 56.25em) { @content }; //900
-    }
-    @if $breakpoint ==  tab-port-md {
-        @media(max-width: 62.5em) { @content }; //1000
-    }
-    @if $breakpoint ==  tab-port-lg {
-        @media(max-width: 68.75em) { @content }; //1100
-    }
-    @if $breakpoint ==  tab-land {
-        @media(max-width: 75em) { @content }; //1200
-    }
-    @if $breakpoint ==  tab-land-lg {
-        @media(max-width: 87.5em) { @content }; //1400
-    }
-    @if $breakpoint ==  big-desktop {
-        @media(min-width: 112.5em) { @content }; //1800
-    }
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    } //600
+  }
+  @if $breakpoint == phone-lg {
+    @media (max-width: 50em) {
+      @content;
+    } //800
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    } //900
+  }
+  @if $breakpoint == tab-port-md {
+    @media (max-width: 62.5em) {
+      @content;
+    } //1000
+  }
+  @if $breakpoint == tab-port-lg {
+    @media (max-width: 68.75em) {
+      @content;
+    } //1100
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    } //1200
+  }
+  @if $breakpoint == tab-land-lg {
+    @media (max-width: 87.5em) {
+      @content;
+    } //1400
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    } //1800
+  }
 }

@@ -1,16 +1,11 @@
 .info {
-  min-height: 100vh;
   background-color: $color-pink;
   position: relative;
+  min-height: 100vh;
   overflow: hidden;
   width: 100%;
-  @include respond(tab-port-lg) {
-    height: 170vh;
-  }
-  @include respond(phone-lg) {
-    height: 150vh;
-  }
   @include respond(phone) {
+    min-height: 120vh;
     background-color: $color-beige;
   }
 
@@ -73,7 +68,7 @@
 
   &__text {
     position: absolute;
-    top: 18%;
+    top: 23%;
     left: 45%;
     height: 100%;
     width: 41%;
@@ -101,8 +96,8 @@
     &-subtitle {
       display: block;
       border-bottom: $border-thin-red;
-      padding-bottom: 1.1rem;
-      padding-top: 5rem;
+      padding-bottom: 2rem;
+      padding-top: 6rem;
 
       @include respond(tab-land) {
         margin-top: 2rem;
@@ -122,7 +117,7 @@
       grid-template-columns: 12rem max-content 1fr;
 
       @include respond(tab-port-lg) {
-        grid-template-columns: 8.5rem max-content 1fr;
+        grid-template-columns: 12rem max-content 1fr;
       }
 
       @include respond(phone) {

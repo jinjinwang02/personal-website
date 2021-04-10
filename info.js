@@ -1,5 +1,5 @@
 //INFO FADE IN
-const faders = document.querySelectorAll(".fade-in-and-rise");
+const faders = document.querySelectorAll('.fade-in-and-rise');
 const appearOptions = {
   thresohld: 1,
 };
@@ -8,7 +8,7 @@ const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
     if (!entry.isIntersecting) {
       return;
     } else {
-      entry.target.classList.add("appear");
+      entry.target.classList.add('appear');
       appearOnScroll.unobserve(entry.target);
     }
   });
@@ -22,11 +22,11 @@ function splitScroll() {
   const controller = new ScrollMagic.Controller();
 
   new ScrollMagic.Scene({
-    duration: 500,
-    triggerElement: ".info__heading",
+    duration: 300,
+    triggerElement: '.info__heading',
     triggerHook: 0,
   })
-    .setPin(".info__heading")
+    .setPin('.info__heading')
     // .addIndicators()
     .addTo(controller);
 }
