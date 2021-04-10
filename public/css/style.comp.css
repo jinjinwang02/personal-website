@@ -612,7 +612,7 @@ body {
     height: 70rem;
     width: 70rem;
     border-radius: 50%;
-    border: 3px solid #fff;
+    border: 2px solid #fff;
     z-index: 99; }
     @media (max-width: 68.75em) {
       .home__circle {
@@ -630,7 +630,7 @@ body {
     position: absolute;
     top: 47%;
     left: 46%;
-    border: 3px solid #fff;
+    border: 2px solid #fff;
     height: 94rem;
     width: 94rem;
     transform: scale(0.5) translate(-50%, -50%);
