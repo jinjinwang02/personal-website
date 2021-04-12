@@ -291,7 +291,7 @@
     position: absolute;
     top: 32%;
     left: 57%;
-    height: 30rem;
+    height: 26.5rem;
     width: 28rem;
     background-color: $color-pink;
     z-index: -2;
@@ -313,14 +313,13 @@
     position: absolute;
     top: 41%;
     left: 32%;
-    height: 1.9rem;
-    width: 52rem;
+    height: 3.5rem;
+    width: 47rem;
     transform-origin: left;
     background-color: $color-orange;
     z-index: -1;
     opacity: 0;
-    animation: expandToBottom 0.8s ease forwards 0.8s,
-      shrinkToBottom 0.6s ease forwards 1.6s;
+    animation: shrinkToBottom 0.6s ease forwards 1.6s;
     @include respond(phone) {
       opacity: 0;
       animation-play-state: paused;

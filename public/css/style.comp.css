@@ -25,9 +25,11 @@
 
 @keyframes shrinkToBottom {
   0% {
+    opacity: 1;
     transform-origin: top;
     transform: scaleY(0); }
   100% {
+    opacity: 1;
     transform-origin: top;
     transform: scaleY(1); } }
 
@@ -384,7 +386,7 @@ body {
 
 .heading-home-1 {
   font-family: "Abril Fatface", cursive;
-  font-size: 10.6rem;
+  font-size: 9.6rem;
   color: #333;
   text-transform: uppercase; }
 
@@ -692,7 +694,7 @@ body {
     position: absolute;
     top: 32%;
     left: 57%;
-    height: 30rem;
+    height: 26.5rem;
     width: 28rem;
     background-color: #eaccc7;
     z-index: -2;
@@ -712,13 +714,13 @@ body {
     position: absolute;
     top: 41%;
     left: 32%;
-    height: 1.9rem;
-    width: 52rem;
+    height: 3.5rem;
+    width: 47rem;
     transform-origin: left;
     background-color: #f93700;
     z-index: -1;
     opacity: 0;
-    animation: expandToBottom 0.8s ease forwards 0.8s, shrinkToBottom 0.6s ease forwards 1.6s; }
+    animation: shrinkToBottom 0.6s ease forwards 1.6s; }
     @media (max-width: 37.5em) {
       .home__cube_vt {
         opacity: 0;

@@ -54,10 +54,12 @@ $border-thin-red: 1px solid $color-red;
 }
 @keyframes shrinkToBottom {
   0% {
+    opacity: 1;
     transform-origin: top;
     transform: scaleY(0);
   }
   100% {
+    opacity: 1;
     transform-origin: top;
     transform: scaleY(1);
   }
