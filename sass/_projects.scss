@@ -13,8 +13,9 @@
     min-height: 310vh;
   }
   @include respond(phone-lg) {
-    //ipad //800
-    min-height: 220vh;
+    //ipad
+    //800
+    min-height: 230vh;
   }
   @include respond(phone) {
     background-color: $color-pink;

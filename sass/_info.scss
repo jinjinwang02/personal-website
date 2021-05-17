@@ -5,7 +5,7 @@
   overflow: hidden;
   width: 100%;
   @include respond(phone) {
-    min-height: 155vh;
+    min-height: 160vh;
     background-color: $color-beige;
   }
 

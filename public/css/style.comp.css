@@ -734,7 +734,7 @@ body {
   width: 100%; }
   @media (max-width: 37.5em) {
     .info {
-      min-height: 155vh;
+      min-height: 160vh;
       background-color: #f8f6f0; } }
   .info__heading {
     height: 100vh;
@@ -858,7 +858,7 @@ body {
       min-height: 310vh; } }
   @media (max-width: 50em) {
     .projects {
-      min-height: 220vh; } }
+      min-height: 230vh; } }
   @media (max-width: 37.5em) {
     .projects {
       background-color: #eaccc7; } }
