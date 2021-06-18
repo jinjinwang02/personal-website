@@ -1,7 +1,12 @@
 .fade-in-and-rise {
   opacity: 0;
-  transform: translateY(12rem);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out; }
+  transform: translateY(100px);
+  transition: opacity 0.5s 0.35s ease-out, transform 0.5s 0.35s ease-out; }
+
+@media screen and (max-width: 400px) {
+  .fade-in-and-rise {
+    opacity: 1;
+    transform: translateY(0); } }
 
 .fade-in-and-rise.appear {
   opacity: 1;
